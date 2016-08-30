@@ -1,0 +1,33 @@
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+
+<nav class="breadcrumbs">
+  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <svg class="icon"><use xlink:href="#home"></use></svg>
+    <a href="{{ site.url }}" class="breadcrumb__item" itemprop="url">
+      <span itemprop="title">{{ site.title }}</span>
+    </a> <span class="breadcrumb__sep">></span>
+  </span>
+{% for crumb in crumbs offset: 1 %}
+{% if forloop.last %}
+  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span itemprop="title">{{ crumb | replace:'-',' ' | remove:'.html' }}</span>
+  </span>
+{% else %}
+  <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}" class="breadcrumb__item" itemprop="url">
+      <span itemprop="title">{{ crumb | replace:'-',' ' | remove:'.html' }}</span>
+    </a> <span class="breadcrumb__sep">></span>
+  </span>
+{% endif %}
+{% endfor %}
+</nav>
+  
+  
+  
+
+
+
+
+
+
+

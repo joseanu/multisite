@@ -1,0 +1,13 @@
+# Navegación site-header
+
+site-header:
+  - title: "Inicio"
+    url: /
+  - title: "Canjea tu vale"
+    url: /canjea-tu-vale/
+  - title: "Sucursales"
+    url: /sucursales/
+  - title: "Nosotros"
+    url: /nosotros/
+  - title: "Contacto"
+    url: /contacto/

@@ -1,0 +1,31 @@
+.puerquito {
+    width: 180px;
+    float: left;
+    margin-right: $spacing-unit;
+}
+
+.paso {
+    padding: 1px 40px 20px 40px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+	color: #ffffff;
+
+    a {
+    	color: #ffffff !important;
+    	text-decoration: underline;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+
+    &.paso01 {
+        background: #8470b0;
+    }
+    &.paso02 {
+        background: #ef7c7c;
+    }
+    &.paso03 {
+        background: #58ba9e;
+    }
+}

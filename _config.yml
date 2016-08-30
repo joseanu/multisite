@@ -1,0 +1,59 @@
+# Site settings
+title: JR Ecotecnología
+description: "Proveedor autorizado del programa Hipoteca Verde a nivel nacional, con 20 sucursales en 15 estados de la República Mexicana."
+logo: 
+locale: es_MX
+baseurl: ""
+url: "http://www.jrecotecnologia.com"
+dev: 0
+
+# Site owner
+owner:
+  name: "JR Ecotecnología"
+  email: contacto@jrecotecnologia.com
+  tel1: 3338258247
+  tel2: 3338267767
+  formsurl: https://formspree.io/webmaster@jrecotecnologia.com
+  facebook: jrecotecnologias
+  linkedin: https://www.linkedin.com/company/jr-ecotecnologia
+  google:
+    analytics: UA-77266972-1
+    gtm: GTM-TQNGHQ
+    plus: https://google.com/+Jrecotecnologia
+    verify: ZOcvun6lI3h_vsGspcSW5aeuN_i7P6ft94g-TOP_0hk
+    mapsapi: AIzaSyA_2f1E_wtDgpdaLNJoVTltecZEcmHpnDE
+  bing:
+    verify: C912FFA4973B378094014CAF88EB7EB7
+  alexa:
+    verify: Y5DYjZ4VWlrQzBP5kcQJeOKLNas
+
+# Jekyll configuration
+markdown: kramdown
+encoding: utf-8
+include: ["_pages"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "node_modules", "src"]
+gems:
+  - jekyll-assets
+  - jekyll-seo-tag
+
+# Plugin: jekyll-assets
+assets:
+  autoprefixer:
+    browsers: ["last 2 versions","> 5%","IE 9"]
+
+# Plugin: jekyll-datapage_gen
+page_gen:
+  - data: 'sucursales'
+    template: 'sucursal'
+    name: 'nombre'
+    dir: 'sucursal'
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+// REVISAR ESTO:
+facebook:
+  app_id: 1622349154752586
