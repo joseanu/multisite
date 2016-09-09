@@ -2,7 +2,7 @@
 layout: con-cabeza
 permalink: /sucursales/
 title: "Sucursales"
-description: "Adquiere ecotecnologías en México."
+description: "Adquiere ecotecnologías en una de nuestras sucursales, estamos por todo México. Seguro hay una cerca de tí."
 ---
 
 <div class="wrapper sucursales">
@@ -10,7 +10,7 @@ description: "Adquiere ecotecnologías en México."
     {% assign sucursales = site.data.sucursales | sort: 'estado' %}
     {% for sucursal in sucursales %}
         <li>
-            <a href="/sucursal/{{ sucursal.slug }}.html">
+            <a href="/sucursales/{{ sucursal.slug }}.html">
                 <picture class="intrinsic intrinsic--square">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
                     <source type="image/webp" srcset="{% asset_path 'sucursales/{{ sucursal.slug }}-800px.webp' %} 800w, 

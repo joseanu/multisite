@@ -2,12 +2,27 @@
 layout: default
 permalink: /
 ---
-
+<script type='application/ld+json'>
+  {
+    "@context": "http://schema.org",
+    "@type":"Organization",
+    "url":"{{ site.url }}",
+    "sameAs": [
+      "{{ site.owner.facebook }}",
+      "{{ site.owner.google.plus }}",
+      "{{ site.owner.linkedin }}"],
+    "name": "{{ site.owner.name }}",
+    "description": "{{ site.description }}",
+    "email": "mailto:{{ site.owner.email }}",
+    "logo": "{{ site.url }}{% asset_path '{{ site.logo }}' %}"
+  }
+</script>
 <div class="svg-wrapper">
-  <div class="wrapper">
-    {% asset_source productos/mapa-sucursales.svg %}
+  <div class="wrapper afueraMapa" id="mapaSucursales">
     <h1>Proveedores de ecotecnologias en {{ site.data.sucursales | size }} ciudades de México</h1>
-    <a href="/sucursales/" class="boton-naranja">Ver Sucursales</a>
+    <a href="{{ site.url }}/sucursales/" class="boton-naranja">Ver Sucursales</a>
+    {% comment %} Aquí va el mapa, se inserta con javascript {% endcomment %}
+    <script type="text/javascript">{% asset_source mapa-sucursales-js.js %}</script>
   </div>
 </div>
 <div class="proveedores">
@@ -47,10 +62,10 @@ permalink: /
     <div class="valor">
       <svg class="icon"><use xlink:href="#check"></use></svg>
       <h3>Garantía</h3>
-      <p></p>
+      <p>Todos nuestros productos cumplen con las <strong>normas federales</strong>.</p>
     </div>
   </div>
-  <a href="/canjea-tu-vale/" class="boton-naranja">Canjea tu vale</a>
+  <a href="{{ site.url }}/canjea-tu-vale/" class="boton-naranja">Canjea tu vale</a>
 </div>
 <div class="productos-dia">
   <div class="wrapper">
@@ -62,8 +77,8 @@ permalink: /
         <h3>Energía solar fotovoltaica</h3>
       </div>
       <div class="rama">
-        <svg><title>Calentamiento de agua</title><use xlink:href="{% asset_path productos/iconos-productos.svg %}#calentar-agua"></use></svg>
-        <h3>Calentamiento de agua</h3>
+        <svg><title>Calentadores solares</title><use xlink:href="{% asset_path productos/iconos-productos.svg %}#calentar-agua"></use></svg>
+        <h3>Calentadores solares</h3>
       </div>
     </div>
     <div class="filas fila-02">

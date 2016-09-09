@@ -5,14 +5,21 @@
 html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
-  background-color: $background-color;
+  background-color: $blanco;
   height: 100%;
-  font-size: $base-font-size * 0.9375;
+    /*
+    * Redefine the rem value while keeping it proportional.
+    * Useful values, with default font-size of 16px:
+    * • 62.5% -> 1rem = 10px, .1rem  = 1px
+    * • 93.75% -> 1rem = 15px, .0.0666666666666667rem  = 1px
+    * • 125%  -> 1rem = 20px, .05rem = 1px
+    */
+  font-size: 93.75%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 
   @media (min-width: $on-laptop) {
-    font-size: $base-font-size;
+    font-size: 100%;
   }
 }
 
@@ -26,8 +33,8 @@ body { margin: 0; }
 
 /* selected elements */
 ::selection {
-  color: #fff;
-  background: #000;
+  color: #49587a;
+  background: $brand-color3;
 }
 
 /* display HTML5 elements in IE6-9 and FF3 */
@@ -46,17 +53,10 @@ section {
 }
 
 /* display block in IE6-9 and FF3 */
-audio,
-canvas,
 video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-}
-
-/* prevents modern browsers from displaying 'audio' without controls */
-audio:not([controls]) {
-  display: none;
 }
 
 /* remove blue color */
@@ -66,31 +66,17 @@ a {
 
 /* apply focus state */
 a:focus {
-
-  @extend %tab-focus;
+  /* default */
+  outline: thin dotted $brand-color;
+  /* Webkit */
+  outline: 5px auto $brand-color;
+  outline-offset: -2px;
 }
 
 /* remove outline from links */
 a:hover,
 a:active {
   outline: 0;
-}
-
-/* prevent sub and sup affecting line-height in all browsers */
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5rem;
-}
-
-sub {
-  bottom: -0.25rem;
 }
 
 /* img border in anchor's and image quality */

@@ -1,10 +1,91 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% seo %}
+  
+  {% assign directorio = page.dir | replace:'/','' %}
+  {% if directorio == 'sucursales' %}
+    {% assign seo_title = "Ecotecnologías en " | append: page.nombre | append: ", " | append: page.estado | append: " - " | append: site.title %}
+  {% elsif page.title %}
+    {% assign seo_title = page.title | append: " - " | append: site.title %}
+  {% elsif site.title %}
+    {% assign seo_title = site.title %}
+  {% endif %}
+
+  {% if seo_title %}
+    {% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if page.slogan %}
+    {% assign seo_description = page.slogan %}
+  {% elsif page.description %}
+    {% assign seo_description = page.description %}
+  {% elsif site.description %}
+    {% assign seo_description = site.description %}
+  {% endif %}
+
+  {% if seo_description %}
+    {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if site.url %}
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.url %}
+  {% endif %}
+
+  {% if seo_title %}
+    <title>{{ seo_title }}</title>
+  {% endif %}
+
+  {% if seo_description %}
+    <meta name="description" content="{{ seo_description }}" />
+  {% endif %}
+  
+  <link rel="canonical" href="{{ canonical_url }}">
+  
+  {% comment %} ¡Implementar sitemap! <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml">{% endcomment %}
+  
+  {% if site.owner.google.verify %}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
+  {% if site.owner.bing.verify %}<meta name="msvalidate.01" content="{{ site.owner.bing.verify }}">{% endif %}
+  {% if site.owner.alexa.verify %}<meta name="alexaVerifyID" content="{{ site.owner.alexa.verify }}">{% endif %}
+
+  {% if site.owner.google.author %}<link rel="author" href="{{ site.owner.google.author }}?rel=author">{% endif %}
+  {% if site.owner.fb_app_id %}<meta property="fb:app_id" content="{{ site.owner.fb_app_id }}" />{% endif %}
+  
+  {% if seo_title %}
+    <meta name="twitter:title" property="og:title" content="{{ seo_title }}">
+  {% endif %}
+  <meta name="twitter:url" property="og:url" content="{{ canonical_url }}">
+  {% if seo_description %}
+    <meta name="twitter:description" property="og:description" content="{{ seo_description }}">
+  {% endif %}
+  {% if page.image.feature %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" property="og:image" content="{{ site.url }}/assets/images/{{ page.image.feature }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.url }}{% asset_path '{{ site.logo }}' %}{% endif %}">
+  {% endif %}
+  <meta property="og:locale" content="{{ site.locale }}">
+  {% if page.date %}
+    <meta property="og:type" content="article">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image.teaser %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/{{ page.image.teaser }}">
+  {% endif %}
+  
   {% css main %}
 
+  {% javascript main async %}
 
-  {% javascript form-js async %}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#44ac64">
+  <meta name="theme-color" content="#44ac64">
+  {% comment %}<style type="text/css">{% asset_source critical %}</style>{% endcomment %}
+  {% if jekyll.environment == "production" %}
+    {% include partes/gtm.html %}
+  {% endif %}
 </head>

@@ -16,12 +16,12 @@
         {% assign dia1 = dias_ary[0] | times: 1 %}
         {% assign dia2 = dias_ary[1] | times: 1 %}
 
-        <meta itemprop="openingHours" content="{{ dias[dia1] }}-{{ dias[dia2] }} {{ horas }}">{{ dias_e[dia1] }} a {{ dias_e[dia2] }} de {{ horas }}
+        {{ dias_e[dia1] }} a {{ dias_e[dia2] }} de {{ horas }}
     
     {% else %}
         {% assign dia = part_ary[0] | times: 1 %}
 
-        <meta itemprop="openingHours" content="{{ dias[dia] }} {{ horas }}">{{ dias_e[dia] }} de {{ horas }}
+        {{ dias_e[dia] }} de {{ horas }}
 
     {% endif %}
     

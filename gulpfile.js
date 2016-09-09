@@ -8,6 +8,7 @@ const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
 const responsive = require('gulp-responsive');
 const rename = require('gulp-rename');
+const purify = require('gulp-purifycss');
 //const changed = require('gulp-changed');
 
 const siteRoot = '_site';
@@ -110,20 +111,20 @@ gulp.task('mapa', function () {
                 pretty: true
               }
           }))
-        .pipe(cheerio({
-          run: function ($, file) {
-            $('svg').prepend(
-              '<style>' +
-              '{% asset_source svg/mapa-sucursales %}' +
-              '</style>');
-            $('svg').append(
-              '<script type="text/javascript"><![CDATA[/* SCRIPT */' +
-              '{% asset_source mapa-sucursales-js %}' +
-              '/* END SCRIPT */]]></script>');
-          },
-          parserOptions: { xmlMode: true }
-        }))
-        .pipe(rename('mapa-sucursales.svg.liquid'))
+        // .pipe(cheerio({
+        //   run: function ($, file) {
+        //     $('svg').prepend(
+        //       '<style>' +
+        //       '{% asset_source svg/mapa-sucursales %}' +
+        //       '</style>');
+        //     $('svg').append(
+        //       '<script type="text/javascript"><![CDATA[/* SCRIPT */' +
+        //       '{% asset_source mapa-sucursales-js %}' +
+        //       '/* END SCRIPT */]]></script>');
+        //   },
+        //   parserOptions: { xmlMode: true }
+        // }))
+        .pipe(rename('mapaSucursales.svg.liquid'))
         .pipe(gulp.dest('./_assets/images/productos/'));
     }
   });
@@ -207,4 +208,19 @@ gulp.task('images', function () {
       withMetadata: false,
     }))
     .pipe(gulp.dest(IMG_DEST));
+});
+
+gulp.task('css', function() {
+  return gulp.src('./_site/assets/main.css')
+    .pipe(purify(['./_site/**/*.js', './_site/**/*.html']))
+    .pipe(gulp.dest('./src/'));
+});
+
+
+var critical = require('critical').stream;
+// Generate & Inline Critical-path CSS
+gulp.task('critical', function () {
+    return gulp.src('_site/*.html')
+        .pipe(critical({base: '_site/', inline: true}))
+        .pipe(gulp.dest('_site'));
 });

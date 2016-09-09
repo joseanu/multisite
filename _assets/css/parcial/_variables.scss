@@ -20,10 +20,13 @@ $on-desktop:      1024px;
 
 // colores
 $text-color:       #706f6f;
-$background-color: #fdfdfd;
+$background-color: #f6f6f6;
 $brand-color:      #44ac64; // El verde
-$brand-color2:     #38466b; // El azul oscuro
+$brand-color2:     #49587a; // El azul oscuro
 $brand-color3:     #efa707; // El naranja
+
+$blanco:            #ffffff;
+$negro:            #000000;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);

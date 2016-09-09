@@ -2,6 +2,47 @@
 layout: con-cabeza
 title: Contacto
 permalink: /contacto/
+slug: contacto
 ---
 
-hola
+<div class="wrapper">
+    <div class="dos-tercios">
+        <form action="{{ site.owner.formsurl }}" method="post">
+            <h2>Escríbenos y te contestaremos a la brevedad</h2>
+            <div class="form-group">
+                <label for="frm-nombre">Nombre *</label>
+                <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />
+            </div>
+            <div class="form-group">
+                <label for="frm-estado">Estado *</label>
+                <select name="estado" id="frm-estado" required>
+                    <option disabled selected value> -- selecciona un estado -- </option>
+                    <option value="Aguascalientes">Aguascalientes</option><option value="Baja California">Baja California</option><option value="Baja California Sur">Baja California Sur</option><option value="Campeche">Campeche</option><option value="Coahuila">Coahuila</option><option value="Colima">Colima</option><option value="Chiapas">Chiapas</option><option value="Chihuahua">Chihuahua</option><option value="Ciudad de México">Ciudad de México</option><option value="Durango">Durango</option><option value="Guanajuato">Guanajuato</option><option value="Guerrero">Guerrero</option><option value="Hidalgo">Hidalgo</option><option value="Jalisco">Jalisco</option><option value="México">México</option><option value="Michoacán">Michoacán</option><option value="Morelos">Morelos</option><option value="Nayarit">Nayarit</option><option value="Nuevo León">Nuevo León</option><option value="Oaxaca">Oaxaca</option><option value="Puebla">Puebla</option><option value="Querétaro">Querétaro</option><option value="Quintana Roo">Quintana Roo</option><option value="San Luis Potosí">San Luis Potosí</option><option value="Sinaloa">Sinaloa</option><option value="Sonora">Sonora</option><option value="Tabasco">Tabasco</option><option value="Tamaulipas">Tamaulipas</option><option value="Tlaxcala">Tlaxcala</option><option value="Veracruz">Veracruz</option><option value="Yucatán">Yucatán</option><option value="Zacatecas">Zacatecas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="frm-correo">Correo *</label>
+                <input type="email" name="correo" id="frm-correo" tabindex="2" required />
+            </div>
+            <div class="form-group">
+                <label for="frm-tel">Teléfono</label>
+                <input type="tel" name="telefono" id="frm-tel" tabindex="3" pattern="[0-9]*" />
+            </div>
+            <div class="form-group">
+                <label for="frm-msg">Escribe tu mensaje:</label>
+                <textarea id="frm-msg" name="mensaje" spellcheck="true" rows="5" cols="50" tabindex="4"></textarea>
+            </div>
+            
+            <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.title }})" />
+            <input type="text" name="_gotcha" style="display:none" />
+            <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Enviar mensaje</button>
+        </form>
+    </div>
+    <div class="frm-der-nar">
+        <h2>Oficina central Guadalajara</h2>
+        {{ site.owner.direccion }}
+        {% include partes/telefono tel=site.owner.tel1 %}
+        {% include partes/telefono tel=site.owner.tel2 %}
+        {% include partes/e-mail e-mail=site.owner.email %}
+    </div>
+</div>

@@ -25,11 +25,3 @@
 	display: table;
 	clear: both;
 }
-
-%tab-focus {
-  /* default */
-  outline: thin dotted $brand-color;
-  /* Webkit */
-  outline: 5px auto $brand-color;
-  outline-offset: -2px;
-}

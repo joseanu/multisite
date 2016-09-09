@@ -2,13 +2,16 @@
 layout: default
 ---
 
+{% include partes/jsonld-sucursal %}
+
 {% include partes/googleMap.html %}
 
 <div class="wrapper">
-    <h1>Ecotecnologías en {{page.nombre}}, {{page.estado}}</h1>
+    <div class="breadcrumbSucursal">{% include partes/breadcrumbs.html %}</div>
+    <h1 class="headerSucursal">Ecotecnologías en {{page.nombre}}, {{page.estado}}</h1>
 
-    <div itemscope itemtype="http://schema.org/LocalBusiness" class="sucursal-info">
-        <figure itemscope itemtype="http://schema.org/ImageObject">
+    <div class="sucursal-info">
+        <figure>
             <picture class="intrinsic intrinsic--square">
                 <!--[if IE 9]><video style="display: none;"><![endif]-->
                 <source type="image/webp" srcset="{% asset_path 'sucursales/{{ page.slug }}-800px.webp' %} 800w, 
@@ -28,43 +31,36 @@ layout: default
                                 (min-width: 920px) calc((100vw - (1.6667rem * 2))/3), 
                                 calc((100vw - 1.6667rem)*0.4)" />
                 <!--[if IE 9]></video><![endif]-->
-                <img itemprop="contentUrl" class="intrinsic-item" src="{% asset_path 'sucursales/{{ page.slug }}-400px.jpg' %}" alt="Ecotecnologías en {{page.nombre}}" />
+                <img class="intrinsic-item" src="{% asset_path 'sucursales/{{ page.slug }}-400px.jpg' %}" alt="Ecotecnologías en {{page.nombre}}" />
             </picture>
-            <meta itemprop="name" content="{{ site.title }} {{ page.nombre }}">
         </figure>
         <div class="info">
-            <h2 itemprop="name" class="nombre">{{ site.title }} {{ page.nombre }}</h2>
-            <span itemprop="description" class="descripcion">Venta de focos ahorradores, focos led, calentadores solares, aire acondicionado, paneles solares y todas las ecotecnologías en {{ page.nombre }}.</span>
+            <span class="descripcion">{{ page.slogan }}</span>
             <div class="direccion">
                 <strong>Estamos en:</strong><br>
-                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}</span><br>
-                    <span itemprop="addressLocality">{{ page.ciudad }}</span>, <span itemprop="addressRegion">{{ page.estado }}</span> <span itemprop="postalCode" class="codigopostal">{{ page.cp }}</span>
+                <div>
+                    <span>{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}</span><br>
+                    <span>{{ page.ciudad }}</span>, <span>{{ page.estado }}</span> <span class="codigopostal">{{ page.cp }}</span>
                 </div>
-                <a itemprop="hasMap" href="{{ page.gmaps }}">
-                    {% img icono-mapa.svg alt:'Ver mapa' class:'icono-mapa' %}</a>
-                <span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
-                    <meta itemprop="latitude" content="{{ page.lat }}" />
-                    <meta itemprop="longitude" content="{{ page.lng }}" />
-                </span>
-            </div>
-            <div class="contactos">
-                <strong>Contáctanos:</strong><br>
-                <span itemprop="telephone">{% include partes/telefono %}</span><br>
-                <a href="mailto:{{ page.correo }}" itemprop="email"><svg class="icon"><use xlink:href="#envelope-o"></use></svg> {{ page.correo }}</a><br>
-                <link itemprop="url" href="{{ site.url }}{{ page.url }}">
-                <a itemprop="sameAs" href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="#facebook"></use></svg></a>
-                <a itemprop="sameAs" href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="#google-plus"></use></svg></a>
+                <a href="{{ page.gmaps }}">
+                    {% img icono-mapa.svg alt:'Ver mapa' class:'icono-mapa' %} Ver Mapa</a>
             </div>
             <div class="horarios">
                 <strong>Horarios:</strong><br>
                 {% include partes/horario %}
             </div>
+            <div class="contactos">
+                <strong>Contáctanos:</strong><br>
+                {% include partes/telefono tel=page.tel %}
+                {% include partes/e-mail e-mail=page.correo %}
+                <a href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="#facebook"></use></svg> {{ page.facebook | remove: "https://www.facebook.com/" | remove: "/" }}</a>
+                <a href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="#google-plus"></use></svg> {{ page.gplus | remove: "https://plus.google.com/" | remove: "/" }}</a>
+            </div>
         </div>
     </div>
     <div class="contacta-suc">
         <form action="{{ site.owner.formsurl }}" method="post">
-            <h3>Contacta a la sucursal de {{ page.nombre }}</h3>
+            <h3>Contacta a esta sucursal</h3>
             <div class="form-group">
                 <label for="frm-nombre">Nombre *</label>
                 <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />

@@ -1,18 +1,8 @@
-<header class="site-header">
-    <div class="topbar">
+<header class="siteHeader">
+    <div class="siteHeader-topBar">
         {{ page.url }}
     </div>
-    <div class="wrapper">
-        <a href="{{ site.url }}" class="logotipo">
-            {% img logo-jr.svg alt:'{{ site.title }}' %}
-        </a>
-        <nav role="navigation">
-            <ul id="menu">
-                {% for link in site.data.navegacion.site-header %}
-                    {% assign link_url = site.url | append: link.url %}
-                    <li><a href="{{ link_url }}" class="site-header__menu-item {% if page.url == link.url %}activo{% endif %}">{{ link.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
+    <div class="siteHeader-contenedor">
+        {% include partes/menu-ppal %}
     </div>
 </header>

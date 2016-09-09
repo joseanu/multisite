@@ -34,7 +34,7 @@ module.exports = function(mapData, sucursalesData, outputLocation) {
 //      .attr('width', chartWidth)
 //      .attr('height', chartHeight)
         .attr('viewBox', '0 0 ' + chartWidth + ' ' + chartHeight)
-        .attr('preserveAspectRatio', 'xMidYMid')
+        .attr('preserveAspectRatio', 'xMinYMid')
         .attr('id', 'mapa-sucursales');
 
       var mex = svg.append('g')
@@ -68,7 +68,7 @@ module.exports = function(mapData, sucursalesData, outputLocation) {
           return "suc sucursal-" + i;
         })
         .attr("style", function(d) {
-          return "transform-origin: " + projection([d.lng, d.lat])[0] + "px " + projection([d.lng, d.lat])[1] + "px";
+          return "transform-origin: " + projection([d.lng, d.lat])[0] + "px " + projection([d.lng, d.lat])[1] + "px;";
         });
       gsucursal.append("path")
         .attr("d", function(d) {
@@ -141,7 +141,7 @@ module.exports = function(mapData, sucursalesData, outputLocation) {
         .attr("class", "circulo3");
       gsucursal.append("a")
         .attr('data-href', function(d) {
-          return "/sucursal/" + d.slug;
+          return d.slug;
         })
         .append("text")
         .attr("id", function(d) {

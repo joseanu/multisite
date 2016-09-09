@@ -1,4 +1,4 @@
-<div id="map"></div>
+<div id="map_canvas"></div>
 <script type="text/javascript">
 
     var nombre = '{{ site.owner.name }} {{ page.ciudad }}, {{ page.estado }}';
@@ -18,7 +18,7 @@
         + '<circle cx="0" cy="-30.3" r="13" fill="#fff"/></svg>';
     var map;
     function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map_canvas'), {
             center: ubicacion,
             zoom: 16,
             scrollwheel: false,

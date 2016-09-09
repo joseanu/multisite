@@ -2,6 +2,10 @@
    FORMS
    ========================================================================== */
 
+form {
+  position: relative;
+}
+
 fieldset {
   margin-bottom: 5px;
   padding: 0;
@@ -129,4 +133,13 @@ form {
       width: 100%;
     }
   }
+}
+
+form .status {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 5rem;
+  text-align: center;
+  background-color: $brand-color3;
 }

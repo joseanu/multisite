@@ -4,9 +4,9 @@ function initForm() {
         var posturl = form.action;
     
         var message = new Object();
-        message.loading = 'Loading...';
-        message.success = 'Thank you. Application received!';
-        message.failure = 'Whoops! There was a problem sending your message.';
+        message.loading = 'Enviando...';
+        message.success = 'Muchas gracias. Recibimos tu mensaje.';
+        message.failure = 'Tuvimos un problema al enviar tu mensaje.';
     
         var statusMessage = document.createElement('div');
         statusMessage.className = 'status';
@@ -44,5 +44,3 @@ function initForm() {
         });
     }
 }
-
-window.addEventListener("load", initForm, false);

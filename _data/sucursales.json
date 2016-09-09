@@ -1,6 +1,7 @@
 [{
     "id": 1,
     "slug": "guadalajara",
+    "slogan": "Proveedor de focos ahorradores, focos led, calentadores de agua, aire acondicionado, celdas solares y más accesorios ahorradores en Guadalajara.",
     "nombre": "Guadalajara",
     "ciudad": "Guadalajara",
     "estado": "Jalisco",
@@ -20,6 +21,7 @@
 }, {
     "id": 2,
     "slug": "reynosa",
+    "slogan": "Proveedor de focos ahorradores, focos leds, calentadores de agua, aire acondicionado, fotoceldas solares y más accesorios ahorradores en Reynosa.",
     "nombre": "Reynosa",
     "ciudad": "Reynosa",
     "estado": "Tamaulipas",
@@ -39,6 +41,7 @@
 }, {
     "id": 3,
     "slug": "matamoros",
+    "slogan": "Proveedor de focos para ahorrar de energia electrica, focos leds, boiler solar, aire acondicionado, sistemas fotovoltaicos y todo en tecnologia sustentable en Matamoros.",
     "nombre": "Matamoros",
     "ciudad": "Matamoros",
     "estado": "Tamaulipas",
@@ -58,6 +61,7 @@
 }, {
     "id": 4,
     "slug": "chihuahua",
+    "slogan": "Proveedor de focos ahorradores, tecnologia led, calentadores solares de agua, aire acondicionado, sistemas fotovoltaicos y más accesorios ahorradores en Chihuahua.",
     "nombre": "Chihuahua",
     "ciudad": "Chihuahua",
     "estado": "Chihuahua",
@@ -77,6 +81,7 @@
 }, {
     "id": 5,
     "slug": "merida",
+    "slogan": "Proveedor de focos para ahorrar de energia electrica, tecnologia led, calentadores de agua, aires acondicionados, paneles solares y uso de energía renovable en Mérida.",
     "nombre": "Merida",
     "ciudad": "Mérida",
     "estado": "Yucatán",
@@ -96,6 +101,7 @@
 }, {
     "id": 6,
     "slug": "zacatecas",
+    "slogan": "Venta de focos ahorradores, focos leds, calentadores solares de agua, aires acondicionados, sistemas fotovoltaicos y todas las ecotecnologías en Zacatecas.",
     "nombre": "Zacatecas",
     "ciudad": "Guadalupe",
     "estado": "Zacatecas",
@@ -115,6 +121,7 @@
 }, {
     "id": 7,
     "slug": "queretaro",
+    "slogan": "Proveedor de focos ahorradores de energia, focos leds, calentadores solares de agua, aire acondicionado, paneles fotovoltaicos y todas las ecotecnologías en Querétaro.",
     "nombre": "Queretaro",
     "ciudad": "Querétaro",
     "estado": "Querétaro",
@@ -134,6 +141,7 @@
 }, {
     "id": 8,
     "slug": "morelia",
+    "slogan": "Venta de focos para ahorrar de energia electrica, tecnologia led, calentadores solares de agua, aire acondicionado, paneles solares y todo en tecnologia sustentable en Morelia.",
     "nombre": "Morelia",
     "ciudad": "Morelia",
     "estado": "Michoacán",
@@ -153,6 +161,7 @@
 }, {
     "id": 9,
     "slug": "tijuana",
+    "slogan": "Proveedor de focos para ahorrar de energia electrica, focos led, calentadores solares, aire acondicionado, sistemas fotovoltaicos y uso de energía renovable en Tijuana.",
     "nombre": "Tijuana",
     "ciudad": "Tijuana",
     "estado": "Baja California",
@@ -172,6 +181,7 @@
 }, {
     "id": 10,
     "slug": "puerto-vallarta",
+    "slogan": "Venta de focos ecologicos, focos led, boiler solar, aire acondicionado, celdas fotovoltaicas y más accesorios ahorradores en Puerto Vallarta.",
     "nombre": "Puerto Vallarta",
     "ciudad": "Puerto Vallarta",
     "estado": "Jalisco",
@@ -191,6 +201,7 @@
 }, {
     "id": 11,
     "slug": "tepic",
+    "slogan": "Venta de focos para ahorrar de energia electrica, tecnologia led, calentadores de agua, aires acondicionados, celdas solares y equipo de ahorro de energia en Tepic.",
     "nombre": "Tepic",
     "ciudad": "Tepic",
     "estado": "Nayarit",
@@ -210,6 +221,7 @@
 }, {
     "id": 12,
     "slug": "guaymas",
+    "slogan": "Proveedor de focos ahorradores de energia, focos leds, calentadores de agua, aire acondicionado, paneles solares y todo en tecnologia sustentable en Guaymas.",
     "nombre": "Guaymas",
     "ciudad": "Guaymas",
     "estado": "Sonora",
@@ -229,6 +241,7 @@
 }, {
     "id": 13,
     "slug": "ciudad-obregon",
+    "slogan": "Proveedor de focos ahorradores de energia, focos led, calentadores de agua, aire acondicionado, fotoceldas solares y equipo de ahorro de energia en Ciudad Obregón.",
     "nombre": "Ciudad Obregon",
     "ciudad": "Ciudad Obregón",
     "estado": "Sonora",
@@ -248,6 +261,7 @@
 }, {
     "id": 14,
     "slug": "culiacan",
+    "slogan": "Venta de focos ahorradores de energia, tecnologia led, calentadores solares, aires acondicionados, paneles solares y todo en eficiencia energetica en Culiacán.",
     "nombre": "Culiacan",
     "ciudad": "Culiacán",
     "estado": "Sinaloa",
@@ -267,6 +281,7 @@
 }, {
     "id": 15,
     "slug": "monterrey",
+    "slogan": "Proveedor de focos ahorradores de energia, focos led, boiler solar, aires acondicionados, fotoceldas solares y uso de energía renovable en Monterrey.",
     "nombre": "Monterrey",
     "ciudad": "Monterrey",
     "estado": "Nuevo León",
@@ -286,6 +301,7 @@
 }, {
     "id": 16,
     "slug": "xalapa",
+    "slogan": "Venta de focos ahorradores de energia, tecnologia led, boiler solar, aires acondicionados, paneles solares y uso de energía renovable en Xalapa.",
     "nombre": "Xalapa",
     "ciudad": "Xalapa",
     "estado": "Veracruz",
@@ -305,6 +321,7 @@
 }, {
     "id": 17,
     "slug": "villahermosa",
+    "slogan": "Proveedor de focos para ahorrar de energia electrica, focos leds, calentadores de agua, aires acondicionados, generadores de energia solar y equipo de ahorro de energia en Villahermosa.",
     "nombre": "Villahermosa",
     "ciudad": "Villahermosa",
     "estado": "Tabasco",
@@ -322,27 +339,9 @@
     "lat": 17.9921548,
     "color": "#f28e77"
 }, {
-    "id": 18,
-    "slug": "hermosillo",
-    "nombre": "Hermosillo",
-    "ciudad": "Hermosillo",
-    "estado": "Sonora",
-    "direccion1": "Calle Ignacio Romero 147",
-    "direccion2": "",
-    "colonia": "Col. San Benito",
-    "cp": 83190,
-    "tel": 6622105814,
-    "correo": "hermosillo@jrecotecnologia.com",
-    "gmaps": "https://goo.gl/K2s6EH",
-    "facebook": "https://www.facebook.com/jrecotec.hermosillo/",
-    "gplus": "https://plus.google.com/+JREcotecnolog%C3%ADaHermosillo",
-    "horario": "1-5:0900-1800,6:0900-1500",
-    "lng": -110.9690381,
-    "lat": 29.0972849,
-    "color": "#f2e659"
-}, {
     "id": 20,
     "slug": "leon",
+    "slogan": "Proveedor de focos ahorradores de energia, focos led, calentadores solares, aire acondicionado, paneles solares y todo en eficiencia energetica en León.",
     "nombre": "Leon",
     "ciudad": "León",
     "estado": "Guanajuato",
@@ -362,6 +361,7 @@
 }, {
     "id": 21,
     "slug": "mexicali",
+    "slogan": "Venta de focos ahorradores, focos leds, boiler solar, aires acondicionados, paneles solares y más accesorios ahorradores en Mexicali.",
     "nombre": "Mexicali",
     "ciudad": "Mexicali",
     "estado": "Baja California",
@@ -381,6 +381,7 @@
 }, {
     "id": 23,
     "slug": "coatzacoalcos",
+    "slogan": "Proveedor de focos para ahorrar de energia electrica, tecnologia led, calentadores de agua, aires acondicionados, celdas fotovoltaicas y todas las ecotecnologías en Coatzacoalcos.",
     "nombre": "Coatzacoalcos",
     "ciudad": "Coatzacoalcos",
     "estado": "Veracruz",
@@ -392,7 +393,7 @@
     "correo": "coatzacoalcos@jrecotecnologia.com",
     "gmaps": "http://goo.gl/4t1SKs",
     "facebook": "https://www.facebook.com/jrecotec.coatzacoalcos/",
-    "gplus": "",
+    "gplus": "https://plus.google.com/+JREcotecnologíaCoatzacoalcos",
     "horario": "1-5:0900-1800,6:1000-1400",
     "lng": -94.4208955,
     "lat": 18.1437049,

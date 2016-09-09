@@ -1,281 +1,292 @@
-@keyframes agua {
-  0% {
-    background-color: #435277;
-  }
-  50% {
-    background-color: #6676a1;
-  }
-  100% {
-    background-color: #435277;
-  }
-}
-
-.svg-wrapper {
-  height: 100vh;
-  margin-top: -7.2167rem; // header + topbar
-  padding-top: 7.2167rem;
-  margin-bottom: -(1.95rem + $spacing-unit * 2); // proveedores
-  padding-bottom: 1.95rem + $spacing-unit * 2;
-  background-color: #435277;
-  animation-name: agua;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  
-  .wrapper {
-    height: 100%;
-    position: relative;
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit;
-  }
-  
-    svg {
-      height: 100%;
-      width: 60%;
-      animation: fade-in 3s;
-    }
-  
-  h1 {
-    margin: 0;
-    margin-right: $spacing-unit;
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #fff;
-  }
-  
-  .boton-naranja {
-    position: absolute;
-    left: 50%;
-    top: calc(20% + 4.5rem);
-  }
-}
-
 .proveedores {
-    background-color: $brand-color2;
-    @extend %clearfix;
-    
-    .wrapper {
-        position: relative;
-        overflow: auto;
-        max-width: calc(#{$content-width} - (#{$spacing-unit} * 8));
-        text-align: center;
-    }
-    
-    h2 {
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        font-weight: 300;
-        color: #fff;
-//        padding-right: 200px;
-        margin-top: $spacing-unit;
-        margin-bottom: $spacing-unit;
-        
-    }
-    
-    .boton-naranja {
-        margin: auto;
-        position: absolute;
-        right: 30px;
-        left: auto;
-        top: 0;
-        bottom: 0;
-    }
+	background-color: $brand-color2;
+
+	@extend %clearfix;
+
+	.wrapper {
+		position: relative;
+		overflow: auto;
+		max-width: calc(#{$content-width} - (#{$spacing-unit} * 8));
+		text-align: center;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		font-weight: 300;
+		color: $blanco;
+		//        padding-right: 200px;
+		margin-top: $spacing-unit;
+		margin-bottom: $spacing-unit;
+	}
+
+	.boton-naranja {
+		margin: auto;
+		position: absolute;
+		right: 30px;
+		left: auto;
+		top: 0;
+		bottom: 0;
+	}
 }
 
 .h_gde {
-    position: relative;
-    margin: 3rem 0 $spacing-unit/2 0;
-    padding: 0 0 $spacing-unit/2 0;
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    
-    &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-        width: 70px;
-        height: 3px;
-        background-color: #cacaca;
-    }
-    
-    & + p {
-        margin-top: $spacing-unit/2;
-    }
-    
-    &.blanco {
-        color: #fff;
-        margin: 0 0 0 0;
-        
-        &:after {
-            content: none;
-        }
-    }
+	position: relative;
+	margin: 3rem 0 $spacing-unit/2 0;
+	padding: 0 0 $spacing-unit/2 0;
+	font-size: 2rem;
+	font-weight: $base-font-weight;
+	text-transform: uppercase;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0 auto;
+		width: 4.5rem;
+		height: 3px;
+		background-color: $grey-color;
+	}
+
+	&+ p {
+		margin-top: $spacing-unit/2;
+	}
+
+	&.blanco {
+		color: $blanco;
+		margin: 0;
+
+		&:after {
+			content: none;
+		}
+	}
 }
 
 .tu-vale {
-    text-align: center;
-    
-    .valores {
-        text-align: left;
-        margin-bottom: 3rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: stretch;
-        align-content: flex-start;
-        
-        .valor {
-            padding-right: 5%;
-            flex-grow: 1;
-            flex-shrink: 1;
-            flex-basis: auto;
-            width: 33.333%;
-            min-width: 340px;
-            
-            .icon {
-                color: #878787;
-                margin-top: 1.1rem;
-                height: 1.5rem;
-            	width: 1.5rem;
-            	float: left;
-            }
-            h3 {
-                font-weight: 500;
-                margin-top: 1rem;
-                margin-bottom: 0;
-                padding-left: 2rem;
-            }
-            p {
-                margin-top: 0;
-                padding-left: 2rem;
-            }
-        }
-    }
-    
-    .boton-naranja {
-        display: inline-block;
-        margin-bottom: 3rem;
-    }
+	text-align: center;
+
+	.valores {
+		text-align: left;
+		margin-bottom: 3rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		align-content: flex-start;
+
+		.valor {
+			flex-grow: 0;
+			flex-shrink: 1;
+			flex-basis: auto;
+			width: 30%;
+			
+			@include media-query($on-desktop) {
+				width: 45%;
+			}
+			
+			@include media-query($on-palm) {
+				width: 80%;
+			}
+
+			.icon {
+				color: $grey-color;
+				margin-top: 1.1rem;
+				height: 1.5rem;
+				width: 1.5rem;
+				float: left;
+			}
+
+			h3 {
+				font-weight: 500;
+				margin-top: 1rem;
+				margin-bottom: 0;
+				padding-left: 2rem;
+			}
+
+			p {
+				margin-top: 0;
+				padding-left: 2rem;
+			}
+		}
+	}
+
+	.boton-naranja {
+		display: inline-block;
+		margin-bottom: 3rem;
+	}
 }
 
 .productos-dia {
-    text-align: center;
-    background-color: #f6f6f6;
-    border-top: 1px solid #c7c7c7;
-    position: relative;
-    
-    @extend %clearfix;
-    
-    .filas {
-        margin-bottom: $spacing-unit;
-        
-        @extend %clearfix;
-        
-        .rama {
-            
-            svg {
-                display: inline-block;
-                line-height: 1;
-                width: 6rem;
-                height: 6rem;
-            }
-            
-            h3 {
-                margin: 0;
-            }
-        }
-        
-        &.fila-01 {
-            
-            .rama {
-                width: initial;
-                display: inline-block;
-                float: none;
-                margin: 0 $spacing-unit;
-            }
-        }
-        
-        &.fila-02 {
-            
-            .rama {
-                width: 50%;
-                float: left;
-            }
-        }
-        
-        &.fila-03 {
-            
-            div:first-child {
-                width: initial;
-                float: left;
-            }
-            
-            div:last-child {
-                width: initial;
-                float: right;
-            }
-        }
-    }
+	text-align: center;
+	background-color: $background-color;
+	border-top: 1px solid $grey-color-light;
+	position: relative;
+	@extend %clearfix;
+
+	.filas {
+
+		@extend %clearfix;
+
+		.rama {
+			vertical-align: top;
+
+			svg {
+				display: inline-block;
+				line-height: 1;
+				width: 6rem;
+				height: 6rem;
+				background-color: $brand-color;
+				border-radius: 3rem;
+				fill: $blanco;
+			}
+
+			h3 {
+				margin: 0;
+			}
+		}
+
+		&.fila-01 {
+
+			.rama {
+				width: 14rem;
+				display: inline-block;
+				float: none;
+				margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+			}
+		}
+
+		&.fila-02 {
+
+			.rama {
+				width: 50%;
+				float: left;
+				margin: 0 0 $spacing-unit 0;
+				
+				@include media-query($on-palm) {
+					width: 14rem;
+					display: inline-block;
+					float: none;
+					margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+				}
+			}
+		}
+
+		&.fila-03 {
+
+			div:first-child {
+				width: initial;
+				float: left;
+				margin: 0 0 $spacing-unit 0;
+			}
+
+			div:last-child {
+				width: initial;
+				float: right;
+				margin: 0 0 $spacing-unit 0;
+			}
+			
+			@include media-query($on-palm) {
+				margin-bottom: 7rem;
+				
+				div {
+					width: 14rem !important;
+					display: inline-block !important;
+					float: none !important;
+					margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2 !important;
+				}
+			}
+		}
+	}
 }
 
 #planeta-ciudad {
-    position: absolute;
-    bottom: -20.8vw;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 40vw;
-    height: 40vw;
-    z-index: 4;
+	position: absolute;
+	bottom: -20.8vw;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 40vw;
+	height: 40vw;
+	z-index: 4;
+	
+	@include media-query($on-desktop) {
+		bottom: -26vw;
+		width: 50vw;
+		height: 50vw;
+	}
+	
+	@include media-query($on-palm) {
+		bottom: -31.1vw;
+		width: 60vw;
+		height: 60vw;
+	}
+	
+	@include media-query(500px) {
+		bottom: -39vw;
+		width: 75vw;
+		height: 75vw;
+	}
 }
 
 .productos-noche {
-    text-align: center;
-    background-color: #49587a;
-    
-    .wrapper {
-        position: relative;
-        padding-top: 18vw;
-        overflow: hidden;
-        
-        #fondo-estrellas {
-            position: absolute;
-            height: 100%;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            z-index: 0;
-        }
-        
-        .cotiza {
-            position: relative;
-            z-index: 1;
-            margin-bottom: $spacing-unit*2;
-            
-            form {
-            	margin: 0 auto;
-            	color: white;
-            
-                .frm-grupo {
-                    text-align: left;
-                	width: 46%;
-                	margin-left: 2%;
-                	margin-right: 2%;
-                	float: left;
-                }
-                
-                button {
-                    margin-top: $spacing-unit;
-                }
-            }
-        }
-    }
+	text-align: center;
+	background-color: $brand-color2;
+
+	.wrapper {
+		position: relative;
+		padding-top: 18vw;
+		overflow: hidden;
+		
+		@include media-query($on-desktop) {
+			padding-top: 24vw;
+		}
+		
+		@include media-query($on-palm) {
+			padding-top: 28vw;
+		}
+		
+		@include media-query(500px) {
+			padding-top: 34vw;
+		}
+
+		#fondo-estrellas {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			z-index: 0;
+		}
+
+		.cotiza {
+			position: relative;
+			z-index: 1;
+			margin-bottom: $spacing-unit*2;
+
+			form {
+				margin: 0 auto;
+				color: $blanco;
+
+				.frm-grupo {
+					text-align: left;
+					width: 46%;
+					margin-left: 2%;
+					margin-right: 2%;
+					float: left;
+					
+					@include media-query($on-palm) {
+						width: 96%;
+					}
+				}
+
+				button {
+					margin-top: $spacing-unit;
+				}
+			}
+		}
+	}
 }

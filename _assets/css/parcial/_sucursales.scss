@@ -49,9 +49,22 @@
     }
 }
 
-#map {
+.breadcrumbSucursal .subHeader-breadcrumbs,
+.breadcrumbSucursal .subHeader-breadcrumbs a {
+    color: $text-color;
+}
+
+.breadcrumbSucursal .subHeader-breadcrumbs .icon {
+    margin-bottom: 4px;
+}
+
+h1.headerSucursal {
+    margin-top: 0;
+}
+
+#map_canvas {
     height: 250px;
-    border-bottom: 3px solid #d7d7d7;
+    border-bottom: 0.125rem solid $grey-color;
 }
 
 .sucursal-info {
@@ -101,40 +114,35 @@
         
         div {
             width: 100%;
-            padding-left: 3.8rem;
+        }
+        .icono-mapa {
+            width: 2rem;
         }
         a {
             display: block;
-            position: absolute;
-            left: 0;
-            bottom: 5px;
-        }
-        .icono-mapa {
-            width: 3.3rem;
         }
         
         @include media-query($on-palm) {
-            div {
-                padding-right: 3.8rem;
-                padding-left: 0;
-            }
-            a {
-                left: auto;
-                right: 0;
-            }
+            
         }
     }
     .contactos {
         
-        svg {
-            width: 1.6rem;
-            margin-bottom: -2px;
+        a {
+            display: block;
+            margin-bottom: 0.125rem;
         }
         
-        .facebook {
+        .icon {
+            width: 2rem;
+            height: 2rem;
+        }
+        
+        .facebook .icon {
             color: #3b5998;
         }
-        .googleplus {
+        .googleplus .icon {
+            width: 2.6rem;
             color: #dd4b39;
         }
     }

@@ -111,6 +111,7 @@ blockquote {
 	margin-left: auto;
 	padding-right: $spacing-unit;
 	padding-left: $spacing-unit;
+	overflow: auto;
 
 	@extend %clearfix;
 
