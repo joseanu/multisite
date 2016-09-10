@@ -3,6 +3,9 @@ layout: con-cabeza
 title: Canjea tu Vale de Ecotecnologías
 description: "Te asesoramos para conseguir y cambiar tu Vale de Ecotecnologías Infonavit para empezar a ahorrar dinero en consumos de agua, electricidad y gas en tu casa."
 permalink: /canjea-tu-vale/
+dataLayer: 
+  { pageCategory: canjea,
+    tieneFormulario: true }
 ---
 
 <div class="wrapper">
@@ -36,7 +39,7 @@ permalink: /canjea-tu-vale/
     </div>
 
     <div class="frm-der-nar">
-        <form action="{{ site.owner.formsurl }}" method="post">
+        <form action="{{ site.owner.formsurl }}" method="post" id="formCanjea">
             <h2>Empieza a ahorrar energía</h2>
 
             <div class="form-group">
@@ -80,6 +83,7 @@ permalink: /canjea-tu-vale/
             </div>
 
             <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com (canjea)" />
+            <input type="hidden" name="_cc" value="{{ site.owner.email }}" />
             <input type="text" name="_gotcha" style="display:none" />
             <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="19">Solicitar cotización</button>
         </form>

@@ -3,27 +3,27 @@
 site-header:
   - title: "Inicio"
     url: /
-  - title: "Productos"
-    url: /ecotecnologias/
-    submenu:
-      - title: "Energía solar"
-        icon: "energia-solar"
-        url: /hola/
-      - title: "Calentadores solares"
-        icon: "calentar-agua"
-        url: /calentadores-solares/
-      - title: "Aire acondicionado"
-        icon: "aire-acond"
-        url: /hola/
-      - title: "Pinturas e impermeabilizantes"
-        icon: "pintura-imper"
-        url: /hola/
-      - title: "Iluminación LED"
-        icon: "ilum-led"
-        url: /hola/
-      - title: "Ahorro de agua"
-        icon: "ahorro-agua"
-        url: /hola/
+#   - title: "Productos"
+#     url: /ecotecnologias/
+#     submenu:
+#       - title: "Energía solar"
+#         icon: "energia-solar"
+#         url: /hola/
+#       - title: "Calentadores solares"
+#         icon: "calentar-agua"
+#         url: /calentadores-solares/
+#       - title: "Aire acondicionado"
+#         icon: "aire-acond"
+#         url: /hola/
+#       - title: "Pinturas e impermeabilizantes"
+#         icon: "pintura-imper"
+#         url: /hola/
+#       - title: "Iluminación LED"
+#         icon: "ilum-led"
+#         url: /hola/
+#       - title: "Ahorro de agua"
+#         icon: "ahorro-agua"
+#         url: /hola/
   - title: "Hipoteca Verde"
     url: /hipoteca-verde/
     submenu:

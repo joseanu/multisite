@@ -3,11 +3,14 @@ layout: con-cabeza
 title: Contacto
 permalink: /contacto/
 slug: contacto
+dataLayer: 
+  { pageCategory: contacto,
+    tieneFormulario: true }
 ---
 
 <div class="wrapper">
     <div class="dos-tercios">
-        <form action="{{ site.owner.formsurl }}" method="post">
+        <form action="{{ site.owner.formsurl }}" method="post" id="formContacto">
             <h2>Escríbenos y te contestaremos a la brevedad</h2>
             <div class="form-group">
                 <label for="frm-nombre">Nombre *</label>
@@ -34,6 +37,7 @@ slug: contacto
             </div>
             
             <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.title }})" />
+            <input type="hidden" name="_cc" value="{{ site.owner.email }}" />
             <input type="text" name="_gotcha" style="display:none" />
             <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Enviar mensaje</button>
         </form>

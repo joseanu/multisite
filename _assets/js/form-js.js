@@ -35,9 +35,10 @@ function initForm() {
                 // 4 = Response from server has been completely loaded.
                 else if (request.readyState === 4) {
                     // 200 - 299 = successful
-                    if (request.status == 200 && request.status < 300)
+                    if (request.status == 200 && request.status < 300) {
                         statusMessage.innerHTML = message.success;
-                    else
+                        dataLayer.push({'event' : 'formSubmitted', 'formName' : form.id});
+                    } else
                         form.insertAdjacentHTML('beforeend', message.failure);
                 }
             };

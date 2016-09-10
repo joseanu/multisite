@@ -3,6 +3,7 @@ layout: con-cabeza
 permalink: /sucursales/
 title: "Sucursales"
 description: "Adquiere ecotecnologías en una de nuestras sucursales, estamos por todo México. Seguro hay una cerca de tí."
+slug: sucursales
 ---
 
 <div class="wrapper sucursales">
@@ -13,28 +14,28 @@ description: "Adquiere ecotecnologías en una de nuestras sucursales, estamos po
             <a href="/sucursales/{{ sucursal.slug }}.html">
                 <picture class="intrinsic intrinsic--square">
                     <!--[if IE 9]><video style="display: none;"><![endif]-->
-                    <source type="image/webp" srcset="{% asset_path 'sucursales/{{ sucursal.slug }}-800px.webp' %} 800w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-600px.webp' %} 600w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-400px.webp' %} 400w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-300px.webp' %} 300w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-200px.webp' %} 200w" 
+                    <source type="image/webp" srcset="{{ site.url }}/img/sucursales/{{ sucursal.slug }}-800px.webp 800w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-600px.webp 600w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-400px.webp 400w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-300px.webp 300w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-200px.webp 200w" 
                             sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 4) + 2rem)/4 - 2rem),
                                     (min-width: 920px) calc((100vw - (0.6667rem * 2))/4 - 2rem), 
                                     (min-width: 768px) calc((100vw - (0.6667rem * 2))/3 - 2rem), 
                                     (min-width: 677px) calc(100vw/3 - 1.6667rem), 
                                     calc(100vw/2 - 1.6667rem)" />
-                    <source srcset="{% asset_path 'sucursales/{{ sucursal.slug }}-800px.jpg' %} 800w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-600px.jpg' %} 600w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-400px.jpg' %} 400w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-300px.jpg' %} 300w, 
-                                    {% asset_path 'sucursales/{{ sucursal.slug }}-200px.jpg' %} 200w" 
+                    <source srcset="{{ site.url }}/img/sucursales/{{ sucursal.slug }}-800px.jpg 800w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-600px.jpg 600w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-400px.jpg 400w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-300px.jpg 300w, 
+                                    {{ site.url }}/img/sucursales/{{ sucursal.slug }}-200px.jpg 200w" 
                             sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 4) + 2rem)/4 - 2rem),
                                     (min-width: 920px) calc((100vw - (0.6667rem * 2))/4 - 2rem), 
                                     (min-width: 768px) calc((100vw - (0.6667rem * 2))/3 - 2rem), 
                                     (min-width: 677px) calc(100vw/3 - 1.6667rem), 
                                     calc(100vw/2 - 1.6667rem)" />
                     <!--[if IE 9]></video><![endif]-->
-                    <img class="intrinsic-item" src="{% asset_path 'sucursales/{{ sucursal.slug }}-400px.jpg' %}" alt="{{ site.title }} {{ sucursal.nombre }}" />
+                    <img class="intrinsic-item" src="{{ site.url }}/img/sucursales/{{ sucursal.slug }}-400px.jpg" alt="{{ site.title }} {{ sucursal.nombre }}" />
                 </picture>
                 <h3 style="background-color: {{ sucursal.color }};">{{ sucursal.nombre }}</h3>
             </a>

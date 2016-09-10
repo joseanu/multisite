@@ -1,102 +1,122 @@
 ---
 layout: default
+dataLayer: 
+  { pageCategory: sucursal,
+  tieneFormulario: true }
 ---
 
 {% include partes/jsonld-sucursal %}
-
 {% include partes/googleMap.html %}
 
 <div class="wrapper">
-    <div class="breadcrumbSucursal">{% include partes/breadcrumbs.html %}</div>
-    <h1 class="headerSucursal">Ecotecnologías en {{page.nombre}}, {{page.estado}}</h1>
+  {% include partes/breadcrumbs.html %}
+  <h1 class="headerSucursal">Ecotecnologías en {{page.nombre}}, {{page.estado}}</h1>
 
-    <div class="sucursal-info">
-        <figure>
-            <picture class="intrinsic intrinsic--square">
-                <!--[if IE 9]><video style="display: none;"><![endif]-->
-                <source type="image/webp" srcset="{% asset_path 'sucursales/{{ page.slug }}-800px.webp' %} 800w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-600px.webp' %} 600w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-400px.webp' %} 400w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-300px.webp' %} 300w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-200px.webp' %} 200w" 
-                        sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))/3),
-                                (min-width: 920px) calc((100vw - (1.6667rem * 2))/3), 
-                                calc((100vw - 1.6667rem)*0.4)" />
-                <source srcset="{% asset_path 'sucursales/{{ page.slug }}-800px.jpg' %} 800w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-600px.jpg' %} 600w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-400px.jpg' %} 400w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-300px.jpg' %} 300w, 
-                                {% asset_path 'sucursales/{{ page.slug }}-200px.jpg' %} 200w" 
-                        sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))/3),
-                                (min-width: 920px) calc((100vw - (1.6667rem * 2))/3), 
-                                calc((100vw - 1.6667rem)*0.4)" />
-                <!--[if IE 9]></video><![endif]-->
-                <img class="intrinsic-item" src="{% asset_path 'sucursales/{{ page.slug }}-400px.jpg' %}" alt="Ecotecnologías en {{page.nombre}}" />
-            </picture>
-        </figure>
-        <div class="info">
-            <span class="descripcion">{{ page.slogan }}</span>
-            <div class="direccion">
-                <strong>Estamos en:</strong><br>
-                <div>
-                    <span>{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}</span><br>
-                    <span>{{ page.ciudad }}</span>, <span>{{ page.estado }}</span> <span class="codigopostal">{{ page.cp }}</span>
-                </div>
-                <a href="{{ page.gmaps }}">
-                    {% img icono-mapa.svg alt:'Ver mapa' class:'icono-mapa' %} Ver Mapa</a>
-            </div>
-            <div class="horarios">
-                <strong>Horarios:</strong><br>
-                {% include partes/horario %}
-            </div>
-            <div class="contactos">
-                <strong>Contáctanos:</strong><br>
-                {% include partes/telefono tel=page.tel %}
-                {% include partes/e-mail e-mail=page.correo %}
-                <a href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="#facebook"></use></svg> {{ page.facebook | remove: "https://www.facebook.com/" | remove: "/" }}</a>
-                <a href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="#google-plus"></use></svg> {{ page.gplus | remove: "https://plus.google.com/" | remove: "/" }}</a>
-            </div>
+  <div class="sucursalContainer">
+    <div class="sucursalFotos">
+      <figure>
+        <picture class="intrinsic intrinsic--square">
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source type="image/webp"
+            srcset="{{ site.url }}/img/sucursales/{{ page.slug }}-800px.webp 800w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-600px.webp 600w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-400px.webp 400w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-300px.webp 300w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-200px.webp 200w"
+            sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))*0.25),
+                  (min-width: 1024px) calc((100vw - (1.6667rem * 2))*0.25),
+                  (min-width: 768px) calc((100vw - (1.6667rem * 2))*0.20),
+                  (min-width: 415px) calc((100vw - (1.6667rem))*0.25),
+                  98px" />
+          <source
+            srcset="{{ site.url }}/img/sucursales/{{ page.slug }}-800px.jpg 800w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-600px.jpg 600w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-400px.jpg 400w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-300px.jpg 300w, 
+                    {{ site.url }}/img/sucursales/{{ page.slug }}-200px.jpg 200w"
+            sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))*0.25),
+                  (min-width: 1024px) calc((100vw - (1.6667rem * 2))*0.25),
+                  (min-width: 768px) calc((100vw - (1.6667rem * 2))*0.20),
+                  (min-width: 415px) calc((100vw - (1.6667rem))*0.25),
+                  98px" />
+          <!--[if IE 9]></video><![endif]-->
+          <img class="intrinsic-item" src="{{ site.url }}/img/sucursales/{{ page.slug }}-400px.jpg" alt="Ecotecnologías en {{page.nombre}}" />
+        </picture>
+      </figure>
+      <figure>
+        <picture class="intrinsic intrinsic--square">
+          <!--[if IE 9]><video style="display: none;"><![endif]-->
+          <source type="image/webp"
+            srcset="{{ site.url }}/img/sucursales/{{ page.slug }}-logo-800px.webp 800w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-600px.webp 600w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-400px.webp 400w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-300px.webp 300w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-200px.webp 200w"
+            sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))*0.25),
+                  (min-width: 1024px) calc((100vw - (1.6667rem * 2))*0.25),
+                  (min-width: 768px) calc((100vw - (1.6667rem * 2))*0.20),
+                  (min-width: 415px) calc((100vw - (1.6667rem))*0.25),
+                  98px" />
+          <source
+            srcset="{{ site.url }}/img/sucursales/{{ page.slug }}-logo-800px.jpg 800w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-600px.jpg 600w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-400px.jpg 400w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-300px.jpg 300w, 
+              {{ site.url }}/img/sucursales/{{ page.slug }}-logo-200px.jpg 200w"
+            sizes="(min-width: 1160px) calc((1200px - (1.6667rem * 2))*0.25),
+                  (min-width: 1024px) calc((100vw - (1.6667rem * 2))*0.25),
+                  (min-width: 768px) calc((100vw - (1.6667rem * 2))*0.20),
+                  (min-width: 415px) calc((100vw - (1.6667rem))*0.25),
+                  98px" />
+          <!--[if IE 9]></video><![endif]-->
+          <img class="intrinsic-item" src="{{ site.url }}/img/sucursales/{{ page.slug }}-logo-400px.jpg" alt="Ecotecnologías en {{page.nombre}}" />
+        </picture>
+      </figure>
+    </div>
+    <div class="sucursalInfo">
+      <div class="descripcion">{{ page.slogan }}</div>
+      <div class="direccion">
+        <h3>Estamos a tus ordenes en:</h3>
+        <span>{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}</span><br>
+        <span>{{ page.ciudad }}</span>, <span>{{ page.estado }}</span> <span class="codigopostal">{{ page.cp }}</span>
+        <a href="{{ page.gmaps }}">{% img icono-mapa.svg alt:'Ver mapa' class:'icono-mapa' %} Ver Mapa</a>
+      </div>
+      <div class="horarios">
+        <h3>Horarios de atención:</h3>
+        {% include partes/horario %}
+      </div>
+      <div class="contactos">
+        <h3>Contáctanos:</h3>
+        {% include partes/telefono tel=page.tel %} {% include partes/e-mail e-mail=page.correo %}
+        <a href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="#facebook"></use></svg> {{ page.facebook | remove: "https://www.facebook.com/" | remove: "/" }}</a>
+        <a href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="#google-plus"></use></svg> {{ page.gplus | remove: "https://plus.google.com/" | remove: "/" }}</a>
+      </div>
+    </div>
+    <div class="sucursalContacto">
+      <form action="{{ site.owner.formsurl }}" method="post" id="form{{ page.nombre }}">
+        <h3>Contacta a esta sucursal</h3>
+        <div class="form-group">
+          <label for="frm-nombre">Nombre *</label>
+          <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />
         </div>
-    </div>
-    <div class="contacta-suc">
-        <form action="{{ site.owner.formsurl }}" method="post">
-            <h3>Contacta a esta sucursal</h3>
-            <div class="form-group">
-                <label for="frm-nombre">Nombre *</label>
-                <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />
-            </div>
-            <div class="form-group">
-                <label for="frm-correo">Correo *</label>
-                <input type="email" name="correo" id="frm-correo" tabindex="2" required />
-            </div>
-            <div class="form-group">
-                <label for="frm-tel">Teléfono</label>
-                <input type="tel" name="telefono" id="frm-tel" tabindex="3" pattern="[0-9]*" />
-            </div>
-            <div class="form-group">
-                <label for="frm-msg">Escribe tu mensaje:</label>
-                <textarea id="frm-msg" name="mensaje" spellcheck="true" rows="5" cols="50" tabindex="4"></textarea>
-            </div>
-            <div class="form-group checkbox">
-                <label>Marca los productos de tu interés:</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="5" value="Focos ahorradores">Focos ahorradores</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="6" value="Focos LED">Focos LED</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="7" value="Paneles solares">Paneles solares</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="8" value="Aire acondicionado">Aire acondicionado</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="9" value="Refrigerador">Refrigerador</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="10" value="Estufa">Estufa</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="11" value="Lavadora">Lavadora</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="12" value="Calentador Solar">Calentador Solar</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="13" value="Boiler de paso">Boiler de paso</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="14" value="Inodoro">Inodoro</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="15" value="Lavabo">Lavabo</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="16" value="Mezcladoras">Mezcladoras</label>
-                <label><input name="intereses[]" type="checkbox" tabindex="17" value="Regaderas">Regaderas</label>
-            </div>
+        <div class="form-group">
+          <label for="frm-correo">Correo *</label>
+          <input type="email" name="correo" id="frm-correo" tabindex="2" required />
+        </div>
+        <div class="form-group">
+          <label for="frm-tel">Teléfono</label>
+          <input type="tel" name="telefono" id="frm-tel" tabindex="3" pattern="[0-9]*" />
+        </div>
+        <div class="form-group">
+          <label for="frm-msg">¿En qué te podemos ayudar?</label>
+          <textarea id="frm-msg" name="mensaje" spellcheck="true" rows="5" cols="50" tabindex="4"></textarea>
+        </div>
 
-            <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.nombre }})" />
-            <input type="text" name="_gotcha" style="display:none" />
-            <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Solicitar cotización</button>
-        </form>
+        <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.nombre }})" />
+        <input type="hidden" name="_cc" value="{{ site.owner.email }}" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Contactar a {{ page.nombre }}</button>
+      </form>
     </div>
+  </div>
 </div>

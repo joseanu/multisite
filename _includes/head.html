@@ -9,7 +9,7 @@
   {% elsif page.title %}
     {% assign seo_title = page.title | append: " - " | append: site.title %}
   {% elsif site.title %}
-    {% assign seo_title = site.title %}
+    {% assign seo_title = site.title | append: " - " | append: site.description %}
   {% endif %}
 
   {% if seo_title %}
@@ -85,7 +85,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#44ac64">
   <meta name="theme-color" content="#44ac64">
   {% comment %}<style type="text/css">{% asset_source critical %}</style>{% endcomment %}
-  {% if jekyll.environment == "production" %}
-    {% include partes/gtm.html %}
-  {% endif %}
+  
+  {% include partes/dataLayer %}
+  
 </head>

@@ -49,56 +49,68 @@
     }
 }
 
-.breadcrumbSucursal .subHeader-breadcrumbs,
-.breadcrumbSucursal .subHeader-breadcrumbs a {
-    color: $text-color;
+.sucursal .subHeader-breadcrumbs {
+    
+    @include media-query($on-desktop) {
+        display: block;
+    }
 }
 
-.breadcrumbSucursal .subHeader-breadcrumbs .icon {
-    margin-bottom: 4px;
-}
-
-h1.headerSucursal {
-    margin-top: 0;
-}
-
-#map_canvas {
+.sucursal #map_canvas {
     height: 250px;
     border-bottom: 0.125rem solid $grey-color;
 }
 
-.sucursal-info {
-    float: left;
-    width: 33.3333333%;
-    font-size: $small-font-size;
+.sucursal .subHeader-breadcrumbs,
+.sucursal .subHeader-breadcrumbs a {
+    color: $text-color;
+}
+
+h1.headerSucursal {
+    margin-top: 0;
+    
+    @include media-query($on-palm) {
+        font-size: 1.5rem;
+    }
+}
+
+.sucursalContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
     margin-bottom: $spacing-unit;
-    position: relative;
-    @extend %clearfix;
+}
+
+.sucursalFotos {
+    width: 25%;
+    flex: 0 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
     figure {
+        width: 100%;
+        flex: 0 0 auto;
         margin: 0;
     }
     
-    @include media-query($on-laptop) {
-        width: 40%;
+    @include media-query($on-desktop) {
+        width: 20%;
     }
-    
-    @include media-query($on-palm) {
+    @include media-query($on-laptop) {
         width: 100%;
         
         figure {
-            float: left;
-            width: 40%;
-            margin-right: $spacing-unit/2;
-        }
-        .info {
-            width: 100%;
-            
-            h2 {
-                margin-top: 0;
-            }
+            width: 25%;
+            min-width: 6.5rem;
         }
     }
+}
+
+.sucursalInfo {
+    width: 32%;
+    flex: 0 1 auto;
     
     .nombre {
         display: block;
@@ -112,18 +124,11 @@ h1.headerSucursal {
     .direccion {
         position: relative;
         
-        div {
-            width: 100%;
-        }
         .icono-mapa {
             width: 2rem;
         }
         a {
             display: block;
-        }
-        
-        @include media-query($on-palm) {
-            
         }
     }
     .contactos {
@@ -132,12 +137,10 @@ h1.headerSucursal {
             display: block;
             margin-bottom: 0.125rem;
         }
-        
         .icon {
             width: 2rem;
             height: 2rem;
         }
-        
         .facebook .icon {
             color: #3b5998;
         }
@@ -146,22 +149,35 @@ h1.headerSucursal {
             color: #dd4b39;
         }
     }
-}
-
-.contacta-suc {
-    float: left;
-    width: 66.6666666%;
-    padding: 0 $spacing-unit $spacing-unit $spacing-unit;
-    
-    @include media-query($on-laptop) {
-        width: 60%;
+    @include media-query($on-desktop) {
+        width: 35%;
     }
-    
+    @include media-query($on-laptop) {
+        width: 48%;
+    }
     @include media-query($on-palm) {
         width: 100%;
+        margin-bottom: $spacing-unit;
+        
+        .contactos {
+        
+            a {
+                margin-bottom: $spacing-unit/2;
+            }
+        }
     }
+}
+
+.sucursalContacto {
+    width: 35%;
+    flex: 0 1 auto;
+    padding: $spacing-unit/2;
+    background-color: #f9b258;
     
-    h3 {
-        margin-top: 0;
+    @include media-query($on-desktop) {
+        width: 40%;
+    }
+    @include media-query($on-palm) {
+        width: 100%;
     }
 }

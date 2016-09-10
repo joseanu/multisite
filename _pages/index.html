@@ -1,6 +1,9 @@
 ---
 layout: default
 permalink: /
+dataLayer: 
+  { pageCategory: home,
+    tieneFormulario: true }
 ---
 <script type='application/ld+json'>
   {
@@ -109,7 +112,7 @@ permalink: /
     <object id="fondo-estrellas" data="{{ site.url }}{% asset_path productos/estrellas.svg %}" type="image/svg+xml"></object>
     <div class="cotiza" role="form" lang="{{ site.locale }}" dir="ltr">
       <h2 class="h_gde blanco">¡Cotiza Ahora!</h2>
-      <form action="{{ site.owner.formsurl }}" method="post">
+      <form action="{{ site.owner.formsurl }}" method="post" id="formHome">
         <div class="frm-grupo">
           <label for="frm-nombre">Nombre *</label>
           <input type="text" name="nombre" id="frm-nombre" required />
@@ -131,6 +134,7 @@ permalink: /
         </div>
 
         <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com (home)" />
+        <input type="hidden" name="_cc" value="{{ site.owner.email }}" />
         <input type="text" name="_gotcha" style="display:none" />
         <button id="frm-enviar" type="submit" class="boton-naranja">Solicitar cotización</button>
       </form>
