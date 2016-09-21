@@ -1,4 +1,3 @@
-
 {% assign ph_ary = include.tel | split: '' %}
-  {% assign phone = ph_ary[0] | append: ph_ary[1] | append: ph_ary[2] | append: '-' | append: ph_ary[3] | append: ph_ary[4] | append: ph_ary[5] | append: '-' | append: ph_ary[6] | append: ph_ary[7] | append: ph_ary[8] | append: ph_ary[9] %}
-<a itemprop="telephone" href="tel:+52{{ include.tel }}"><svg class="icon"><use xlink:href="#phone"></use></svg> {{ phone }}</a>
+{% assign phone = ph_ary[0] | append: ph_ary[1] | append: ph_ary[2] | append: '-' | append: ph_ary[3] | append: ph_ary[4] | append: ph_ary[5] | append: '-' | append: ph_ary[6] | append: ph_ary[7] | append: ph_ary[8] | append: ph_ary[9] %}
+<a href="tel:+52{{ include.tel }}"><svg class="icon"><use xlink:href="#phone"></use></svg> {{ phone }}</a>

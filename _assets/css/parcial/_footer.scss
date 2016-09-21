@@ -3,4 +3,8 @@ footer {
     overflow: auto;
     font-size: $small-font-size;
     text-align: center;
+    
+    .icon {
+        width: 2rem;
+    }
 }

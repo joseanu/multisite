@@ -106,25 +106,18 @@ gulp.task('mapa', function () {
                   collapseGroups: false
                 }, {
                   mergePaths: false
-                }],
-              js2svg: {
-                pretty: true
-              }
+                }]
+      //        , js2svg: {
+      //          pretty: true
+      //        }
           }))
-        // .pipe(cheerio({
-        //   run: function ($, file) {
-        //     $('svg').prepend(
-        //       '<style>' +
-        //       '{% asset_source svg/mapa-sucursales %}' +
-        //       '</style>');
-        //     $('svg').append(
-        //       '<script type="text/javascript"><![CDATA[/* SCRIPT */' +
-        //       '{% asset_source mapa-sucursales-js %}' +
-        //       '/* END SCRIPT */]]></script>');
-        //   },
-        //   parserOptions: { xmlMode: true }
-        // }))
-        .pipe(rename('mapaSucursales.svg.liquid'))
+        .pipe(cheerio({
+              run: function ($, file) {
+                $('svg').attr('xmlns:xlink', 'http://www.w3.org/1999/xlink');
+              },
+              parserOptions: { xmlMode: true }
+          }))
+        .pipe(rename('mapaSucursales.svg'))
         .pipe(gulp.dest('./_assets/images/productos/'));
     }
   });

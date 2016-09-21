@@ -147,6 +147,16 @@
 				margin: 0;
 			}
 		}
+		
+		&.fila-00 {
+
+			.rama {
+				width: 14rem;
+				display: inline-block;
+				float: none;
+				margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+			}
+		}
 
 		&.fila-01 {
 

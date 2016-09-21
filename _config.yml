@@ -6,7 +6,6 @@ locale: es_MX
 baseurl: ""
 url: "http://www.jrecotecnologia.com"
 repository: "joseanu/jrecotecnologia"
-dev: 0
 
 # Site owner
 owner:
@@ -57,6 +56,11 @@ page_gen:
     template: 'sucursal'
     name: 'nombre'
     dir: 'sucursales'
+  - data: 'sucursales'
+    template: 'sucursalJson'
+    name: 'slug'
+    dir: 'sucursalData'
+    extension: 'json'
 
 # HTML Compression
 compress_html:

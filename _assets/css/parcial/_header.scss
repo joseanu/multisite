@@ -10,6 +10,54 @@
     background-color: $brand-color;
 }
 
+.siteHeader-topBar .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    
+    @include media-query($on-palm) {
+        display: none;
+    }
+}
+
+.siteHeader-topBar-selectSucursal {
+    border: none;
+    padding: 0.125rem 2rem 0.125rem 0.25rem;
+    margin: 0;
+    width: auto;
+    display: inline;
+    font-size: $small-font-size;
+    background-color: #449b5e;
+    color: $blanco;
+    
+    &:focus {
+        outline:none;
+        box-shadow: none;
+    }
+}
+
+.siteHeader-topBar-telefono a,
+.siteHeader-topBar-correo a,
+.siteHeader-topBar-ubicacion a {
+    color: $blanco;
+    font-size: $small-font-size;
+    
+    .icon {
+        margin-bottom: 0.0625rem;
+    }
+}
+
+.siteHeader-topBar-telefono {
+    margin: 0 $spacing-unit/2;
+}
+
+.siteHeader-topBar-correo a .icon {margin-top: -0.125rem;}
+
+.siteHeader-topBar-ubicacion {
+    margin: 0 0 0 $spacing-unit/2;
+}
+
 .siteHeader-contenedor {
     max-width: calc(1200px - (1.6667rem * 2));
     margin-right: auto;

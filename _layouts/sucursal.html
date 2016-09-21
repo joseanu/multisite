@@ -77,7 +77,7 @@ dataLayer:
       <div class="descripcion">{{ page.slogan }}</div>
       <div class="direccion">
         <h3>Estamos a tus ordenes en:</h3>
-        <span>{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}</span><br>
+        <span>{{ page.direccion1 }}{% if page.direccion2 %}<br>{{ page.direccion2 }}{% endif %}{% if page.colonia %}<br>{{ page.colonia }}{% endif %}</span><br>
         <span>{{ page.ciudad }}</span>, <span>{{ page.estado }}</span> <span class="codigopostal">{{ page.cp }}</span>
         <a href="{{ page.gmaps }}">{% img icono-mapa.svg alt:'Ver mapa' class:'icono-mapa' %} Ver Mapa</a>
       </div>
