@@ -26,12 +26,14 @@ layout: compress
       </div>
     </main>
 
-    {% asset_source icons.svg %}
     {% include footer.html %}
 {% comment %}
     {% javascript vendor/barba.min %}
     {% javascript pageTransit %}
 {% endcomment %}
+{% if jekyll.environment == "production" %}
+      {% include partes/chat %}
+{% endif %}
   </body>
 
 </html>

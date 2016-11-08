@@ -14,7 +14,7 @@ owner:
   direccion: "Nicolás Romero #429 Col. Santa Teresita, Guadalajara, Jal."
   tel1: 3338258247
   tel2: 3338267767
-  formsurl: https://formspree.io/webmaster@jrecotecnologia.com
+  formsurl: http://www.jrecotecnologia.com/form.php
   facebook: https://www.facebook.com/jrecotecnologias
   fb_app_id: 1622349154752586
   linkedin: https://www.linkedin.com/company/jr-ecotecnologia
@@ -38,6 +38,7 @@ exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "node_module
 gems:
   - jekyll-assets
   - jekyll-sitemap
+  - jekyll-cloudinary
 
 # Colecciones
 collections:
@@ -66,4 +67,15 @@ page_gen:
 compress_html:
   clippings: all
   ignore:
-    envs: development
+    envs: [development, dev]
+
+# jekyll-cloudinary
+cloudinary:
+  cloud_name: jrecotec
+  presets:
+    default:
+      min_width: 320
+      max_width: 1600
+      fallback_max_width: 800
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"

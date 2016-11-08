@@ -3,18 +3,21 @@
 site-header:
   - title: "Inicio"
     url: /
-#   - title: "Productos"
-#     url: /ecotecnologias/
-#     submenu:
+  - title: "Productos"
+    url: /ecotecnologias/
+    submenu:
+      - title: "Línea blanca"
+        icon: "linea-blanca"
+        url: /ecotecnologias/linea-blanca/
 #       - title: "Energía solar"
 #         icon: "energia-solar"
 #         url: /hola/
-#       - title: "Calentadores solares"
-#         icon: "calentar-agua"
-#         url: /calentadores-solares/
-#       - title: "Aire acondicionado"
-#         icon: "aire-acond"
-#         url: /hola/
+      - title: "Calentadores solares"
+        icon: "calentar-agua"
+        url: /ecotecnologias/calentadores-solares/
+      - title: "Aire acondicionado"
+        icon: "aire-acond"
+        url: /ecotecnologias/aire-acondicionado/
 #       - title: "Pinturas e impermeabilizantes"
 #         icon: "pintura-imper"
 #         url: /hola/

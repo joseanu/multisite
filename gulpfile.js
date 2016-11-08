@@ -217,3 +217,47 @@ gulp.task('critical', function () {
         .pipe(critical({base: '_site/', inline: true}))
         .pipe(gulp.dest('_site'));
 });
+
+const IMG_PROD_SRC = './src/assets/img_productos/**/*.jpg';
+const IMG_PROD_DEST = './img/productos/';
+
+gulp.task('prodImg', function () {
+  return gulp.src(IMG_PROD_SRC)
+    .pipe(responsive({
+      '**/*.jpg': [{
+        width: 25,
+        rename: {
+          prefix: 'lqip-'
+        }
+      },{
+        width: 200,
+        rename: {
+          suffix: '-200px'
+        }
+      },{
+        width: 300,
+        rename: {
+          suffix: '-300px'
+        }
+      },{
+        width: 400,
+        rename: {
+          suffix: '-400px'
+        }
+      },{
+        width: 600,
+        rename: {
+          suffix: '-600px'
+        }
+      }]
+    }, {
+      // Global configuration for all images
+      // The output quality for JPEG, WebP and TIFF output formats
+      quality: 80,
+      // Use progressive (interlace) scan for JPEG and PNG output
+      progressive: true,
+      // Strip all metadata
+      withMetadata: false,
+    }))
+    .pipe(gulp.dest(IMG_PROD_DEST));
+});

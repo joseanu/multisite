@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   {% assign directorio = page.dir | replace:'/','' %}
-  {% if directorio == 'sucursales' %}
+  {% if directorio == 'sucursales' and page.nombre != null  %}
     {% assign seo_title = "Ecotecnologías en " | append: page.nombre | append: ", " | append: page.estado | append: " - " | append: site.title %}
   {% elsif page.title %}
     {% assign seo_title = page.title | append: " - " | append: site.title %}

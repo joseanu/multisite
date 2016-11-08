@@ -88,8 +88,8 @@ dataLayer:
       <div class="contactos">
         <h3>Contáctanos:</h3>
         {% include partes/telefono tel=page.tel %} {% include partes/e-mail e-mail=page.correo %}
-        <a href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="#facebook"></use></svg> {{ page.facebook | remove: "https://www.facebook.com/" | remove: "/" }}</a>
-        <a href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="#google-plus"></use></svg> {{ page.gplus | remove: "https://plus.google.com/" | remove: "/" }}</a>
+        <a href="{{ page.facebook }}" class="facebook"><svg class="icon"><use xlink:href="{% asset_path icons.svg %}#facebook"></use></svg> {{ page.facebook | remove: "https://www.facebook.com/" | remove: "/" }}</a>
+        <a href="{{ page.gplus }}" class="googleplus"><svg class="icon"><use xlink:href="{% asset_path icons.svg %}#google-plus"></use></svg> {{ page.gplus | remove: "https://plus.google.com/" | remove: "/" }}</a>
       </div>
     </div>
     <div class="sucursalContacto">
@@ -113,9 +113,9 @@ dataLayer:
         </div>
 
         <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.nombre }})" />
-        <input type="hidden" name="_cc" value="{{ site.owner.email }}" />
         <input type="text" name="_gotcha" style="display:none" />
         <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Contactar a {{ page.nombre }}</button>
+        <span class="error">Por favor llena los campos requeridos.</span>
       </form>
     </div>
   </div>
