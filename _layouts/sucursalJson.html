@@ -1,0 +1,12 @@
+---
+layout: null
+---
+{% capture telefono %}{% include partes/telefono tel=page.tel %}{% endcapture %}
+{% capture correo %}{% include partes/e-mail e-mail=page.correo %}{% endcapture %}
+{% capture json %}
+{
+"telefono": "{{ telefono | replace: '"', '\"' }}",
+"correo": "{{ correo | replace: '"', '\"' }}"
+}
+{% endcapture %}
+{{ json | strip_newlines }}

@@ -1,0 +1,34 @@
+<script type="application/ld+json">
+	{
+	    "@context": "http://schema.org",
+	    "@type": "HomeGoodsStore",
+	    "url": "{{ site.url }}{{ page.url }}",
+	    "logo": "{{ site.url }}{% asset_path '{{ site.logo }}' %}",
+	    "hasMap": "{{ page.gmaps }}",
+	    "email": "mailto:{{ page.correo }}",
+	    "address": {
+	        "@type": "PostalAddress",
+	        "addressLocality": "{{ page.ciudad }}",
+	        "addressRegion": "{{ page.estado }}",
+	        "addressCountry": "MX",
+	        "postalCode": "{{ page.cp }}",
+	        "streetAddress": "{{ page.direccion1 }}{% if page.direccion2 %} {{ page.direccion2 }}{% endif %}"
+	    },
+	    "description": "{{ page.slogan }}",
+	    "name": "{{ site.title }} {{ page.nombre }}",
+	    
+        {% assign ph_ary = page.tel | split: '' %}
+        {% assign phone = ph_ary[0] | append: ph_ary[1] | append: ph_ary[2] | append: '-' | append: ph_ary[3] | append: ph_ary[4] | append: ph_ary[5] | append: '-' | append: ph_ary[6] | append: ph_ary[7] | append: ph_ary[8] | append: ph_ary[9] %}
+        "telephone": "{{ phone }}",
+	    
+	    "openingHours": {% include partes/jsonld-horario %},
+	    "geo": {
+	        "@type": "GeoCoordinates",
+	        "latitude": "{{ page.lat }}",
+	        "longitude": "{{ page.lng }}"
+	    },
+	    "sameAs": ["{{ page.facebook }}",
+	        "{{ page.gplus }}"
+	    ]
+	}
+</script>

@@ -1,0 +1,155 @@
+---
+layout: con-cabeza
+---
+
+<style type="text/css">
+    .productosLista {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin: 0 -10px;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+    .producto {
+        width: calc(100% / 3);
+        padding: 0 10px;
+    }
+    @media screen and (max-width: 960px) {
+        .producto {
+            width: calc(100% / 2);
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .producto {
+            width: 100%;
+        }
+    }
+    .productoInner h2 {
+        margin: 0;
+    }
+    .productoInner figure {
+        margin: 0;
+    }
+    .productoInner figure img {
+        width: 100%;
+    }
+    .blur-up {
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        transition: filter 300ms, -webkit-filter 300ms;
+    }
+
+    .blur-up.lazyloaded {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+
+{{ content }}
+
+<div class="wrapper" style="overflow: initial;">
+    <div class="productos">
+        {% if site.data.productos[page.slug].size > 1 %}
+        <div class="productosFiltro">
+            <button type="button" data-filter="all">Todos</button>
+            {% for tipo in site.data.productos[page.slug] %}
+                <button type="button" data-filter=".{{ tipo[0] }}">{{ tipo[0] | capitalize | replace: "-", " " }}</button>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div class="productosLista">
+        {% for tipo in site.data.productos[page.slug] %}
+            {% for producto in tipo[1] %}
+            <div class="producto {{ tipo[0] }}">
+                <div class="productoInner">
+                        {% if site.data.productos[page.slug].size > 1 %}
+                            {% capture ImagePath %}/img/productos/{{ page.slug }}/{{ tipo[0] }}/{% endcapture %}
+                        {% else %}
+                            {% capture ImagePath %}/img/productos/{{ page.slug }}/{% endcapture %}
+                        {% endif %}
+                        {% capture myImagePath %}{{ ImagePath }}lqip-{{ producto.modelo }}{% endcapture %}
+                        {% assign itemString = '' %}
+                        {% for myImage in site.static_files %}{% if myImage.path contains myImagePath %}
+                            {% capture itemString %}{{ itemString }}{{ myImage.basename | remove: "lqip-" }}|||{% endcapture %}
+                        {% endif %}{% endfor %}
+                        {% assign items = itemString | split: "|||" %}
+                        {% if items.size > 1 %}
+                            <figure class="main-carousel">
+                            {% for item in items %}
+                                <img src="{{ ImagePath }}{{ item }}-300px.jpg"
+                                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                    data-sizes="auto"
+                                    data-srcset="{{ ImagePath }}{{ item }}-300px.jpg 300w,
+                                    {{ ImagePath }}{{ item }}-200px.jpg 200w,
+                                    {{ ImagePath }}{{ item }}-400px.jpg 400w,
+                                    {{ ImagePath }}{{ item }}-600px.jpg 600w"
+                                    alt="{{ producto.marca }} {{ producto.modelo }}"
+                                    class="carousel-cell lazyload" />
+                            {% endfor %}
+                        {% else %}
+                            <figure class="intrinsic intrinsic--square">
+                            {% for item in items %}
+                                <img src="{{ ImagePath }}{{ item }}-300px.jpg"
+                                    srcset="{{ myImagePath }}.jpg"
+                                    data-sizes="auto"
+                                    data-srcset="{{ ImagePath }}{{ item }}-300px.jpg 300w,
+                                    {{ ImagePath }}{{ item }}-200px.jpg 200w,
+                                    {{ ImagePath }}{{ item }}-400px.jpg 400w,
+                                    {{ ImagePath }}{{ item }}-600px.jpg 600w"
+                                    alt="{{ producto.marca }} {{ producto.modelo }}"
+                                    class="intrinsic-item lazyload blur-up" />
+                            {% endfor %}
+                        {% endif %}
+                    </figure>
+                    <h2>{{ producto.marca }} {{ producto.modelo }}</h2>
+                    <span>{{ producto.caracteristicas }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+{% javascript vendor/lazysizes.min %}
+
+{% if site.data.productos[page.slug].size > 1 %}
+    {% javascript vendor/mixitup.min %}
+{% endif %}
+
+<script type="text/javascript">
+
+    {% if site.data.productos[page.slug].size > 1 %}
+        const mixer = mixitup('.productos', {
+            selectors: {
+                target: '.producto'
+            },
+            animation: {
+                duration: 300
+            }
+            //,callbacks: {onMixEnd: function() {}}
+        });
+    {% endif %}
+    
+    document.addEventListener('DOMContentLoaded', function(event) {
+        var sliders = [].slice.call(document.querySelectorAll('.main-carousel')),
+    		flkties = [];
+    	sliders.forEach(function(slider){
+    		var flkty = new Flickity(slider, {
+    		    cellSelector: '.carousel-cell',
+    			//prevNextButtons: false,
+    			pageDots: false,
+    			//lazyLoad: true,
+    			wrapAround: true,
+    			cellAlign: 'left',
+    			imagesLoaded: true,
+    			percentPosition: true,
+    			resize: true
+    		});
+    		flkties.push(flkty);
+    	});
+    }, false);
+</script>

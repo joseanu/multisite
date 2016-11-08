@@ -1,0 +1,51 @@
+        <svg id="svg01">
+          <path
+              id="path01"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path02"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path03"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path04"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path05"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path06"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+          <path
+              id="path07"
+              d="M0 0"         
+              stroke="#EFA70C" 
+              stroke-dasharray="15, 5" 
+              fill="none" 
+              stroke-width="3px";/>
+        </svg>
