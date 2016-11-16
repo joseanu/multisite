@@ -130,7 +130,6 @@ layout: con-cabeza
             animation: {
                 duration: 300
             }
-            //,callbacks: {onMixEnd: function() {}}
         });
     {% endif %}
     
@@ -140,9 +139,7 @@ layout: con-cabeza
     	sliders.forEach(function(slider){
     		var flkty = new Flickity(slider, {
     		    cellSelector: '.carousel-cell',
-    			//prevNextButtons: false,
     			pageDots: false,
-    			//lazyLoad: true,
     			wrapAround: true,
     			cellAlign: 'left',
     			imagesLoaded: true,
