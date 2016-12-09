@@ -4,6 +4,10 @@ footer {
     font-size: $small-font-size;
     text-align: center;
     
+    .canjealo a {
+        color: $text-color;
+    }
+    
     .icon {
         width: 2rem;
     }

@@ -32,6 +32,8 @@ site-header:
     submenu:
       - title: "Canjea tu vale"
         url: /canjea-tu-vale/
+      - title: "Ecotecnología"
+        url: /ecotecnologia/
   - title: "Sucursales"
     url: /sucursales/
     submenu:
