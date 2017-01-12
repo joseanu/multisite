@@ -3,15 +3,15 @@
 site-header:
   - title: "Inicio"
     url: /
-  - title: "Productos"
+  - title: "Catálogo"
     url: /ecotecnologias/
     submenu:
+      - title: "Energía solar"
+        icon: "energia-solar"
+        url: /ecotecnologias/energia-solar/
       - title: "Línea blanca"
         icon: "linea-blanca"
         url: /ecotecnologias/linea-blanca/
-#       - title: "Energía solar"
-#         icon: "energia-solar"
-#         url: /hola/
       - title: "Calentadores solares"
         icon: "calentar-agua"
         url: /ecotecnologias/calentadores-solares/

@@ -71,11 +71,11 @@ function dibujaConector(svg, path, startX, startY, endX, endY) {
 }
 
 function conectaElementos(svg, path, startElem, endElem, porX, porY) {
-  var svgContainer = document.getElementById("svgConectores");
+  var svgContainer = $id("svgConectores");
   
   // Poner como inicial al que esté más alto
   if (offset(startElem).top > (offset(endElem).top + porY * endElem.offsetHeight)) {
-    //var temp = document.getElementById(startElem.id);
+    //var temp = $id(startElem.id);
     //startElem = endElem;
     //endElem = temp;
     endElem = [startElem, startElem = endElem][0];
@@ -102,17 +102,17 @@ function conectaElementos(svg, path, startElem, endElem, porX, porY) {
 }
 
 function connectAll() {
-  var svg01 = document.getElementById("svg01");
+  var svg01 = $id("svg01");
   
   if ((svg01 != null) & window.matchMedia("(min-width: 520px)").matches) {
-    var planetaCiudad = document.getElementById("planeta-ciudad");
+    var planetaCiudad = $id("planeta-ciudad");
     
-    conectaElementos(svg01, document.getElementById("path01"), document.getElementById("svgEnergia"), planetaCiudad, 0.4045, 0.3560);
-    conectaElementos(svg01, document.getElementById("path02"), document.getElementById("svgCalentador"), planetaCiudad, 0.5892, 0.3102);
-    conectaElementos(svg01, document.getElementById("path03"), document.getElementById("svgBlanca"), planetaCiudad, 0.2902, 0.3899);
-    conectaElementos(svg01, document.getElementById("path04"), document.getElementById("svgAire"), planetaCiudad, 0.3517, 0.4516);
-    conectaElementos(svg01, document.getElementById("path05"), document.getElementById("svgImper"), planetaCiudad, 0.6578, 0.3747);
-    conectaElementos(svg01, document.getElementById("path06"), document.getElementById("svgLed"), planetaCiudad, 0.1953, 0.3809);
-    conectaElementos(svg01, document.getElementById("path07"), document.getElementById("svgAgua"), planetaCiudad, 0.7457, 0.4251);
+    conectaElementos(svg01, $id("path01"), $id("svgEnergia"), planetaCiudad, 0.4045, 0.3560);
+    conectaElementos(svg01, $id("path02"), $id("svgCalentador"), planetaCiudad, 0.5892, 0.3102);
+    conectaElementos(svg01, $id("path03"), $id("svgBlanca"), planetaCiudad, 0.2902, 0.3899);
+    conectaElementos(svg01, $id("path04"), $id("svgAire"), planetaCiudad, 0.3517, 0.4516);
+    conectaElementos(svg01, $id("path05"), $id("svgImper"), planetaCiudad, 0.6578, 0.3747);
+    conectaElementos(svg01, $id("path06"), $id("svgLed"), planetaCiudad, 0.1953, 0.3809);
+    conectaElementos(svg01, $id("path07"), $id("svgAgua"), planetaCiudad, 0.7457, 0.4251);
   }
 }

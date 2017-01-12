@@ -34,7 +34,7 @@ owner:
 markdown: kramdown
 encoding: utf-8
 include: ["_pages"]
-exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "node_modules", "src", "README.md", "notas.md"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "node_modules", "src", "README.md", "notas.md", "composer.phar"]
 gems:
   - jekyll-assets
   - jekyll-sitemap

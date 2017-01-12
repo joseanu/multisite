@@ -21,28 +21,8 @@ Sucursal Hermosillo borrada 31/08/16
       "lat": 29.0972849,
       "color": "#f2e659"
   }
-Sucursal Monterrey borrada 10/11/16
-  {
-    "id": 15,
-    "slug": "monterrey",
-    "slogan": "Proveedor de focos ahorradores de energia, focos led, boiler solar, aires acondicionados, fotoceldas solares y uso de energía renovable en Monterrey.",
-    "nombre": "Monterrey",
-    "ciudad": "Monterrey",
-    "estado": "Nuevo León",
-    "direccion1": "Calle Hermenegildo Galeana Sur 589",
-    "direccion2": "Letra C ",
-    "colonia": "Col. Oriente Centro",
-    "cp": 64720,
-    "tel": 8682147607,
-    "correo": "monterrey@jrecotecnologia.com",
-    "gmaps": "https://goo.gl/UZsJ3I",
-    "facebook": "https://www.facebook.com/jrecotec.monterrey/",
-    "gplus": "https://plus.google.com/+Jrecotecnologia-Monterrey",
-    "horario": "1-5:1000-1800,6:1000-1400",
-    "lng": -100.3134587,
-    "lat": 25.6703794,
-    "color": "#53b89c"
-  }
+Sucursal Monterrey borrada 10/11/16 > cambia 15/12/16
+
   
 JEKYLL_ENV=production bundle exec jekyll build
 
@@ -58,3 +38,10 @@ mirror --reverse --delete --use-cache --verbose --allow-chown --allow-suid --no-
 
 usar en lugar de lastitem:
 {% assign items = items | split: "|||" | join: ',' %}
+
+
+http://galt.mx/contact/
+http://enerbiomex.com/cotizacion-sin-costo/
+http://www.ecotrends.mx/cotizacion
+http://www.panelessolares.com.mx/CONTACTO.aspx
+http://www.revoteck.com/page/cotiza

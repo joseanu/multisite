@@ -73,14 +73,14 @@
     "colonia": "Col. Centro",
     "cp": 31000,
     "encargado": "Rebeca Siboney Guilbert Morales",
-    "tel": 6142966330,
+    "tel": 6143353554,
     "correo": "chihuahua@jrecotecnologia.com",
     "gmaps": "https://goo.gl/pJMqkJ",
     "facebook": "https://www.facebook.com/jrecotec.chihuahua/",
     "gplus": "https://plus.google.com/+Jrecotecnologia-Chihuahua",
     "horario": "1-5:0900-1700",
-    "lng": -106.0694288,
-    "lat": 28.6392246,
+    "lng": -106.070329,
+    "lat": 28.639108,
     "color": "#79679c"
 }, {
     "id": 5,
@@ -226,8 +226,8 @@
     "facebook": "https://www.facebook.com/jrecotec.tepic/",
     "gplus": "https://plus.google.com/+Jrecotecnologia-Tepic",
     "horario": "1-5:1000-1800,6:1000-1400",
-    "lng": -104.91921,
-    "lat": 21.5188235,
+    "lng": -104.917104,
+    "lat": 21.518888,
     "color": "#71a3d8"
 }, {
     "id": 12,
@@ -292,6 +292,26 @@
     "lng": -107.3923044,
     "lat": 24.8023262,
     "color": "#e94b4c"
+}, {
+    "id": 15,
+    "slug": "monterrey",
+    "slogan": "Proveedor de focos ahorradores de energia, focos led, boiler solar, aires acondicionados, fotoceldas solares y uso de energía renovable en Monterrey.",
+    "nombre": "Monterrey",
+    "ciudad": "Monterrey",
+    "estado": "Nuevo León",
+    "direccion1": "Calle Padre Mier 481",
+    "direccion2": "Local 4",
+    "colonia": "Col. Centro",
+    "cp": 64000,
+    "tel": 8183404922,
+    "correo": "monterrey@jrecotecnologia.com",
+    "gmaps": "https://goo.gl/UZsJ3I",
+    "facebook": "https://www.facebook.com/jrecotec.monterrey/",
+    "gplus": "https://plus.google.com/+Jrecotecnologia-Monterrey",
+    "horario": "1-5:0900-1830,6:0900-1400",
+    "lng": -100.322715,
+    "lat": 25.670020,
+    "color": "#53b89c"
 }, {
     "id": 16,
     "slug": "xalapa",

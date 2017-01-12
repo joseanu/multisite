@@ -5,8 +5,8 @@ ajax.onload = function(e) {
 
     var div = document.createElement("div");
     div.innerHTML = ajax.responseText;
-    //document.getElementById('mapaSucursales').insertBefore(div, document.getElementById('mapaSucursales').childNodes[1]);
-    document.getElementById('mapaSucursales').appendChild(div);
+    //$id('mapaSucursales').insertBefore(div, $id('mapaSucursales').childNodes[1]);
+    $id('mapaSucursales').appendChild(div);
 
     var square = document.getElementsByClassName('suc');
     
@@ -22,7 +22,7 @@ ajax.onload = function(e) {
         square[i].onmouseenter = function() {
             this.removeEventListener("transitionend", showMessage, false);
             this.parentNode.appendChild(this);
-            var el_texto = document.getElementById("t_" + this.id).getComputedTextLength();
+            var el_texto = $id("t_" + this.id).getComputedTextLength();
             var circulos = this.querySelectorAll('.circulo1, .circulo2');
             circulos[0].style.transform = 'translateX(' + (Number(el_texto)-13.7) + 'px)';
             circulos[1].style.transform = 'translateX(' + (Number(el_texto)-13.7) + 'px)';
