@@ -1,0 +1,48 @@
+.productosLista {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -10px;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+
+.producto {
+  width: calc(100% / 3);
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .producto {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .producto {
+    width: 100%;
+  }
+}
+
+.productoInner h2 {
+  margin: 0;
+}
+
+.productoInner figure {
+  margin: 0;
+}
+
+.productoInner figure img {
+  width: 100%;
+}
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 300ms, -webkit-filter 300ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}

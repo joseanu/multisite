@@ -1,0 +1,45 @@
+# Navegación site-header
+
+site-header:
+  - title: "Inicio"
+    url: /
+  - title: "Catálogo"
+    url: /ecotecnologias/
+    submenu:
+      - title: "Energía solar"
+        icon: "energia-solar"
+        url: /ecotecnologias/energia-solar/
+      - title: "Línea blanca"
+        icon: "linea-blanca"
+        url: /ecotecnologias/linea-blanca/
+      - title: "Calentadores solares"
+        icon: "calentar-agua"
+        url: /ecotecnologias/calentadores-solares/
+      - title: "Aire acondicionado"
+        icon: "aire-acond"
+        url: /ecotecnologias/aire-acondicionado/
+#       - title: "Pinturas e impermeabilizantes"
+#         icon: "pintura-imper"
+#         url: /hola/
+#       - title: "Iluminación LED"
+#         icon: "ilum-led"
+#         url: /hola/
+#       - title: "Ahorro de agua"
+#         icon: "ahorro-agua"
+#         url: /hola/
+  - title: "Hipoteca Verde"
+    url: /hipoteca-verde/
+    submenu:
+      - title: "Canjea tu vale"
+        url: /canjea-tu-vale/
+      - title: "Ecotecnología"
+        url: /ecotecnologia/
+  - title: "Sucursales"
+    url: /sucursales/
+    submenu:
+      - title: "Franquicias"
+        url: /franquicias/
+  - title: "Nosotros"
+    url: /nosotros/
+  - title: "Contacto"
+    url: /contacto/

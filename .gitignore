@@ -3,5 +3,6 @@ _site/
 .asset-cache/
 .jekyll-metadata
 .tmp/
+phplib/*
 composer.phar
 _archivo.txt

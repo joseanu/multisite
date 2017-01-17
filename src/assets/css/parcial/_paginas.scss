@@ -1,0 +1,409 @@
+/////// CANJEA TU VALE
+.puerquito {
+	width: 180px;
+	float: left;
+	margin-right: $spacing-unit;
+	
+	@include media-query(500px) {
+		float: none;
+	    display: block;
+   		margin: 0 auto;
+	}
+}
+
+.paso {
+	padding: 20px 40px 20px 40px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	color: #ffffff;
+
+	a {
+		color: #ffffff !important;
+		text-decoration: underline;
+	}
+	
+	h3 {
+		font-size: 2rem;
+		margin-top: 0;
+	}
+
+	&.paso01 {
+		background: #8470b0;
+	}
+	&.paso02 {
+		background: #ef7c7c;
+	}
+	&.paso03 {
+		background: #58ba9e;
+	}
+	&.paso04 {
+		background: #f28e77;
+	}
+}
+
+.dos-tercios {
+	width: 66.66666666%;
+	float: left;
+	padding-right: $spacing-unit;
+
+	@include media-query($on-desktop) {
+		width: 100%;
+		float: none;
+		padding-right: 0;
+	}
+}
+
+.frm-der-nar {
+	float: right;
+	width: 33.33333333%;
+	background-color: #f9b258;
+	border: 30px solid #f9b258;
+	margin-bottom: 20px;
+	
+	h2 {
+		margin-top: 0;
+	}
+
+	@include media-query($on-desktop) {
+		float: none;
+		width: 50%;
+		min-width: 25rem;
+		margin: 0 auto;
+		background-color: #f9b258;
+		border: 30px solid #f9b258;
+		margin-bottom: 20px;
+	}
+	
+	@include media-query(450px) {
+		min-width: 100%;
+	}
+}
+
+/////// HIPOTECA VERDE
+.hipoteca-verde {
+	.subHeader {
+		margin-bottom: 0;
+	}
+	
+	.boton-naranja {
+		display: inline-block;
+		margin: $spacing-unit 0;
+	}
+}
+.fondo-gris {
+	background-color: $background-color;
+	padding-bottom: $spacing-unit;
+	
+	@extend %clearfix;
+	
+}
+.logo-hipoteca, .panel-solar {
+	width: 14rem;
+	float: right;
+	margin: $spacing-unit 0 $spacing-unit/2 $spacing-unit;
+	
+	+ div {
+		padding-right: 14rem + $spacing-unit;
+	}
+	
+	@include media-query($on-laptop) {
+		
+		+ div {
+			padding-right: 0;
+		}
+	}
+	
+	@include media-query(500px) {
+		float: none;
+		display: block;
+		margin: $spacing-unit auto;
+	}
+}
+.logo-tuvale, .logo-franquicia {
+	width: 14rem;
+	float: left;
+	margin: $spacing-unit/2 $spacing-unit $spacing-unit/2 0;
+	
+	+ div {
+		padding-left: 14rem + $spacing-unit;
+	}
+	
+	@include media-query($on-laptop) {
+		
+		+ div {
+			padding-left: 0;
+		}
+	}
+	
+	@include media-query(500px) {
+		float: none;
+		display: block;
+		margin: $spacing-unit auto;
+	}
+}
+.logo-franquicia {
+	
+	+ div {
+		margin-bottom: $spacing-unit;
+		
+		h2 {
+			margin-top: 0;
+		}
+		
+		.boton-naranja {
+			display: inline-block;
+		}
+		
+		@include media-query(550px) {
+			padding-left: 0;
+		}
+	}
+	
+	@include media-query(450px) {
+		float: none;
+		display: block;
+    	margin: 0 auto;
+	}
+}
+.ahorrar {
+	text-align: center;
+	
+	> p {
+		padding: 0 $spacing-unit*4 0 $spacing-unit*4;
+	}
+
+	table {
+		margin: $spacing-unit auto;
+		border-collapse: separate;
+  		border-spacing: 0.5rem 0;
+  		color: $blanco;
+		
+		col {
+			background-color: $brand-color2;
+			width: 30%;
+		}
+		
+		thead {
+			
+			tr {
+				background-color: $brand-color2 !important;
+			}
+			
+			th {
+				border-radius: 1rem 1rem 0 0;
+				padding: $spacing-unit/2 $spacing-unit;
+			}
+		}
+		
+		tr:nth-child(odd) {
+			background-color: lighten($brand-color2, 10%)
+		}
+		
+		td {
+			padding: $spacing-unit/3 $spacing-unit;
+		}
+	}
+	
+	@include media-query($on-palm) {
+		
+		> p {
+			text-align: left;
+			padding: 0;
+		}
+	}
+	
+	@include media-query(530px) {
+		table {
+			margin: $spacing-unit/3 auto;
+			border-collapse: collapse;
+	  		border-spacing: 0;
+			
+			col {
+				width: 33.333333%;
+			}
+			
+			thead {
+				
+				th {
+					padding: 0 $spacing-unit/3;
+					font-size: $small-font-size;
+				}
+			}
+			
+			td {
+				padding: $spacing-unit/3 $spacing-unit/3;
+			}
+		}
+	}
+}
+
+.tres-columnas {
+	
+	> div {
+		width: 33.33333%;
+		float: left;
+		text-align: center;
+		padding: $spacing-unit;
+		
+	}
+	
+	@include media-query($on-laptop) {
+		> div {
+			width: 50%;
+		}
+		> div:first-child {
+			width: 100%;
+			padding: $spacing-unit $spacing-unit*3;
+		}
+	}
+	
+	@include media-query(550px) {
+		> div {
+			width: 100%;
+			padding: $spacing-unit $spacing-unit*2 !important;
+		}
+	}
+	
+	@include media-query(450px) {
+		> div {
+			padding: $spacing-unit $spacing-unit/2 !important;
+		}
+	}
+}
+
+
+.hojas {
+	background: linear-gradient(to right, rgba(196,104,34,0.5) 0%,rgba(196,104,34,0.5) 50%,rgba(57,125,77,0.5) 51%,rgba(57,125,77,0.5) 100%),
+				url('/assets/img/leaf-green.jpg') !important;
+	background-size: cover;
+	color: #ffffff;
+	overflow: auto;
+	
+	@extend %clearfix;
+
+	@include media-query($on-laptop) {
+		background: linear-gradient(to bottom, rgba(196,104,34,0.5) 0%,rgba(196,104,34,0.5) 50%,rgba(57,125,77,0.5) 51%,rgba(57,125,77,0.5) 100%),
+					url('/assets/img/leaf-green.jpg') !important;
+	}
+}
+
+#requisitos, #ofrecemos {
+	padding: 0 $spacing-unit $spacing-unit $spacing-unit;
+	width: 50%;
+	float: left;
+	
+	h2 {
+		color: #ffffff;
+	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+	    list-style: none;
+	    vertical-align: middle;
+	}
+	
+	.icon {
+		height: 2rem;
+		width: 2rem;
+		margin: 0 $spacing-unit/4 0 $spacing-unit/4;
+	}
+	
+	p {
+		overflow: hidden;
+	}
+
+	@include media-query($on-laptop) {
+		width: 100%;
+		float: none;
+	}
+}
+
+#ofrecemos {
+	text-align: right;
+	
+	.icon {
+		float: right;
+	}
+}
+
+#requisitos {
+	
+	.icon {
+		float: left;
+	}
+}
+
+.compromisos {
+	margin-bottom: $spacing-unit;
+}
+
+.compromisos .compromiso {
+	margin-bottom: $spacing-unit/2;
+	
+	span:first-child {
+		width: 15rem;
+	}
+	
+	&.primero {
+		
+		span:first-child {
+			width: 10rem;
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+		
+		span:first-child {
+			width: 20rem;
+		}
+	}
+}
+
+.compromiso span:first-child {
+	background-color: $brand-color3;
+	color: $blanco;
+	padding: $spacing-unit/2;
+	display: inline-block;
+}
+
+.compromiso span:last-child {
+	padding-left: $spacing-unit;
+	display: inline-block;
+}
+
+.contacto .wrapper {
+	overflow: initial;
+}
+
+.contacto .boton-naranja {
+	display: inline-block;
+	margin: $spacing-unit 0;
+}
+
+.contacto .frm-der-nar a {
+	display: block;
+}
+
+.ecotecnologia table {
+	width: 100%;
+	border-spacing: $spacing-unit;
+	
+	td {
+		width: 50%;
+		vertical-align: top;
+		border: 1px solid $grey-color;
+		
+		h3 {
+			padding-left: $spacing-unit;
+		}
+	}
+}
+
+.ecotecnologia .referencia {
+	font-size: $small-font-size;
+}

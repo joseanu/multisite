@@ -1,0 +1,34 @@
+---
+layout: compress
+---
+
+{% if page.slug != null %}
+  {% assign body_class = page.slug %}
+{% endif %}
+{% if page.bodyClass %}
+  {% assign body_class = page.bodyClass %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+
+  {% include head.html %}
+
+  <body{% if body_class %} class="{{ body_class }}"{% endif %}{% if page.function %} data-function="{{ page.function }}"{% endif %}>
+    {% if jekyll.environment == "production" %}
+      {% include partes/gtm.html %}
+    {% endif %}
+
+    {% include header.html %}
+
+    <main class="page-content">
+      <div>
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

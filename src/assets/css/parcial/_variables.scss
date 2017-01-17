@@ -1,0 +1,33 @@
+// tipografias
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+
+// dimensiones
+$spacing-unit:     1.6667rem;
+
+$content-width:    1200px;
+
+$topbar-height:    $spacing-unit * 1.3;
+$logo-height:      4.45rem;
+
+$on-palm:          660px;
+$on-laptop:        768px;
+$on-desktop:      1024px;
+
+// colores
+$text-color:       #706f6f;
+$background-color: #f6f6f6;
+$brand-color:      #44ac64; // El verde
+$brand-color2:     #49587a; // El azul oscuro
+$brand-color3:     #efa707; // El naranja
+
+$blanco:            #ffffff;
+$negro:            #000000;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
