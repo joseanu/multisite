@@ -1,10 +1,10 @@
 # Site settings
 title: JR Ecotecnología
 description: "Proveedor autorizado del programa Hipoteca Verde a nivel nacional, con 20 sucursales en 15 estados de la República Mexicana."
-logo: "social/logo.jpg"
+logo: "/assets/img/social/logo.jpg"
 locale: es_MX
 baseurl: ""
-url: "http://www.jrecotecnologia.com"
+url: "https://www.jrecotecnologia.com"
 repository: "joseanu/jrecotecnologia"
 
 # Site owner
@@ -14,7 +14,7 @@ owner:
   direccion: "Nicolás Romero #429 Col. Santa Teresita, Guadalajara, Jal."
   tel1: 3338258247
   tel2: 3338267767
-  formsurl: http://www.jrecotecnologia.com/form.php
+  formsurl: /server/contacto
   facebook: https://www.facebook.com/jrecotecnologias
   fb_app_id: 1622349154752586
   linkedin: https://www.linkedin.com/company/jr-ecotecnologia
@@ -33,12 +33,13 @@ owner:
 # Jekyll configuration
 markdown: kramdown
 encoding: utf-8
+source: ./.tmp/src
+destination: ./.tmp/_site
 include: ["_pages"]
-exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "node_modules", "src", "README.md", "notas.md", "composer.phar"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
 gems:
   - jekyll-assets
   - jekyll-sitemap
-  - jekyll-cloudinary
 
 # Colecciones
 collections:
@@ -63,19 +64,17 @@ page_gen:
     dir: 'sucursalData'
     extension: 'json'
 
+# Defaults
+defaults:
+  -
+    scope:
+      path: "sucursales"
+    values:
+      bodyClass: "sucursal"
+      function: "form"
+
 # HTML Compression
 compress_html:
   clippings: all
   ignore:
     envs: [development, dev]
-
-# jekyll-cloudinary
-cloudinary:
-  cloud_name: jrecotec
-  presets:
-    default:
-      min_width: 320
-      max_width: 1600
-      fallback_max_width: 800
-      steps: 5
-      sizes: "(min-width: 50rem) 50rem, 90vw"

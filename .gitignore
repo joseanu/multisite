@@ -2,4 +2,6 @@ _site/
 .sass-cache/
 .asset-cache/
 .jekyll-metadata
+.tmp/
 composer.phar
+_archivo.txt

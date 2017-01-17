@@ -7,4 +7,3 @@ assets:
     css: false
     js: false
   digest: false
-  cache: false
