@@ -16,31 +16,31 @@ function: form
             <h2>Escríbenos y te contestaremos a la brevedad</h2>
             <div class="form-group">
                 <label for="frm-nombre">Nombre *</label>
-                <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />
+                <input type="text" name="nombre" id="frm-nombre" class="input" required />
             </div>
             <div class="form-group">
                 <label for="frm-estado">Estado *</label>
-                <select name="estado" id="frm-estado" required>
+                <select name="estado" id="frm-estado" class="select" required>
                     <option disabled selected value> -- selecciona un estado -- </option>
                     <option value="Aguascalientes">Aguascalientes</option><option value="Baja California">Baja California</option><option value="Baja California Sur">Baja California Sur</option><option value="Campeche">Campeche</option><option value="Coahuila">Coahuila</option><option value="Colima">Colima</option><option value="Chiapas">Chiapas</option><option value="Chihuahua">Chihuahua</option><option value="Ciudad de México">Ciudad de México</option><option value="Durango">Durango</option><option value="Guanajuato">Guanajuato</option><option value="Guerrero">Guerrero</option><option value="Hidalgo">Hidalgo</option><option value="Jalisco">Jalisco</option><option value="México">México</option><option value="Michoacán">Michoacán</option><option value="Morelos">Morelos</option><option value="Nayarit">Nayarit</option><option value="Nuevo León">Nuevo León</option><option value="Oaxaca">Oaxaca</option><option value="Puebla">Puebla</option><option value="Querétaro">Querétaro</option><option value="Quintana Roo">Quintana Roo</option><option value="San Luis Potosí">San Luis Potosí</option><option value="Sinaloa">Sinaloa</option><option value="Sonora">Sonora</option><option value="Tabasco">Tabasco</option><option value="Tamaulipas">Tamaulipas</option><option value="Tlaxcala">Tlaxcala</option><option value="Veracruz">Veracruz</option><option value="Yucatán">Yucatán</option><option value="Zacatecas">Zacatecas</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="frm-correo">Correo *</label>
-                <input type="email" name="correo" id="frm-correo" tabindex="2" required />
+                <input type="email" name="correo" id="frm-correo" class="input" required />
             </div>
             <div class="form-group">
                 <label for="frm-tel">Teléfono</label>
-                <input type="tel" name="telefono" id="frm-tel" tabindex="3" pattern="[0-9]*" />
+                <input type="tel" name="telefono" id="frm-tel" class="input" pattern="[0-9]*" />
             </div>
             <div class="form-group">
                 <label for="frm-msg">Escribe tu mensaje:</label>
-                <textarea id="frm-msg" name="mensaje" spellcheck="true" rows="5" cols="50" tabindex="4"></textarea>
+                <textarea id="frm-msg" name="mensaje" class="input" spellcheck="true" rows="5" cols="50"></textarea>
             </div>
             
             <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.title }})" />
             <input type="text" name="_gotcha" style="display:none" />
-            <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Enviar mensaje</button>
+            <button id="frm-enviar" type="submit" class="boton-naranja">Enviar mensaje</button>
             <span class="error">Por favor llena los campos requeridos.</span>
         </form>
     </div>

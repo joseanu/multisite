@@ -44,7 +44,7 @@ gulp.task('build:site', gulp.series('copy:tmp', 'inject', 'copy:productos', 'sit
 
 // 'gulp build' -- same as 'gulp' but doesn't serve site
 // 'gulp build --prod' -- same as above but with production settings
-gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'php', 'copy:favicons'));
+gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'php', 'copy:favicons', 'inject:htaccess', 'inject:trabajador'));
 
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));
 

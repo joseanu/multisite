@@ -63,6 +63,7 @@
     "axios": "^0.15.3",
     "babel-runtime": "^6.20.0",
     "flickity": "^2.0.5",
+    "formbase": "^6.0.0",
     "ismobilejs": "^0.4.0",
     "lazysizes": "^3.0.0-rc2",
     "mixitup": "^3.1.2",

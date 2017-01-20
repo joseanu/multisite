@@ -128,6 +128,8 @@ $app->post('/cotizar', function () use ($app) {
 
   $request = $app->request->getBody();
   $post = json_decode($request);
+  
+  $headers = $app->request->headers;
 
   $respuesta = array();
   $errores = array();
@@ -151,6 +153,7 @@ $app->post('/cotizar', function () use ($app) {
       $respuesta['ok'] = 'Gracias.';
     }
     $app->response->write( json_encode($respuesta) );
+    $app->response->write( json_encode($headers) );
   }
   else
   {

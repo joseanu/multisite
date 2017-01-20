@@ -66,24 +66,24 @@ dataLayer:
         <h3>Contacta a esta sucursal</h3>
         <div class="form-group">
           <label for="frm-nombre">Nombre *</label>
-          <input type="text" name="nombre" id="frm-nombre" tabindex="1" required />
+          <input type="text" name="nombre" id="frm-nombre" class="input" required />
         </div>
         <div class="form-group">
           <label for="frm-correo">Correo *</label>
-          <input type="email" name="correo" id="frm-correo" tabindex="2" required />
+          <input type="email" name="correo" id="frm-correo" class="input" required />
         </div>
         <div class="form-group">
           <label for="frm-tel">Teléfono</label>
-          <input type="tel" name="telefono" id="frm-tel" tabindex="3" pattern="[0-9]*" />
+          <input type="tel" name="telefono" id="frm-tel" class="input" pattern="[0-9]*" />
         </div>
         <div class="form-group">
           <label for="frm-msg">¿En qué te podemos ayudar?</label>
-          <textarea id="frm-msg" name="mensaje" spellcheck="true" rows="5" cols="50" tabindex="4"></textarea>
+          <textarea id="frm-msg" name="mensaje" class="input" spellcheck="true" rows="5" cols="50"></textarea>
         </div>
 
         <input type="hidden" name="_subject" value="Contacto desde JRecotecnologia.com ({{ page.nombre }})" />
         <input type="text" name="_gotcha" style="display:none" />
-        <button id="frm-enviar" type="submit" class="boton-naranja" tabindex="18">Contactar a {{ page.nombre }}</button>
+        <button id="frm-enviar" type="submit" class="boton-naranja">Contactar a {{ page.nombre }}</button>
         <span class="error">Por favor llena los campos requeridos.</span>
       </form>
     </div>

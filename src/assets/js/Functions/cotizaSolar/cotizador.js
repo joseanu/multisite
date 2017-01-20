@@ -1,5 +1,6 @@
 import axios from 'axios';
 import isMobile from 'ismobilejs';
+import { cambiaTamano } from './func/resize';
 
 export default {
   name: 'App',
@@ -24,6 +25,9 @@ export default {
     doUpload() {
       //return (window.File && window.FileReader && window.FormData);
       return (window.File && window.FileReader && window.FormData && isMobile.any);
+    },
+    cargandoRecibo() {
+      return (this.recibo == '/assets/img/sun.gif');
     }
   },
   methods: {
@@ -36,6 +40,8 @@ export default {
     },
     onFileChange(e) {
 
+      let vm = this;
+      vm.recibo = '/assets/img/sun.gif';
       let file = e.target.files[0];
       if ( !file )
         return;
@@ -45,56 +51,29 @@ export default {
     },
     procesaImagen(file) {
 
-      const maxWidth = 80;
-    	const maxHeight = 80;
-
-      let image = new Image();
       let reader = new FileReader();
       let vm = this;
 
       reader.onprogress = (e) => {
-        if (e.lengthComputable) {
-        }
-          var percentage = Math.round((e.loaded * 100) / e.total);
-          console.log('Cargado : ' + percentage + '%');
+        var percentage = Math.round((e.loaded * 100) / e.total);
+        console.log('Cargado : ' + percentage + '%');
       };
       
       reader.onloadend = (e) => {
+        let image = new Image();
         let dataURL = e.target.result;
         let mimeType = dataURL.split(",")[0].split(":")[1].split(";")[0];
+
         image.src = dataURL;
 
         image.onload = () => {
-		      const width = image.width;
-		      const height = image.height;
-		      const shouldResize = (width > maxWidth) || (height > maxHeight);
-
-          if (!shouldResize) {
-      			vm.recibo = image.src;
-      			return;
-      		}
-
-      		let newWidth;
-		      let newHeight;
-      		if (width > height) {
-      			newHeight = height * (maxWidth / width);
-      			newWidth = maxWidth;
-      		} else {
-      			newWidth = width * (maxHeight / height);
-      			newHeight = maxHeight;
-      		}
-
-      		let canvas = document.createElement('canvas');
-      		canvas.width = newWidth;
-      		canvas.height = newHeight;
-      		let context = canvas.getContext('2d');
-      		context.drawImage(image, 0, 0, newWidth, newHeight);
-      		vm.recibo = canvas.toDataURL(mimeType);
+		      vm.recibo = cambiaTamano(image, mimeType);
         };
       };
       
       reader.onerror = () => {
     		alert('Error leyendo imágen.');
+    		vm.recibo = '';
     	};
       
       reader.readAsDataURL(file);

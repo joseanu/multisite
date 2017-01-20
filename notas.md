@@ -24,18 +24,6 @@ Sucursal Hermosillo borrada 31/08/16
 Sucursal Monterrey borrada 10/11/16 > cambia 15/12/16
 
   
-JEKYLL_ENV=production bundle exec jekyll build
-
-
-lftp ftp://usuario@66.7.195.240
-
-lftp -c "set ftp:list-options -a;
-open ftp://user:password@your.ftp.com; 
-lcd ./web;
-cd /web/public_html;
-mirror --reverse --delete --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --exclude-glob .svn"
-
-
 usar en lugar de lastitem:
 {% assign items = items | split: "|||" | join: ',' %}
 
@@ -45,3 +33,6 @@ http://enerbiomex.com/cotizacion-sin-costo/
 http://www.ecotrends.mx/cotizacion
 http://www.panelessolares.com.mx/CONTACTO.aspx
 http://www.revoteck.com/page/cotiza
+
+
+Hay que hacer que webappmanifest.json sea dinámico

@@ -18,4 +18,10 @@ DOMUtil.ready(function() {
       }
     });
   }
+  
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/trabajador.js', {
+      scope: '/'
+    });
+  }
 });
