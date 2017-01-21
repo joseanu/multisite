@@ -3,7 +3,7 @@
   
   //https://www.filamentgroup.com/sw.js
   const version = 'jr0.04::';
-  const ignorar = /(google-analytics|googletagmanager|facebook|tawk)/
+  const ignorar = /(google-analytics|googletagmanager|facebook|tawk)/;
   const staticCacheName = version + 'static';
   const pagesCacheName = version + 'pages';
   const imagesCacheName = version + 'images';

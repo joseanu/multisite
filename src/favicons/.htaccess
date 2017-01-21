@@ -24,9 +24,9 @@ Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 
 # Sin cache para Service Worker
-<filesMatch "trabajador.js">
-  Header set Cache-control “no-cache, no-store”
-</filesMatch>
+<Files /trabajador.js>
+  Header set Cache-control "max-age=0, no-cache, no-store, must-revalidate"
+</Files>
 
 <Files .htaccess>
 order allow,deny
