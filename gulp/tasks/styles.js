@@ -1,24 +1,25 @@
 'use strict';
-const argv         = require('yargs').argv;
-const gulp         = require('gulp');
-const when         = require('gulp-if');
-const sourcemaps   = require('gulp-sourcemaps');
-const sass         = require('gulp-sass');
-const postcss      = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const size         = require('gulp-size');
-const rename       = require('gulp-rename');
-const cssnano      = require('gulp-cssnano');
-const rev          = require('gulp-rev');
+const argv          = require('yargs').argv,
+      gulp          = require('gulp'),
+      when          = require('gulp-if'),
+      sourcemaps    = require('gulp-sourcemaps'),
+      sass          = require('gulp-sass'),
+      postcss       = require('gulp-postcss'),
+      autoprefixer  = require('autoprefixer'),
+      size          = require('gulp-size'),
+      rename        = require('gulp-rename'),
+      cssnano       = require('gulp-cssnano'),
+      rev           = require('gulp-rev');
 
 // include paths
-const paths        = require('../paths');
+const paths         = require('../paths');
 
+const webSite       = argv.site + '/';
 
 // 'gulp styles' -- creates a CSS file from SCSS, adds prefixes and creates a Sourcemap
 // 'gulp styles --prod' -- creates a CSS file from your SCSS, adds prefixes, minifies, gzips and cache busts it. Does not create a Sourcemap
 gulp.task('styles', () =>
-  gulp.src([paths.sassFiles + '/main.scss'])
+  gulp.src(webSite + paths.sassFiles + '/main.scss')
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
       precision: 10
@@ -29,7 +30,6 @@ gulp.task('styles', () =>
     .pipe(size({
       showFiles: true
     }))
-//    .pipe(gulp.dest(paths.sourceDir + paths.includesFolderName))
     .pipe(when(argv.prod, rename({suffix: '.min'})))
     .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
     .pipe(when(argv.prod, size({
@@ -42,5 +42,5 @@ gulp.task('styles', () =>
       gzip: true,
       showFiles: true
     })))
-    .pipe(gulp.dest(paths.sassFilesTemp))
+    .pipe(gulp.dest(webSite + paths.sassFilesTemp))
 );

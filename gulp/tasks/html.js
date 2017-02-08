@@ -1,18 +1,20 @@
 'use strict';
-var argv       = require('yargs').argv;
-var gulp       = require('gulp');
-var htmlmin    = require('gulp-htmlmin');
-var size       = require('gulp-size');
-var when       = require('gulp-if');
-var typogr     = require('gulp-typogr');
+const argv       = require('yargs').argv,
+      gulp       = require('gulp'),
+      htmlmin    = require('gulp-htmlmin'),
+      size       = require('gulp-size'),
+      when       = require('gulp-if'),
+      typogr     = require('gulp-typogr');
 
 // include paths file
-var paths      = require('../paths');
+const paths      = require('../paths');
+
+const webSite    = argv.site + '/';
 
 // 'gulp html' -- does nothing
 // 'gulp html --prod' -- minifies and gzips HTML files for production
 gulp.task('html', () =>
-  gulp.src(paths.siteFolderName + paths.htmlPattern)
+  gulp.src(webSite + paths.siteFolderName + paths.htmlPattern)
     .pipe(typogr({
       only: ['widont', 'smartypants']
     }))
@@ -26,5 +28,5 @@ gulp.task('html', () =>
       minifyCSS: true
     })))
     .pipe(when(argv.prod, size({title: 'optimized HTML'})))
-    .pipe(gulp.dest(paths.siteFolderName))
+    .pipe(gulp.dest(webSite + paths.siteFolderName))
 );

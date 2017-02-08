@@ -1,35 +1,37 @@
 'use strict';
-
-const gulp     = require('gulp');
-const imagemin = require('gulp-imagemin');
-const newer    = require('gulp-newer');
-const size     = require('gulp-size');
-const rename   = require('gulp-rename');
-const resize   = require('./resize-images');
-const merge2   = require('merge2');
+const argv        = require('yargs').argv,
+      gulp        = require('gulp'),
+      imagemin    = require('gulp-imagemin'),
+      newer       = require('gulp-newer'),
+      size        = require('gulp-size'),
+      rename      = require('gulp-rename'),
+      resize      = require('./resize-images'),
+      merge2      = require('merge2');
 
 // include paths file
-const paths    = require('../paths');
+const paths       = require('../paths');
+
+const webSite     = argv.site + '/';
 
 // 'gulp images:noresize' -- optimizes images
 gulp.task('images:noresize', () => 
   gulp.src([
-      paths.imageFilesGlob, '!' + paths.imageFiles + '/{productos,productos/**}',
-      '!' + paths.imageFiles + '/{sucursales,sucursales/**}',
-      '!' + paths.imageFiles + '/{svg,svg/**}'
+      webSite + paths.imageFilesGlob,
+      '!' + webSite + paths.imageFiles + '/{responsive,responsive/**}',
+      '!' + webSite + paths.imageFiles + '/{svg,svg/**}'
     ])
-    .pipe(newer(paths.imageFilesSite))
+    .pipe(newer(webSite + paths.imageFilesSite))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng()
     ], {verbose: true}))
-    .pipe(gulp.dest(paths.imageFilesSite))
+    .pipe(gulp.dest(webSite + paths.imageFilesSite))
     .pipe(size({title: 'images'}))
 );
 
 // Image resize values
-var options = [
+const responsiveSizes = [
   { width: 25, upscale: false },
   { width: 200, upscale: false },
   { width: 300, upscale: false },
@@ -38,11 +40,11 @@ var options = [
   { width: 800, upscale: false }
 ];
 
-// 'gulp images:~' -- resizes, optimizes, and caches feature images
+// 'gulp images:responsive' -- resizes, optimizes, and caches responsive images
 // https://gist.github.com/ddprrt/1b535c30374158837df89c0e7f65bcfc
-gulp.task('images:productos', function() {
-  var streams = options.map(function(el) {
-    return gulp.src([paths.imageFiles + '/productos' + paths.imagePattern])
+gulp.task('images:responsive', function() {
+  var streams = responsiveSizes.map(function(el) {
+    return gulp.src(webSite + paths.imageFiles + '/responsive' + paths.imagePattern)
       .pipe(rename(function(file) {
         if(file.extname) {
           if(el.width == 25) {
@@ -52,18 +54,18 @@ gulp.task('images:productos', function() {
           }
         }
       }))
-      .pipe(newer(paths.imageFilesSite + '/productos'))
+      .pipe(newer(webSite + paths.imageFilesSite + '/responsive'))
       .pipe(resize(el))
       .pipe(imagemin([
         imagemin.jpegtran({progressive: true}),
         imagemin.optipng()
       ], {verbose: true}))
-      .pipe(gulp.dest(paths.imageFilesSite + '/productos'));
+      .pipe(gulp.dest(webSite + paths.imageFilesSite + '/responsive'));
   });
   return merge2(streams);
 });
 
 gulp.task('images:svg', () =>
-  gulp.src(paths.imageFiles + '/svg/**/*')
-    .pipe(gulp.dest(paths.imageFilesSite + '/svg'))
+  gulp.src(webSite + paths.imageFiles + '/svg/**/*')
+    .pipe(gulp.dest(webSite + paths.imageFilesSite + '/svg'))
 );

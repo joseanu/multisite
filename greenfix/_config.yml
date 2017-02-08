@@ -41,8 +41,8 @@ owner:
 # Jekyll configuration
 markdown: kramdown
 encoding: utf-8
-source: ./.tmp/src
-destination: ./.tmp/_site
+source: ./greenfix/.tmp/src
+destination: ./greenfix/.tmp/_site
 include: ["_pages"]
 exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
 gems:

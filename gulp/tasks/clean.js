@@ -1,25 +1,35 @@
 'use strict';
-const gulp         = require('gulp');
-const del          = require('del');
+const argv        = require('yargs').argv,
+      gulp        = require('gulp'),
+      del         = require('del');
 
 // include paths
-const paths        = require('../paths');
+const paths       = require('../paths');
+
+const webSite     = argv.site + '/';
 
 // 'gulp clean:assets' -- removes temporary and built CSS/JS assets
 gulp.task('clean:assets', () => {
-  return del([paths.tempFolderName + '/**/*', '!' + paths.assetFilesTemp, paths.assetFilesSite + '/**/*', '!' + paths.imageFilesSite, '!' + paths.imageFilesSite + '/**/*']);
+  return del([
+    webSite + paths.tempFolderName + '/**/*',
+    '!' + webSite + paths.assetFilesTemp,
+    webSite + paths.assetFilesSite + '/**/*',
+    '!' + webSite + paths.imageFilesSite,
+    '!' + webSite + paths.imageFilesSite + '/**/*'
+  ]);
 });
 
 // 'gulp clean:site' -- removes temporary source
 gulp.task('clean:site', () => {
-  return del([paths.tempDir  + paths.sourceFolderName]);
+  return del([webSite + paths.tempDir  + paths.sourceFolderName]);
 });
 
 // 'gulp clean:dist' -- removes built site but keep images
 gulp.task('clean:dist', () => {
-  return del([paths.siteFolderName + '/**/*', '!' + paths.assetFilesSite, '!' + paths.imageFilesSite, '!' + paths.imageFilesSite + '/**/*'], {'dot': true});
-});
-
-gulp.task('clean:productos', () => {
-  return del(paths.tempDir + paths.siteDir + 'img');
+  return del([
+    webSite + paths.siteFolderName + '/**/*',
+    '!' + webSite + paths.assetFilesSite,
+    '!' + webSite + paths.imageFilesSite,
+    '!' + webSite + paths.imageFilesSite + '/**/*'
+  ], {'dot': true});
 });
