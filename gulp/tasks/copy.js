@@ -24,9 +24,9 @@ gulp.task('copy:site', () =>
     .pipe(gulp.dest(paths.siteFolderName))
 );
 
-// 'gulp copy:favicons' -- copia archivos de favicons a /_site/
-gulp.task('copy:favicons', () =>
-  gulp.src(paths.sourceFolderName + '/favicons/*', {dot: true})
+// 'gulp copy:static' -- copia archivos de static a /_site/
+gulp.task('copy:static', () =>
+  gulp.src(paths.sourceFolderName + '/static/*', {dot: true})
     .pipe(gulp.dest(paths.siteFolderName))
 );
 
@@ -40,17 +40,4 @@ gulp.task('copy:phplib', () =>
 gulp.task('copy:php', () =>
   gulp.src(paths.phpFiles + '/**/*', {dot: true})
     .pipe(gulp.dest(paths.siteFolderName + '/server'))
-);
-
-// 'gulp copy:inline' -- copiar archivos que se incluyen 'inline'
-gulp.task('copy:inline', () =>
-  gulp.src(paths.sourceDir + paths.assetsDir + 'inline-svg/**/*')
-    .pipe(gulp.dest(paths.tempDir + paths.sourceFolderName + '/_assets/images'))
-);
-
-
-
-gulp.task('copy:productos', () =>
-  gulp.src(paths.imageFilesSite + '/productos' + '/**/*')
-    .pipe(gulp.dest(paths.tempDir + paths.sourceFolderName + '/img/productos'))
 );

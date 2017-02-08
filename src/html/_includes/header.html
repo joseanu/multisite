@@ -1,8 +1,14 @@
-<header class="siteHeader">
-    <div class="siteHeader-topBar" id="topBar">
-        {% include partes/topBar %}
+<header class="siteHeader container">
+  <div class="siteHeader__top row">
+    <div class="siteHeader__logo"><img src="/assets/img/social/logo.png" alt="{{ site.title }}"></div>
+    <div class="siteHeader__espacio"></div>
+    <div class="siteHeader__telefonos">
+      <p class="siteHeader__telefono">Teléfonos</p>
+      {% include partes/telefono.html %}
     </div>
-    <div class="siteHeader-contenedor">
-        {% include partes/menu-ppal %}
+    <div class="siteHeader__social">
+      Fb
     </div>
+  </div>
+  {% include partes/navegacion.html %}
 </header>

@@ -2,10 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  {% assign directorio = page.dir | replace:'/','' %}
-  {% if directorio == 'sucursales' and page.nombre != null  %}
-    {% assign seo_title = "Ecotecnologías en " | append: page.nombre | append: ", " | append: page.estado | append: " - " | append: site.title %}
-  {% elsif page.title %}
+  {% if page.title %}
     {% assign seo_title = page.title | append: " - " | append: site.title %}
   {% elsif site.title %}
     {% assign seo_title = site.title | append: " - " | append: site.description %}
@@ -40,9 +37,11 @@
   {% endif %}
   
   <link rel="canonical" href="{{ canonical_url }}">
-  
-  {% comment %} ¡Implementar sitemap! <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml">{% endcomment %}
-  
+
+  {% if jekyll.environment == "production" %}
+    {% include partes/gtm.html parte = 'head' %}
+  {% endif %}
+
   {% if site.owner.google.verify %}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
   {% if site.owner.bing.verify %}<meta name="msvalidate.01" content="{{ site.owner.bing.verify }}">{% endif %}
   {% if site.owner.alexa.verify %}<meta name="alexaVerifyID" content="{{ site.owner.alexa.verify }}">{% endif %}
@@ -81,8 +80,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#44ac64">
   <meta name="theme-color" content="#44ac64">
-  {% comment %}<style type="text/css">{% asset_source critical %}</style>{% endcomment %}
-  
-  {% include partes/dataLayer %}
-  
+
+  {% include partes/dataLayer.html %}
+
 </head>

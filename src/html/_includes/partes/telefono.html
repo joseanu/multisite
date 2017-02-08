@@ -1,0 +1,5 @@
+{% for tel in site.owner.telefonos %}
+  {% assign ph_ary = tel | split: '' %}
+  {% assign phone = ph_ary[0] | append: ph_ary[1] | append: ph_ary[2] | append: '-' | append: ph_ary[3] | append: ph_ary[4] | append: ph_ary[5] | append: '-' | append: ph_ary[6] | append: ph_ary[7] | append: ph_ary[8] | append: ph_ary[9] %}
+  <p class="siteHeader__telefono">{{ phone }}</p>
+{% endfor %}

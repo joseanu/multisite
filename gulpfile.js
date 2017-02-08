@@ -2,23 +2,15 @@
 
 'use strict';
 
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
-const cheerio = require('gulp-cheerio');
-const rename = require('gulp-rename');
-const purify = require('gulp-purifycss');
-
-
-const requireDir = require('require-dir');
-const tasks = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
+const gulp        = require('gulp');
+const requireDir  = require('require-dir');
+const tasks       = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
 
 // include paths file
-var paths      = require('./gulp/paths');
+var paths         = require('./gulp/paths');
 
 // 'gulp images' -- copies, builds, and then copies it again
-gulp.task('images', gulp.series('images:noresize', 'images:productos', 'images:sucursales', 'images:svg'));
+gulp.task('images', gulp.series('images:noresize', 'images:svg'));
 
 // 'gulp scripts' -- genera los JS
 gulp.task('scripts', gulp.parallel('scripts:webpack'));
@@ -27,7 +19,7 @@ gulp.task('scripts', gulp.parallel('scripts:webpack'));
 // 'gulp assets --prod' -- same as above but with production settings
 gulp.task('assets', gulp.series(
   gulp.parallel('styles', 'scripts'),
-  gulp.series('images', 'copy:assets', 'copy:inline')
+  gulp.series('images', 'copy:assets')
 ));
 
 // 'gulp clean' -- removes temporary and built files
@@ -40,77 +32,10 @@ gulp.task('inject', gulp.parallel('inject:css', 'inject:scripts'));
 gulp.task('php', gulp.parallel('copy:phplib', 'copy:php'));
 
 // 'gulp build:site' -- copies, builds, and then copies it again
-gulp.task('build:site', gulp.series('copy:tmp', 'inject', 'copy:productos', 'site', 'clean:productos', 'copy:site'));
+gulp.task('build:site', gulp.series('copy:tmp', 'inject', 'site', 'copy:site'));
 
 // 'gulp build' -- same as 'gulp' but doesn't serve site
 // 'gulp build --prod' -- same as above but with production settings
-gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'php', 'copy:favicons', 'inject:htaccess', 'inject:trabajador'));
+gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'php', 'copy:static', 'inject:htaccess'/*, 'inject:trabajador'*/));
 
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));
-
-gulp.task('iconos', function () {
-  return gulp.src('./src/assets/icons/*')
-    .pipe(svgmin({
-            plugins: [{
-                cleanupIDs: false
-            }]
-        }))
-    .pipe(svgstore({ inlineSvg: true}))
-    .pipe(cheerio({
-      run: function ($, file) {
-        $('svg').addClass('hide');
-        $('[fill]').removeAttr('fill');
-      },
-      parserOptions: { xmlMode: true }
-    }))
-    .pipe(gulp.dest('./_assets/images/'));
-});
-
-gulp.task('productos', function () {
-  return gulp.src('./src/assets/productos/*')
-    .pipe(svgmin({
-            plugins: [{
-                cleanupIDs: false
-            }]
-        }))
-    .pipe(svgstore({ inlineSvg: true}))
-    .pipe(cheerio({
-      run: function ($, file) {
-        $('svg').addClass('hide');
-      },
-      parserOptions: { xmlMode: true }
-    }))
-    .pipe(rename('iconos-productos.svg'))
-    .pipe(gulp.dest('./_assets/images/productos/'));
-});
-
-gulp.task('mapa', function () {
-  const genMapa = child.spawn('node', ['./src/assets/mapa/mapa-home.js']);
-  genMapa.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
-    
-    if (code == 0) {
-      return gulp.src('./src/assets/mapa/mapa-sucursales.svg')
-        .pipe(svgmin({
-              plugins: [{
-                  cleanupIDs: false
-                }, {
-                  collapseGroups: false
-                }, {
-                  mergePaths: false
-                }]
-      //        , js2svg: {
-      //          pretty: true
-      //        }
-          }))
-        .pipe(cheerio({
-              run: function ($, file) {
-                $('svg').attr('xmlns:xlink', 'http://www.w3.org/1999/xlink');
-              },
-              parserOptions: { xmlMode: true }
-          }))
-        .pipe(rename('mapaSucursales.svg'))
-        .pipe(gulp.dest('./_assets/images/productos/'));
-    }
-  });
-});

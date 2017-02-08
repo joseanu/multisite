@@ -63,26 +63,6 @@ gulp.task('images:productos', function() {
   return merge2(streams);
 });
 
-gulp.task('images:sucursales', function() {
-  var streams = options.map(function(el) {
-    return gulp.src([paths.imageFiles + '/sucursales' + paths.imagePattern])
-      .pipe(rename(function(file) {
-        if(file.extname) {
-          file.basename += '-' + el.width;
-        }
-      }))
-      .pipe(newer(paths.imageFilesSite + '/sucursales'))
-      .pipe(resize(el))
-      .pipe(imagemin([
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng()
-      ], {verbose: true}))
-      .pipe(gulp.dest(paths.imageFilesSite + '/sucursales'));
-  });
-  return merge2(streams);
-});
-
-
 gulp.task('images:svg', () =>
   gulp.src(paths.imageFiles + '/svg/**/*')
     .pipe(gulp.dest(paths.imageFilesSite + '/svg'))

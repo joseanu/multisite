@@ -1,0 +1,18 @@
+<nav class="siteHeader__menuPrincipal row" role="navigation">
+  {% for link in site.data.navegacion.site-header %}
+    {% assign link_url = link.url | prepend: site.url %}
+    <div class="siteHeader__menuPrincipal__Item">
+      <a href="{{ link_url }}" class="siteHeader__menuPrincipal__link{% if page.url == link.url %} activo{% endif %}">{{ link.title }}</a>
+    {% if link.submenu %}
+      <div class="siteHeader__subMenu">
+        {% for sublink in link.submenu %}
+          {% assign sublink_url = sublink.url | prepend: site.url %}
+          <div class="siteHeader__subMenu__Item">
+            <a href="{{ sublink_url }}" class="siteHeader__subMenu__link{% if page.url == sublink.url %} activo{% endif %}{% if sublink.icon == null %} sin-icono{% endif %}">{{ sublink.title }}</a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    </div>
+  {% endfor %}
+</nav>
