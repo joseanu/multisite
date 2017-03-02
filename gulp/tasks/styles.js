@@ -4,6 +4,7 @@ const argv          = require('yargs').argv,
       when          = require('gulp-if'),
       sourcemaps    = require('gulp-sourcemaps'),
       sass          = require('gulp-sass'),
+      sassImport    = require('sass-module-importer'),
       postcss       = require('gulp-postcss'),
       autoprefixer  = require('autoprefixer'),
       size          = require('gulp-size'),
@@ -22,6 +23,7 @@ gulp.task('styles', () =>
   gulp.src(webSite + paths.sassFiles + '/main.scss')
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
+      importer: sassImport(),
       precision: 10
     }).on('error', sass.logError))
     .pipe(postcss([

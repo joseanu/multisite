@@ -1,0 +1,77 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% if page.title %}
+    {% assign seo_title = page.title | append: " - " | append: site.title %}
+  {% elsif site.title %}
+    {% assign seo_title = site.title | append: " - " | append: site.description %}
+  {% endif %}
+
+  {% if seo_title %}
+    {% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if page.slogan %}
+    {% assign seo_description = page.slogan %}
+  {% elsif page.description %}
+    {% assign seo_description = page.description %}
+  {% elsif site.description %}
+    {% assign seo_description = site.description %}
+  {% endif %}
+
+  {% if seo_description %}
+    {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if site.url %}
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.url %}
+  {% endif %}
+
+  {% if seo_title %}
+    <title>{{ seo_title }}</title>
+  {% endif %}
+
+  {% if seo_description %}
+    <meta name="description" content="{{ seo_description }}" />
+  {% endif %}
+  
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {% if jekyll.environment == "production" %}
+    {% include partes/gtm.html parte = 'head' %}
+  {% endif %}
+
+  {% if site.owner.google.verify %}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
+  {% if site.owner.bing.verify %}<meta name="msvalidate.01" content="{{ site.owner.bing.verify }}">{% endif %}
+  {% if site.owner.alexa.verify %}<meta name="alexaVerifyID" content="{{ site.owner.alexa.verify }}">{% endif %}
+
+  {% if site.owner.google.author %}<link rel="author" href="{{ site.owner.google.author }}?rel=author">{% endif %}
+  {% if site.owner.fb_app_id %}<meta property="fb:app_id" content="{{ site.owner.fb_app_id }}" />{% endif %}
+  
+  {% if seo_title %}
+    <meta name="twitter:title" property="og:title" content="{{ seo_title }}">
+  {% endif %}
+  <meta name="twitter:url" property="og:url" content="{{ canonical_url }}">
+  {% if seo_description %}
+    <meta name="twitter:description" property="og:description" content="{{ seo_description }}">
+  {% endif %}
+  {% if page.image.feature %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" property="og:image" content="{{ site.url }}/assets/images/{{ page.image.feature }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
+  {% endif %}
+  <meta property="og:locale" content="{{ site.locale }}">
+  {% if page.date %}
+    <meta property="og:type" content="article">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image.teaser %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/{{ page.image.teaser }}">
+  {% endif %}
+  
+  <link rel="stylesheet" href="<!-- inject:css --><!-- endinject -->">
+  
+</head>

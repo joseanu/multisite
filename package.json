@@ -4,9 +4,7 @@
   "description": "web Green Fix",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp build",
     "start": "gulp",
-    "prod": "gulp build --prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "anya",
@@ -44,7 +42,9 @@
     "gulp-util": "^3.0.7",
     "merge2": "^1.0.3",
     "require-dir": "^0.3.1",
+    "sass-module-importer": "^1.4.0",
     "shelljs": "^0.7.6",
+    "sw-precache": "^5.0.0",
     "through2": "^2.0.3",
     "vue-loader": "^10.0.2",
     "vue-template-compiler": "^2.1.8",
@@ -54,11 +54,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joseanu/jrecotecnologia.git#greenfix"
+    "url": "https://github.com/joseanu/multisite.git"
   },
   "dependencies": {
     "axios": "^0.15.3",
     "babel-runtime": "^6.20.0",
+    "bulma": "^0.3.2",
     "formbase": "^6.0.0",
     "ismobilejs": "^0.4.0",
     "lazysizes": "^3.0.0-rc2",

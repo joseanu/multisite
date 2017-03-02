@@ -12,9 +12,9 @@ site-header:
         url: /servicios/limpieza-general/
   - title: "Staff"
     url: /staff/
-  - title: "Clientes"
-    url: /clientes/
-  - title: "Boletines"
-    url: /articulos/
+#  - title: "Clientes"
+#    url: /clientes/
+#  - title: "Boletines"
+#    url: /articulos/
   - title: "Contacto"
     url: /contacto/

@@ -2,9 +2,10 @@
 title: "Green Fix Limpieza, S.A. de C.V."
 description: "Limpieza y Jardinería"
 logo: "/assets/img/social/logo.png"
+color: "#069865"
 locale: "es_MX"
 baseurl: ""
-url: "https://www.green-fix.com/"
+url: "https://www.green-fix.com"
 
 # Site owner
 owner:
@@ -22,8 +23,8 @@ owner:
     - "3330550586"
   horario: "1-5:0900-2000,6:1000-1400"
   formsurl: "/server/contacto"
-  facebook: "https://www.facebook.com/greenfix.limpieza"
-  fb_app_id: "474693915886699"
+  facebook: "https://www.facebook.com/Green-Fix-Limpieza-474693915886699"
+  fb_app_id: "383578788665076"
   linkedin: ""
   google:
     analytics: "UA-37123624-1"

@@ -1,84 +1,63 @@
 <?php
+
+date_default_timezone_set('America/Mexico_City');
+
 require '../phplib/autoload.php';
 
 $app = new \Slim\Slim();
 
 function enviarCorreo($datos) {
   
-  $myFile = $_SERVER['DOCUMENT_ROOT'].'/../_archivo.txt';
-  $fh = fopen($myFile, 'r');
-  $passw = fgets($fh);
-  fclose($fh);
-  
-  $mailer = new PHPMailer;
+  $from = 'webmaster@green-fix.com';
+  $cc = 'contacto@green-fix.com';
+
+  require $_SERVER['DOCUMENT_ROOT'].'/../green-fix-oauth.php';
+
+  $mailer = new PHPMailerOAuth;
   $mailer->isSMTP();
-  $mailer->Host = 'rmx11.dizinc.com';
+  $mailer->SMTPDebug = 0;
+  $mailer->Debugoutput = 'html';
+  $mailer->Host = 'smtp.gmail.com';
+  $mailer->Port = 587;
+  $mailer->SMTPSecure = 'tls';
   $mailer->SMTPAuth = true;
-  $mailer->Username = 'webmaster@jrecotecnologia.com';
-  $mailer->Password = $passw;
-  $mailer->SMTPSecure = 'ssl';
-  $mailer->Port = 465;
-  $mailer->isHTML(true);
+  $mailer->AuthType = 'XOAUTH2';
+  $mailer->oauthUserEmail = $from;
+  $mailer->oauthClientId = $gf_oauthClientId;
+  $mailer->oauthClientSecret = $gf_oauthClientSecret;
+  $mailer->oauthRefreshToken = $gf_oauthRefreshToken;
   
-	$cc = 'contacto@jrecotecnologia.com';
-	$nombre = $datos['nombre'];
-	$reply = $datos['correo'];
-	$titulo = $datos['_subject'];
-	$body = '';
-	$parametros = '';
-	foreach ($datos as $key => $value) {
-		if ($key == 'intereses') {
-			$body = $body.$key.': ';
-			$parametros = $parametros.'&'.$key.'=\'';
-			foreach ($value as $key => $value) {
-				$body = $body.filter_var($value, FILTER_SANITIZE_STRING).', ';
-				$parametros = $parametros.urlencode(filter_var($value, FILTER_SANITIZE_STRING)).',';
-			}
-			$body = $body.'<br />';
-			$parametros = $parametros.'\'';
-		} elseif (substr( $key, 0, 1 ) !== '_') {
-			$body = $body.$key.': '.filter_var($value, FILTER_SANITIZE_STRING).'<br />';
-			$parametros = $parametros.'&'.$key.'=\''.urlencode(filter_var($value, FILTER_SANITIZE_STRING)).'\'';
-		}
-	}
-	$parametros = ltrim($parametros, '&');
-	$resp = guardarSheet($parametros);
+  $nombre = $datos['nombre'];
+  $reply = $datos['correo'];
+  $titulo = 'Contacto desde green-fix.com';
+  $body = '';
+  foreach ($datos as $key => $value) {
+    if ($key == 'intereses') {
+      $body = $body.$key.': ';
+      foreach ($value as $key => $value) {
+        $body = $body.filter_var($value, FILTER_SANITIZE_STRING).', ';
+      }
+      $body = $body.'<br />';
+    } elseif (substr( $key, 0, 1 ) !== '_') {
+      $body = $body.$key.': '.filter_var($value, FILTER_SANITIZE_STRING).'<br />';
+    }
+  }
 
-	$mailer->clearAllRecipients();
-	$mailer->setFrom('webmaster@jrecotecnologia.com', 'Sitio Web JR Ecotecnologia');
-	$mailer->addAddress('webmaster@jrecotecnologia.com', 'webmaster');
-	$mailer->addReplyTo($reply, $nombre);
-	$mailer->addCC($cc);
+  $mailer->clearAllRecipients();
+  $mailer->setFrom($from, 'Sitio Web Green Fix');
+  $mailer->addAddress($from, 'webmaster');
+  $mailer->addReplyTo($reply, $nombre);
+  $mailer->addCC($cc);
 
-	$mailer->Subject = $titulo;
-	$mailer->Body    = $body;
-	$mailer->AltBody = $body;
+  $mailer->Subject = $titulo;
+  $mailer->Body = $body;
+  $mailer->AltBody = $body;
 
-	if(!$mailer->send()) {
-		return $mailer->ErrorInfo;
-	} else {
-		return 'enviado';
-	}
-}
-
-function guardarSheet($parametros) {
-	$sheet = 'https://script.google.com/macros/s/AKfycbyrKg6jJ5OMl4pDpcRvhE6HHm7oWqKqoenT3cEHfqHW2Jvzck12/exec?';
-
-	$url = $sheet . $parametros;
-
-	// Get cURL resource
-	$curl = curl_init();
-	// Set some options - we are passing in a useragent too here
-	curl_setopt_array($curl, array(
-	    CURLOPT_RETURNTRANSFER => 1,
-	    CURLOPT_URL => $url
-	));
-	// Send the request & save response to $resp
-	$resp = curl_exec($curl);
-	// Close request to clear up some resources
-	curl_close($curl);
-
-	return $resp.'<br />'.$url;
+  if(!$mailer->send()) {
+    return $mailer->ErrorInfo;
+  } else {
+    return 'enviado';
+  }
 }
 
 $app->post('/contacto', function () use ($app) {
@@ -100,12 +79,12 @@ $app->post('/contacto', function () use ($app) {
     }
     else
     {
-      if ( $_SERVER['HTTP_HOST'] != 'jr-ecotecnologia-joseanu.c9users.io' ) {
+      if ( $_SERVER['HTTP_HOST'] != 'multisite-joseanu.c9users.io' ) {
         $correo = enviarCorreo($post);
         if ( $correo == 'enviado' ) {
           $respuesta['ok'] = 'Gracias por contactarnos. Recibimos tus datos y en breve nos comunicaremos.';
         } else {
-          $errores['correo'] = $correo;
+          $errores['envio'] = $correo;
         }
       }
       else
@@ -117,43 +96,6 @@ $app->post('/contacto', function () use ($app) {
       $respuesta['errores'] = $errores;
     }
     $app->response->write( json_encode($respuesta) );
-  }
-  else
-  {
-    $app->response->write( 'mal' );
-  }
-});
-
-$app->post('/cotizar', function () use ($app) {
-
-  $request = $app->request->getBody();
-  $post = json_decode($request);
-  
-  $headers = $app->request->headers;
-
-  $respuesta = array();
-  $errores = array();
-  
-  if ( empty($post->gotchaz) ) {
-    if ( empty( $post->correo ) || !filter_var( trim( $post->correo ), FILTER_VALIDATE_EMAIL ) ) 
-    {
-      $errores['correo'] = 'Es necesario el correo';
-    }
-    if ( empty( $post->nombre ) )
-    {
-      $errores['nombre'] = 'Es necesario el nombre';
-    }
-
-    if ( count($errores) > 0 ) {
-      $app->response->setStatus(422);
-      $respuesta = $errores;
-    }
-    else
-    {
-      $respuesta['ok'] = 'Gracias.';
-    }
-    $app->response->write( json_encode($respuesta) );
-    $app->response->write( json_encode($headers) );
   }
   else
   {

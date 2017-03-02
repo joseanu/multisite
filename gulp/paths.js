@@ -16,8 +16,6 @@ paths.phplibFolderName   = 'phplib';
 paths.tempFolderName     = '.tmp';
 paths.modulesFolderName  = 'node_modules';
 
-paths.prodUrl            = 'https://www.jrecotecnologia.com';
-
 // Directory locations.
 paths.sourceDir          = paths.sourceFolderName + '/';
 paths.assetsDir          = paths.assetsFolderName + '/';

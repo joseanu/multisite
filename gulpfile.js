@@ -25,7 +25,7 @@ gulp.task('clean', gulp.parallel('clean:assets', 'clean:dist', 'clean:site'));
 gulp.task('inject', gulp.parallel('inject:css', 'inject:scripts'));
 
 // 'gulp php' -- Copa archivos php a _site
-gulp.task('php', gulp.parallel('copy:php'));
+gulp.task('php', gulp.parallel('copy:php', 'copy:phplib'));
 
 // 'gulp build:site' -- copies, builds, and then copies it again
 gulp.task('build:site', gulp.series('copy:tmp', 'inject', 'site', 'copy:site'));

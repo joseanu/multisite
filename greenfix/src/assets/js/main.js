@@ -1,22 +1,35 @@
-import lazyLoad from 'lazysizes';
-import svg4everybody from 'svg4everybody';
-import DOMUtil from './util';
-import Functions from './Functions/index';
+import 'lazysizes'
+import svg4everybody from 'svg4everybody'
+import isMobile from 'ismobilejs'
+import { DOMUtil, $class } from './util'
+import linkeaTelefonos from './telefonos'
+import Functions from './Functions/index'
 
-DOMUtil.ready(function() {
+//require('es6-promise').polyfill()
 
-  svg4everybody();
+window.lazySizesConfig = window.lazySizesConfig || {}
+window.lazySizesConfig.init = false
 
-  // Load the function based on the body tag data-function="" 
-  var func = DOMUtil.getFunctionName(document.body.attributes);
+DOMUtil.ready(function () {
+  if (isMobile.phone) linkeaTelefonos()
+
+  window.lazySizes.init()
+  svg4everybody()
+
+  // Load the function based on the body tag data-function=""
+  var func = DOMUtil.getFunctionName(document.body.attributes)
   if (func !== undefined) {
     func.forEach(function (funcion) {
       if (Functions[funcion] !== undefined) {
-        Functions[funcion]();
+        Functions[funcion]()
       }
-    });
+    })
   }
-  
+
+  $class('siteHeader__menuPrincipal__toggle').addEventListener('click', function() {
+    $class('siteHeader__menuPrincipal').classList.toggle('activo')
+  })
+
 /*
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/trabajador.js', {

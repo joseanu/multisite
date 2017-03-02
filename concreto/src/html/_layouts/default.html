@@ -1,0 +1,24 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+
+  {% include head.html %}
+
+  <body{% if page.bodyClass %} class="{{ page.bodyClass }}"{% endif %}{% if page.function %} data-function="{{ page.function }}"{% endif %}>
+    {% if jekyll.environment == "production" %}
+      {% include partes/gtm.html parte = 'body' %}
+    {% endif %}
+
+    {% include header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include partes/scripts.html %}
+  </body>
+
+</html>

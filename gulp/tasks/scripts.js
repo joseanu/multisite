@@ -3,6 +3,7 @@ const argv         = require('yargs').argv,
       path         = require('path'),
       gulp         = require('gulp'),
       webpack      = require('webpack'),
+      webpackstats = require("webpack-stats-plugin").StatsWriterPlugin,
       Md5Hash      = require('webpack-md5-hash');
 
 // include paths
@@ -44,6 +45,10 @@ gulp.task('scripts', function(callback) {
     output.chunkFilename = 'chunk/[name].js';
     sourceMap = '#cheap-module-source-map';
   }
+  webpackPlugins.push(new webpackstats({
+    filename: "stats.json",
+    fields: null
+  }));
 
   var webpackConfig = {
     context: path.join('/home/ubuntu/workspace/', webSite + paths.jsFiles),

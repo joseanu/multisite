@@ -1,13 +1,18 @@
 <header class="siteHeader container">
   <div class="siteHeader__top row">
     <div class="siteHeader__logo"><img src="/assets/img/social/logo.png" alt="{{ site.title }}"></div>
-    <div class="siteHeader__espacio"></div>
     <div class="siteHeader__telefonos">
       <p class="siteHeader__telefono">Teléfonos</p>
-      {% include partes/telefono.html %}
+      {% for tel in site.owner.telefonos %}
+      <p class="siteHeader__telefono">{% include partes/telefono.html tel=tel %}</p>
+      {% endfor %}
+      {% assign tel1 = site.owner.telefonos[0] %}
+      {% include partes/telefono.html tel=tel1 icon=1 sombra=1 %}
     </div>
     <div class="siteHeader__social">
-      Fb
+      <a href="{{ site.owner.facebook }}">
+        <svg width="2.4rem" height="2.4rem" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1579 128q35 0 60 25t25 60v1366q0 35-25 60t-60 25h-391v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-735q-35 0-60-25t-25-60v-1366q0-35 25-60t60-25h1366z"/></svg>
+      </a>
     </div>
   </div>
   {% include partes/navegacion.html %}

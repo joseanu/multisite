@@ -10,7 +10,7 @@ const webSite    = argv.site + '/';
 
 // 'gulp assets:copy' -- copies assets into the /_site/ to avoid Jekyll overwriting the whole directory
 gulp.task('copy:assets', () =>
-  gulp.src(webSite + paths.assetFilesTemp + '/**/*')
+  gulp.src([webSite + paths.assetFilesTemp + '/**/*', '!' + webSite + paths.jsFilesTemp + '/stats.json'])
     .pipe(gulp.dest(webSite + paths.assetFilesSite))
 );
 
@@ -31,21 +31,4 @@ gulp.task('copy:site', () =>
 gulp.task('copy:static', () =>
   gulp.src(webSite + paths.sourceFolderName + '/static/*', {dot: true})
     .pipe(gulp.dest(webSite + paths.siteFolderName))
-);
-
-// 'gulp copy:php' -- copia archivos de php a /_site/
-gulp.task('copy:php', () =>
-  gulp.src(webSite + paths.phpFiles + '/**/*', {dot: true})
-    .pipe(gulp.dest(webSite + paths.siteFolderName + '/server'))
-);
-
-
-//******************************************************************************
-//        PENSAR !
-//******************************************************************************
-//
-// 'gulp copy:phplib' -- copia archivos de phplib a /_site/
-gulp.task('copy:phplib', () =>
-  gulp.src(paths.phplibFolderName + '/**/*')
-    .pipe(gulp.dest(paths.siteDir + paths.phplibFolderName))
 );

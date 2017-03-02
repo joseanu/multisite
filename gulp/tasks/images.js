@@ -1,11 +1,14 @@
 'use strict';
 const argv        = require('yargs').argv,
       gulp        = require('gulp'),
+      cheerio     = require('gulp-cheerio'),
       imagemin    = require('gulp-imagemin'),
       newer       = require('gulp-newer'),
       size        = require('gulp-size'),
       rename      = require('gulp-rename'),
       resize      = require('./resize-images'),
+      svgmin      = require('gulp-svgmin'),
+      svgstore    = require('gulp-svgstore'),
       merge2      = require('merge2');
 
 // include paths file
@@ -63,6 +66,27 @@ gulp.task('images:responsive', function() {
       .pipe(gulp.dest(webSite + paths.imageFilesSite + '/responsive'));
   });
   return merge2(streams);
+});
+
+gulp.task('icons', function () {
+  return gulp.src(webSite + paths.iconFiles + '/**/*.svg')
+    .pipe(svgmin({
+        plugins: [{
+          cleanupIDs: false
+        }]
+      }))
+    .pipe(svgstore({ inlineSvg: true}))
+    .pipe(cheerio({
+      run: function ($, file) {
+        $('svg').attr('style', 'display:none');
+        $('[fill]').removeAttr('fill');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(size({
+      showFiles: true
+    }))
+    .pipe(gulp.dest(webSite + paths.imageFiles + '/svg/'));
 });
 
 gulp.task('images:svg', () =>

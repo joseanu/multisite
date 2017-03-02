@@ -31,7 +31,7 @@ gulp.task('server', done => {
 
 gulp.task('watch', () => {
   gulp.watch(webSite + '_config*', gulp.series('build:site'));
-  gulp.watch([webSite + paths.mdFilesGlob, webSite + paths.htmlFilesGlob, webSite + paths.ymlFilesGlob, webSite + paths.xmlFilesGlob], gulp.series('build:site'));
+  gulp.watch([webSite + paths.mdFilesGlob, webSite + paths.htmlFilesGlob, webSite + paths.ymlFilesGlob, webSite + paths.xmlFilesGlob], gulp.series('build:site', 'html'));
   gulp.watch(webSite + paths.jsFilesGlob, gulp.series('scripts', 'copy:assets'));
   gulp.watch(webSite + paths.sassFilesGlob, gulp.series('styles', 'copy:assets'));
   gulp.watch(webSite + paths.imageFilesGlob, gulp.series('images', 'copy:assets'));

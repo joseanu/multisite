@@ -1,9 +1,7 @@
-_site/
-.sass-cache/
-.asset-cache/
-.jekyll-metadata
-.tmp/
-phplib/*
-composer.phar
-deploy.sh
-_archivo.txt
+*_site/
+*.sass-cache/
+*.asset-cache/
+*.jekyll-metadata
+*.tmp/
+*phplib
+*composer.phar

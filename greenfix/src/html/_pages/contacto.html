@@ -3,11 +3,41 @@ layout: default
 title: Contacto
 description: "Resolveremos tus necesidades de limpieza."
 permalink: /contacto/
-slug: contacto
 dataLayer: 
   { pageCategory: contacto,
     tieneFormulario: true }
 function: form
 tipo: ContactPage
+bodyClass: siteContacto
 ---
 
+<div class="row">
+  <div class="column column-75 siteContacto__col1">
+    <h4><strong>Contáctanos</strong></h4>
+    <p>Por favor llena la siguiente forma y nosotros nos pondremos en contacto a la brevedad.</p>
+    <form action="{{ site.owner.formsurl }}" method="post" id="formContacto">
+      <fieldset>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="correo">Email</label>
+        <input type="email" name="correo" id="correo">
+        <label for="empresa">Empresa</label>
+        <input type="text" name="empresa" id="empresa">
+        <label for="mensaje">¿Cómo te podemos ayudar?</label>
+        <textarea name="mensaje" id="mensaje"></textarea>
+        <input type="text" name="_gotcha" style="display:none" />
+        <button id="frm-enviar" type="submit" class="button button-outline">Enviar mensaje</button>
+      </fieldset>
+    </form>
+  </div>
+  <div class="column column-25 siteContacto__col2">
+    {% include partes/facebook.html %}
+  </div>
+</div>
+ 
+<script type='application/ld+json'>
+  [
+  {% include json-ld/WebPage.json %},
+  {% include json-ld/WebSite.json %}
+  ]
+</script>
