@@ -1,0 +1,76 @@
+ul.sucursales__Lista {
+  margin: 0 -1rem 0 -1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  text-align: center;
+
+  @include media-query($on-laptop) {
+    margin: 0 -0.83335rem 0 -0.83335rem;
+  }
+}
+
+li.sucursales__Lista__Item {
+  position: relative;
+  padding: 0 1rem 2rem;
+  list-style: none;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 25%;
+  min-width: 220px;
+  max-width: 25%;
+
+  @include media-query(920px) {
+    max-width: 33.333%;
+  }
+
+  @include media-query($on-laptop) {
+    padding: 0 $spacing-unit/2 $spacing-unit;
+  }
+
+  @include media-query(677px) {
+    max-width: 50%;
+  }
+
+  @include media-query(457px) {
+    min-width: 150px;
+  }
+
+  figure {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+}
+
+img.sucursales__Lista__Img {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+h3.sucursales__Lista__Nombre {
+  position: absolute;
+  bottom: 2rem;
+  margin: 0;
+  left: 1rem;
+  right: 1rem;
+  padding: 0.416675rem;
+  background-color: #435277;
+  color: #fff;
+  border-top: 4px solid;
+
+  @include media-query($on-laptop) {
+    bottom: 1.6667rem;
+    margin: 0;
+    left: 0.83335rem;
+    right: 0.83335rem;
+    padding: 0.83335rem;
+  }
+}

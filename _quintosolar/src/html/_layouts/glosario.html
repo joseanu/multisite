@@ -1,0 +1,26 @@
+---
+layout: principal
+---
+
+<section class="section"> 
+    <div class="container content">
+        {{ content }}
+
+        <ul>
+        {% for letra in site.data.glosario %}
+          <li><a href="#letra-{{ letra[0] }}">{{ letra[0] }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <dl>
+        {% for letra in site.data.glosario %}
+        <h2 id="letra-{{ letra[0] }}">{{ letra[0] }}</h2>
+        {% for member in letra[1] %}
+          <a name="{{ member.termino }}"></a>
+          <dt>{{ member.termino }}</dt>
+          <dd>{{ member.definicion }}</dd>
+        {% endfor %}
+        {% endfor %}
+        </dl>
+    </div>
+</section>

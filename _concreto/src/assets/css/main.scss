@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "bulma";
+
+.logo {
+  padding: 0.25rem 0.25rem;
+  
+  img {
+    max-height: 2.5rem;
+  }
+}

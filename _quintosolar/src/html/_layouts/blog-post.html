@@ -1,0 +1,29 @@
+---
+layout: principal
+---
+
+<article>
+  {% include blog-hero.html %}
+
+  <section class="section">
+    <div class="container content">
+      {{ content }}
+      <hr>
+      <p>
+        <small>Publicado el día {{ page.date | date: "%d/%m/%Y" }}
+          {% if page.autor %}por {{ page.autor }}{% endif %}
+          en <a href="{{ site.url }}">quintosolar.com</a>
+        </small>
+      </p>
+    </div>
+  </section>
+</article>
+
+<script type="application/ld+json">// <![CDATA[
+  [
+  {% include json-ld/website.json %},
+  {% include json-ld/webpage.json %},
+  {% include json-ld/organization.json %},
+  {% include json-ld/newsarticle.json %}
+  ]
+// ]]></script>

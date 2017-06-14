@@ -1,0 +1,24 @@
+{% capture svg01path %}{{ include.origenT }}/{{ include.origen }}{% endcapture %}
+{% capture svg01 %}{% include svg/{{ svg01path }}.svg %}{% endcapture %}
+{% capture svgOrigen %}{{ svg01 | replace: '<svg','symbol id="origen"' }}{% endcapture %}
+
+{% capture svg02path %}{{ include.destinoT }}/{{ include.destino }}{% endcapture %}
+{% capture svg02 %}{% include svg/{{ svg02path }}.svg %}{% endcapture %}
+{% capture svgDestino %}{{ svg02 | replace: '<svg','symbol id="destino"' }}{% endcapture %}
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 100">
+    <defs>
+        <pattern id="patron"
+           x="0" y="0" width="5.875" height="5.875" viewBox="0 0 30 30"
+           patternUnits="userSpaceOnUse" preserveAspectRatio="xMinYMin" >
+            <path fill="#f4f4f4" d="M15,0 C6.71572875,0 0,6.71572875 0,15 C8.28427125,15 15,8.28427125 15,0 Z M0,15 C0,23.2842712 6.71572875,30 15,30 C15,21.7157288 8.28427125,15 0,15 Z M30,15 C30,6.71572875 23.2842712,0 15,0 C15,8.28427125 21.7157288,15 30,15 Z M30,15 C30,23.2842712 23.2842712,30 15,30 C15,21.7157288 21.7157288,15 30,15 Z"></path>
+        </pattern>
+        {{ svgOrigen }}
+        {{ svgDestino }}
+    </defs>
+    <g>
+        <rect x="0" y="0" width="235" height="100" style="fill: url(#patron);" />
+        <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#origen" width="100" x="0" y="0" />
+        <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#destino" width="100" x="135" y="0" />
+    </g>
+</svg>

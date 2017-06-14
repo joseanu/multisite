@@ -6,7 +6,7 @@ const argv        = require('yargs').argv,
 // include paths
 const paths       = require('../paths');
 
-const webSite     = argv.site + '/';
+const webSite     = '_' + argv.site + '/';
 
 // 'gulp inject:css' -- injects style.css
 gulp.task('inject:css', () =>

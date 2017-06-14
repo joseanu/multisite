@@ -1,0 +1,83 @@
+---
+layout: con-cabeza
+---
+
+{% include partes/productosHeader.html %}
+
+{{ content }}
+
+{% assign cantTipoProducto = site.data.productos[page.slug].size %}
+{% assign ImagePath = '/assets/img/productos/' %}
+
+<div class="productosGrid">
+  <div class="wrapper">
+    <div class="productos">
+  
+    {% if cantTipoProducto > 1 %}
+      <div id="filtro" class="productosFiltro">
+        <button type="button" data-filter="all">Todos</button>
+        {% for tipo in site.data.productos[page.slug] %}
+          <button type="button" data-filter=".{{ tipo[0] }}">{{ tipo[0] | capitalize | replace: '-', ' ' }}</button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  
+      <div class="productosLista">
+      {% for tipo in site.data.productos[page.slug] %}
+        {% assign nombreTipo = tipo[0] %}
+
+        {% if cantTipoProducto > 1 %}
+          {% assign imageList = site.data.imageList[page.slug][nombreTipo] %}
+        {% else %}
+          {% assign imageList = site.data.imageList[page.slug] %}
+        {% endif %}
+
+        {% for producto in tipo[1] %}
+          {% assign itemString = '' %}
+
+          {% for imagen in imageList %}
+            {% if imagen[0] contains producto.modelo %}
+              {% capture itemString %}{{ itemString }}{{ imagen[1] | remove: '.jpg' }}|||{% endcapture %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign items = itemString | split: '|||' %}
+          {% assign figureClass = 'intrinsic intrinsic--square' %}
+          {% assign imgClass = 'intrinsic-item lazyload blur-up' %}
+
+          {% if items.size > 1 %}
+            {% assign figureClass = 'main-carousel' %}
+            {% assign imgClass = 'carousel-cell lazyload' %}
+          {% endif %}
+          <div class="producto {{ tipo[0] }}">
+            <div class="productoInner">
+              <figure class="{{ figureClass }}">
+                {% for item in items %}
+                  <img src="{{ site.url }}{{ ImagePath }}{{ item }}-300.jpg"
+                    srcset="{% if items.size > 1 %}data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=={% else %}{{ site.url }}{{ ImagePath }}{{ item }}-25.jpg{% endif %}"
+                    data-sizes="auto"
+                    data-srcset="{{ site.url }}{{ ImagePath }}{{ item }}-300.jpg 300w,
+                      {{ site.url }}{{ ImagePath }}{{ item }}-200.jpg 200w,
+                      {{ site.url }}{{ ImagePath }}{{ item }}-400.jpg 400w,
+                      {{ site.url }}{{ ImagePath }}{{ item }}-600.jpg 600w,
+                      {{ site.url }}{{ ImagePath }}{{ item }}-800.jpg 800w"
+                    alt="{{ producto.marca }} {{ producto.modelo }}"
+                    class="{{ imgClass }}" />
+                {% endfor %}
+              </figure>
+              <div class="productoInner__nombre">
+                <h2>{{ producto.marca }}<br>{{ producto.modelo }}</h2>
+              </div>
+              <div class="productoInner__descripcion">
+                <p>{{ producto.caracteristicas }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}{% comment %} producto in tipo[1] {% endcomment %}
+      {% endfor %}{% comment %} tipo in site.data.productos[page.slug] {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include partes/cta.html %}

@@ -6,7 +6,7 @@ const argv        = require('yargs').argv,
 // include paths
 const paths        = require('../paths');
 
-const webSite    = argv.site + '/';
+const webSite    = '_' + argv.site + '/';
 
 // 'gulp copy:php' -- copia archivos de php a /_site/
 gulp.task('copy:php', () =>

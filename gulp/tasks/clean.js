@@ -6,7 +6,7 @@ const argv        = require('yargs').argv,
 // include paths
 const paths       = require('../paths');
 
-const webSite     = argv.site + '/';
+const webSite     = '_' + argv.site + '/';
 
 // 'gulp clean:assets' -- removes temporary and built CSS/JS assets
 gulp.task('clean:assets', () => {

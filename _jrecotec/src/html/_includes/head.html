@@ -1,0 +1,127 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  {% assign directorio = page.dir | replace:'/','' %}
+  {% if directorio == 'sucursales' and page.nombre != null  %}
+    {% assign seo_title = "Ecotecnologías en " | append: page.nombre | append: ", " | append: page.estado | append: " - " | append: site.title %}
+  {% elsif page.title %}
+    {% if page.title == '{{ title }}' %}
+      {% assign seo_title = page.title %}
+    {% else %}
+      {% assign seo_title = page.title | append: " - " | append: site.title %}
+    {% endif %}
+  {% elsif site.title %}
+    {% assign seo_title = site.title | append: " - " | append: site.description %}
+  {% endif %}
+
+  {% if seo_title %}
+    {% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if page.slogan %}
+    {% assign seo_description = page.slogan %}
+  {% elsif page.description %}
+    {% if page.description == 'null' %}
+      {% assign seo_description = false %}
+    {% else %}
+      {% assign seo_description = page.description %}
+    {% endif %}
+  {% elsif site.description %}
+    {% assign seo_description = site.description %}
+  {% endif %}
+
+  {% if seo_description %}
+    {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  {% if site.url %}
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.url %}
+  {% endif %}
+
+  {% if seo_title %}
+    <title>{{ seo_title }}</title>
+  {% endif %}
+
+  {% if seo_description %}
+    <meta name="description" content="{{ seo_description }}" />
+  {% endif %}
+
+  {% if page.meta %}
+    {{ page.meta }}
+  {% endif %}
+
+  <link rel="canonical" href="{{ canonical_url }}">
+  
+  {% if site.owner.google.verify %}<meta name="google-site-verification" content="{{ site.owner.google.verify }}">{% endif %}
+  {% if site.owner.bing.verify %}<meta name="msvalidate.01" content="{{ site.owner.bing.verify }}">{% endif %}
+  {% if site.owner.alexa.verify %}<meta name="alexaVerifyID" content="{{ site.owner.alexa.verify }}">{% endif %}
+  <meta name="majestic-site-verification" content="MJ12_c11ec5d2-030d-4d5c-9018-75cf25b2ee12">
+
+  {% if site.owner.google.author %}<link rel="author" href="{{ site.owner.google.author }}?rel=author">{% endif %}
+  {% if site.owner.fb_app_id %}<meta property="fb:app_id" content="{{ site.owner.fb_app_id }}" />{% endif %}
+  
+  {% if seo_title %}
+    <meta name="twitter:title" property="og:title" content="{{ seo_title }}">
+  {% endif %}
+  <meta name="twitter:url" property="og:url" content="{{ canonical_url }}">
+  {% if seo_description %}
+    <meta name="twitter:description" property="og:description" content="{{ seo_description }}">
+  {% endif %}
+  {% if page.image.feature %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" property="og:image" content="{{ site.url }}/assets/images/{{ page.image.feature }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.logo | prepend: site.url }}{% endif %}">
+  {% endif %}
+  <meta property="og:locale" content="{{ site.locale }}">
+  {% if page.date %}
+    <meta property="og:type" content="article">
+  {% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image.teaser %}
+    <meta property="og:image" content="{{ site.url }}/assets/images/{{ page.image.teaser }}">
+  {% endif %}
+  
+  <link rel="stylesheet" href="<!-- inject:css --><!-- endinject -->">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#44ac64">
+  <meta name="theme-color" content="#44ac64">
+  
+  {% include partes/dataLayer %}
+  {% if jekyll.environment == "production" %}
+    <script>
+    var _rollbarConfig = {
+        accessToken: "1824e8ef3b0748ebb91e7e2eab7ac22e",
+        captureUncaught: true,
+        captureUnhandledRejections: true,
+        payload: {
+          environment: "production",
+          client: {
+            javascript: {
+              source_map_enabled: true,
+              code_version: "3",
+              guess_uncaught_frames: true
+            }
+          }
+        }
+    };
+    !function(r){function e(n){if(o[n])return o[n].exports;var t=o[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,e),t.loaded=!0,t.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var n=o(1).Rollbar,t=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/1.9.3/rollbar.min.js";var a=n.init(window,_rollbarConfig),i=t(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function n(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function t(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);n(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,n="scope"===r;n&&(o=new e(this));var t=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:t,ts:new Date};return window._rollbarShimQueue.push(a),n?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,n,t){o.call(this,e,r.wrap(n),t)};var n=e.removeEventListener;e.removeEventListener=function(r,e,o){n.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var n=e.globalAlias||"Rollbar";if("object"==typeof r[n])return r[n];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=t(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,n=r.detail;!e&&n&&(e=n.reason,o=n.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[n]=i,i})()},a.prototype.loadFull=function(r,e,n,t,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,n,t,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(t=o.args,i=0;i<t.length;++i)if(n=t[i],"function"==typeof n){n(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),p=e.getElementsByTagName("script")[0],s=p.parentNode;c.crossOrigin="",c.src=t.rollbarJsUrl,c.async=!n,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{s.removeChild(c)}catch(r){}l=!0,i()}}),s.insertBefore(c,p)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw"string"==typeof e&&(e=new String(e)),e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var n in r)r.hasOwnProperty(n)&&(r._wrapped[n]=r[n])}return r._wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),s=0;s<p.length;++s)a.prototype[p[s]]=i(p[s]);r.exports={Rollbar:a,_rollbarWindowOnError:n}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var n=window.RollbarNotifier,t=e||{},a=t.globalAlias||"Rollbar",i=window.Rollbar.init(t,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,n.processPayloads()}}}}])
+    </script>
+    {% include partes/gtm.html part='head' %}
+  {% endif %}
+  <script>
+    function loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
+		if(!window.HTMLPictureElement || !('sizes' in document.createElement('img'))){
+			document.createElement('picture');
+			window.picturefillCFG = window.picturefillCFG || [];
+			picturefillCFG.push([ "algorithm", "saveData" ]);
+			loadJS("https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js");
+		}
+  </script>
+</head>

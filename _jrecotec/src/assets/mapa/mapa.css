@@ -1,0 +1,75 @@
+.agua {
+  display: none;
+  fill: #38456B;
+}
+
+.contorno {
+  display: none;
+  fill: none;
+  stroke-opacity: 0.72;
+  stroke-width: 0.25;
+  stroke: #fff;
+}
+
+.vecinos {
+  display: none;
+  fill: #d2d0c5;
+  stroke-width: 0.25;
+  stroke: #717171;
+}
+
+#mexico path {
+  /* fill: #44AC64; */
+  fill: #fdfaec;
+  stroke-width: 0.25;
+  stroke: #727272;
+  transition: fill .9s ease-out;
+}
+#mexico path:hover {
+  /*fill: #efa707;*/
+  fill: #44ac64;
+}
+
+#sucursales .punto {
+  fill: #38456B;
+  stroke: #38456B;
+}
+#sucursales .pin {
+  stroke-width: 0;
+}
+#sucursales .circulo1 {
+  stroke-width: 0;
+  transition: all 0.5s ease;
+}
+#sucursales .rect1 {
+  stroke-width: 0;
+  transition: all 0.5s ease;
+}
+#sucursales .circulo2 {
+  fill: #fff;
+  stroke-width: 0;
+  transition: all 0.5s ease;
+}
+#sucursales .rect2 {
+  fill: #fff;
+  stroke-width: 0;
+  transition: all 0.5s ease;
+}
+#sucursales .circulo3 {
+  fill: #fff;
+  stroke-width: 0;
+}
+#sucursales text {
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  font-family: Times New Roman;
+  font-size: 18px;
+  fill: #000;
+  transition: opacity 0.0s ease;
+}
+#sucursales g.hover text {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease 0.2s;
+}

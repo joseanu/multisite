@@ -1,0 +1,45 @@
+ahorro-de-agua:
+  nombre: 'Ahorro de agua'
+  tipos:
+    mezcladoras:
+      filtro: 'Mezcladoras'
+      producto: 'Mezcladora'
+    monomandos:
+      filtro: 'Monomandos'
+      producto: 'Monomando'
+    regaderas:
+      filtro: 'Regaderas'
+      producto: 'Regadera'
+
+aire-acondicionado:
+  nombre: 'Aire acondicionado'
+  tipos:
+    mirage:
+      filtro: 'Mirage'
+    aux:
+      filtro: 'AUX'
+
+energia-solar:
+  nombre: 'Energía solar'
+
+linea-blanca:
+  nombre: 'Línea blanca'
+  tipos:
+    estufas:
+      filtro: 'Estufas'
+      producto: 'Estufa'
+    lavadoras:
+      filtro: 'Lavadoras'
+      producto: 'Lavadora'
+    refrigeradores:
+      filtro: 'Refrigeradores'
+      producto: 'Refrigerador'
+
+iluminacion-led:
+  nombre: 'Iluminación led'
+
+pintura-imper:
+  nombre: 'Pinturas e impermeabilizantes'
+
+calentadores-solares:
+  nombre: 'Calentadores solares'

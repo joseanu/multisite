@@ -1,37 +1,58 @@
 // Modificado de https://github.com/mmistakes/made-mistakes-jekyll/blob/master/gulpfile.js
 
 'use strict';
-const gulp        = require('gulp'),
+const fs          = require('fs'),
+      argv        = require('yargs').argv,
+      gulp        = require('gulp'),
       requireDir  = require('require-dir'),
-      tasks       = requireDir('./gulp/tasks', {recurse: true}); // eslint-disable-line
+      tasks       = requireDir('./gulp/tasks', {recurse: true}),
+      paths       = require('./gulp/paths');
 
-// include paths file
-const paths       = require('./gulp/paths');
+const webSite     = '_' + argv.site + '/';
 
-// 'gulp images' -- copies, builds, and then copies it again
+const config      = require('./' + webSite + 'config');
+
+if (fs.existsSync('./' + webSite + 'gulp')) {
+  var websiteTasks = requireDir('./' + webSite + 'gulp', {recurse: true});
+}
+
+let buildSite = [
+  'copy:tmp',
+  'inject',
+  'site',
+  'copy:site'
+];
+let buildSequence = [
+  'clean',
+  'assets',
+  'build:site',
+  'html',
+  'copy:static'
+];
+const watcher = (config.tasks && config.tasks.watcher) || 'watch';
+
+if (config.tasks) {
+  if (config.tasks.buildSite)
+    buildSite = config.tasks.buildSite;
+  if (config.tasks.buildSequence)
+    buildSequence = config.tasks.buildSequence;
+};
+
 gulp.task('images', gulp.series('images:noresize', 'images:responsive', 'images:svg'));
 
-// 'gulp assets' -- removes assets and rebuilds them
-// 'gulp assets --prod' -- same as above but with production settings
 gulp.task('assets', gulp.series(
   gulp.parallel('styles', 'scripts'),
   gulp.series('images', 'copy:assets')
 ));
 
-// 'gulp clean' -- removes temporary and built files
 gulp.task('clean', gulp.parallel('clean:assets', 'clean:dist', 'clean:site'));
 
-// 'gulp inject' -- injects CSS and JS into includes
 gulp.task('inject', gulp.parallel('inject:css', 'inject:scripts'));
 
-// 'gulp php' -- Copa archivos php a _site
 gulp.task('php', gulp.parallel('copy:php', 'copy:phplib'));
 
-// 'gulp build:site' -- copies, builds, and then copies it again
-gulp.task('build:site', gulp.series('copy:tmp', 'inject', 'site', 'copy:site'));
+gulp.task('build:site', gulp.series(buildSite));
 
-// 'gulp build' -- same as 'gulp' but doesn't serve site
-// 'gulp build --prod' -- same as above but with production settings
-gulp.task('build', gulp.series('clean', 'assets', 'build:site', 'html', 'php', 'copy:static'));
+gulp.task('build', gulp.series(buildSequence));
 
-gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('build', gulp.parallel(watcher, 'server')));

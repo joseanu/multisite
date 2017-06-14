@@ -1,0 +1,15 @@
+{% if page.dataLayer %}
+
+<script type="text/javascript">
+  (function(w) {
+    var dataLayer = w.dataLayer = w.dataLayer || [];
+    dataLayer.push({
+      {% for dato in page.dataLayer %}
+        '{{ dato[0] }}': '{{ dato[1] }}'
+        {% if forloop.last == true %} {% else %}, {% endif %}
+      {% endfor %}
+    });
+  })(window);
+</script>
+
+{% endif %}

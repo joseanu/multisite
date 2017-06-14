@@ -1,0 +1,2690 @@
+[
+  {
+    "nombre": "Aries en Casa 1",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 1",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 1",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 1",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 1",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 1",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 1",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 1",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 1",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 1",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 1",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 1",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 2",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 2",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 2",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 2",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 2",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 2",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 2",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 2",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 2",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 2",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 2",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 2",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 3",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 3",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 3",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 3",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 3",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 3",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 3",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 3",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 3",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 3",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 3",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 3",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 4",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 4",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 4",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 4",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 4",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 4",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 4",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 4",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 4",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 4",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 4",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 4",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 5",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 5",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 5",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 5",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 5",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 5",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 5",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 5",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 5",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 5",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 5",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 5",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 6",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 6",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 6",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 6",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 6",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 6",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 6",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 6",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 6",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 6",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 6",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 6",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 7",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 7",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 7",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 7",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 7",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 7",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 7",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 7",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 7",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 7",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 7",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 7",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 8",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 8",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 8",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 8",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 8",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 8",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 8",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 8",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 8",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 8",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 8",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 8",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 9",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 9",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 9",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 9",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 9",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 9",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 9",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 9",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 9",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 9",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 9",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 9",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 10",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 10",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 10",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 10",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 10",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 10",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 10",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 10",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 10",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 10",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 10",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 10",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 11",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 11",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 11",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 11",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 11",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 11",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 11",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 11",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 11",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 11",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 11",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 11",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Aries en Casa 12",
+    "origen": "aries",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Tauro en Casa 12",
+    "origen": "tauro",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Geminis en Casa 12",
+    "origen": "geminis",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Cancer en Casa 12",
+    "origen": "cancer",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Leo en Casa 12",
+    "origen": "leo",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Virgo en Casa 12",
+    "origen": "virgo",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Libra en Casa 12",
+    "origen": "libra",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Escorpion en Casa 12",
+    "origen": "escorpion",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sagitario en Casa 12",
+    "origen": "sagitario",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Capricornio en Casa 12",
+    "origen": "capricornio",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Acuario en Casa 12",
+    "origen": "acuario",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Piscis en Casa 12",
+    "origen": "piscis",
+    "origenT": "signos",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 1",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 1",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 1",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 1",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 1",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 1",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 1",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 1",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 1",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 1",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-01",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 2",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 2",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 2",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 2",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 2",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 2",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 2",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 2",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 2",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 2",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-02",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 3",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 3",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 3",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 3",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 3",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 3",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 3",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 3",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 3",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 3",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-03",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 4",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 4",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 4",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 4",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 4",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 4",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 4",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 4",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 4",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 4",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-04",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 5",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 5",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 5",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 5",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 5",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 5",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 5",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 5",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 5",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 5",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-05",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 6",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 6",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 6",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 6",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 6",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 6",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 6",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 6",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 6",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 6",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-06",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 7",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 7",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 7",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 7",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 7",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 7",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 7",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 7",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 7",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 7",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-07",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 8",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 8",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 8",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 8",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 8",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 8",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 8",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 8",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 8",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 8",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-08",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 9",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 9",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 9",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 9",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 9",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 9",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 9",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 9",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 9",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 9",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-09",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 10",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 10",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 10",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 10",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 10",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 10",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 10",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 10",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 10",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 10",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-10",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 11",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 11",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 11",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 11",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 11",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 11",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 11",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 11",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 11",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 11",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-11",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Casa 12",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Luna en Casa 12",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Mercurio en Casa 12",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Venus en Casa 12",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Marte en Casa 12",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Jupiter en Casa 12",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Saturno en Casa 12",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Urano en Casa 12",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Neptuno en Casa 12",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Pluton en Casa 12",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "casa-12",
+    "destinoT": "casas"
+  },
+  {
+    "nombre": "Sol en Aries",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Aries",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Aries",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Aries",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Aries",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Aries",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Aries",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Aries",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Aries",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Aries",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "aries",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Tauro",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Tauro",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Tauro",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Tauro",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Tauro",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Tauro",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Tauro",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Tauro",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Tauro",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Tauro",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "tauro",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Geminis",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Geminis",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Geminis",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Geminis",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Geminis",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Geminis",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Geminis",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Geminis",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Geminis",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Geminis",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "geminis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Cancer",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Cancer",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Cancer",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Cancer",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Cancer",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Cancer",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Cancer",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Cancer",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Cancer",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Cancer",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "cancer",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Leo",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Leo",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Leo",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Leo",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Leo",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Leo",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Leo",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Leo",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Leo",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Leo",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "leo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Virgo",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Virgo",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Virgo",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Virgo",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Virgo",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Virgo",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Virgo",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Virgo",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Virgo",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Virgo",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "virgo",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Libra",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Libra",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Libra",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Libra",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Libra",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Libra",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Libra",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Libra",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Libra",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Libra",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "libra",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Escorpion",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Escorpion",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Escorpion",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Escorpion",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Escorpion",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Escorpion",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Escorpion",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Escorpion",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Escorpion",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Escorpion",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "escorpion",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Sagitario",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Sagitario",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Sagitario",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Sagitario",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Sagitario",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Sagitario",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Sagitario",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Sagitario",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Sagitario",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Sagitario",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "sagitario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Capricornio",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Capricornio",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Capricornio",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Capricornio",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Capricornio",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Capricornio",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Capricornio",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Capricornio",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Capricornio",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Capricornio",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "capricornio",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Acuario",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Acuario",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Acuario",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Acuario",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Acuario",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Acuario",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Acuario",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Acuario",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Acuario",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Acuario",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "acuario",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Sol en Piscis",
+    "origen": "sol",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Luna en Piscis",
+    "origen": "luna",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Mercurio en Piscis",
+    "origen": "mercurio",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Venus en Piscis",
+    "origen": "venus",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Marte en Piscis",
+    "origen": "marte",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Jupiter en Piscis",
+    "origen": "jupiter",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Saturno en Piscis",
+    "origen": "saturno",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Urano en Piscis",
+    "origen": "urano",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Neptuno en Piscis",
+    "origen": "neptuno",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  },
+  {
+    "nombre": "Pluton en Piscis",
+    "origen": "pluton",
+    "origenT": "planetas",
+    "destino": "piscis",
+    "destinoT": "signos"
+  }
+]

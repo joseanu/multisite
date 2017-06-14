@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% include svg/aforismo.svg origenT=page.origenT origen=page.origen destinoT=page.destinoT destino=page.destino %}
+
+{% assign origen = site.data[page.origenT][page.origen] %}
+{% assign destino = site.data[page.destinoT][page.destino] %}
+
+{{ origen.nombre }} en {{ destino.nombre }}

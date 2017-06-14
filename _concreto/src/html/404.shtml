@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /404.shtml
+sitemap: false
+---
+
+<section class="hero is-light is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            Concreto estampado, oxidado y decorativo.
+          </h1>
+          <h2 class="subtitle">
+            Decorando bajo tus pies
+          </h2>
+        </div>
+        <div class="column is-narrow">
+          <div class="box has-text-centered">
+            <img src="/assets/img/bricks.svg" alt="Concreto decorativo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

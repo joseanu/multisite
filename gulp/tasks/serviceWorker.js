@@ -1,31 +1,39 @@
 'use strict';
 const argv        = require('yargs').argv,
       gulp        = require('gulp'),
+      gutil       = require('gulp-util'),
       swPrecache  = require('sw-precache');
 
 // include paths
 const paths       = require('../paths');
 
-const webSite     = argv.site + '/';
+const webSite     = '_' + argv.site + '/';
 
 // include config
 const config      = require('../../' + webSite + 'config');
 
 gulp.task('service-worker', function(callback) {
-  swPrecache.write(webSite + paths.siteFolderName + '/service-worker.js', {
-    //1
-    staticFileGlobs: [
-       webSite + paths.sassFilesSite + '/**/*.css',
-       webSite + paths.jsFilesSite + '/**/*.js',
-       webSite + paths.siteFolderName + '/index.html',
-       webSite + paths.imageFilesSite + '/**/*.{svg,png,jpg,gif}'
-     ],
-    // 2
-//    importScripts: [
-//       'app/node_modules/sw-toolbox/sw-toolbox.js',
-//       'app/js/toolbox-script.js'
-//     ],
-    // 3
+  const sw_filename = 'service-worker.js';
+  if (config.serviceWorker.fileName)
+    sw_filename = config.serviceWorker.fileName;
+  const sw_path = webSite + paths.siteFolderName + '/' + sw_filename;
+
+  const sw_options = {
+    cacheId: webSite,
+    logger: gutil.log,
+    navigateFallback: '/sin-red.html',
     stripPrefix: webSite + paths.siteDir
-  }, callback);
+  };
+
+  if (config.serviceWorker.staticFileGlobs)
+    sw_options.staticFileGlobs = config.serviceWorker.staticFileGlobs;
+  if (config.serviceWorker.runtimeCaching)
+    sw_options.runtimeCaching = config.serviceWorker.runtimeCaching;
+
+  if (argv.prod && config.serviceWorker.generar) {
+    swPrecache.write(sw_path, sw_options, callback);
+  }
+  else {
+    callback();
+  }
 });

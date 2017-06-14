@@ -9,7 +9,12 @@ const argv         = require('yargs').argv,
 // include paths
 const paths        = require('../paths');
 
-const webSite       = argv.site + '/';
+const webSite       = '_' + argv.site + '/';
+
+// include config
+const config      = require('../../' + webSite + 'config');
+
+var entradas = config.webpackEntry || { main: './main' };
 
 gulp.task('scripts', function(callback) {
   var webpackPlugins = [
@@ -52,12 +57,16 @@ gulp.task('scripts', function(callback) {
 
   var webpackConfig = {
     context: path.join('/home/ubuntu/workspace/', webSite + paths.jsFiles),
-    entry: {
-      main: './main'
-    },
+    entry: entradas,
     output: output,
     module: {
       rules: [
+        {
+          enforce: "pre",
+          test: /\.(jsx?|vue)$/,
+          exclude: /node_modules/,
+          loader: "eslint-loader"
+        },
         {
           test: /\.vue$/,
           loader: 'vue-loader',
@@ -70,14 +79,14 @@ gulp.task('scripts', function(callback) {
           }
         },
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /(node_modules)/,
           loader: 'babel-loader',
           query: {
             presets: [
               ["es2015", { "modules": false }]
             ],
-            plugins: ['transform-runtime']
+            plugins: ['syntax-dynamic-import', 'transform-runtime']
           }
         }
       ]

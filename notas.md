@@ -6,10 +6,3 @@ npm install
 gem install bundler
 bundle install
 
-
-TODO:
-
- - robots, manifest, webappmanifest y browserconfig: generar con Jekyll
- - generar favicons
- - generar logo grande
- - 

@@ -1,0 +1,364 @@
+.proveedores {
+  background-color: $brand-color2;
+
+  @extend %clearfix;
+
+  .wrapper {
+    position: relative;
+    overflow: auto;
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 8));
+    text-align: center;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $blanco;
+    //        padding-right: 200px;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit;
+  }
+
+  .boton {
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    left: auto;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.h_gde {
+  position: relative;
+  margin: 3rem 0 $spacing-unit/2 0;
+  padding: 0 0 $spacing-unit/2 0;
+  font-size: 2rem;
+  font-weight: $base-font-weight;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 4.5rem;
+    height: 3px;
+    background-color: $grey-color;
+  }
+
+  & + p {
+    margin-top: $spacing-unit/2;
+  }
+
+  &.blanco {
+    color: $blanco;
+    margin: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.tu-vale {
+  text-align: center;
+
+  .valores {
+    text-align: left;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: flex-start;
+
+    .valor {
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
+      width: 30%;
+
+      @include media-query($on-desktop) {
+        width: 45%;
+      }
+
+      @include media-query($on-palm) {
+        width: 80%;
+      }
+
+      .icon {
+        color: $grey-color;
+        margin-top: 1.1rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        float: left;
+      }
+
+      h3 {
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        padding-left: 2rem;
+      }
+
+      p {
+        margin-top: 0;
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .boton {
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+}
+
+.productos-dia {
+  text-align: center;
+  background-color: $background-color;
+  border-top: 1px solid $grey-color-light;
+  position: relative;
+
+  @extend %clearfix;
+
+  .filas {
+    @extend %clearfix;
+
+    .rama {
+      position: relative;
+      z-index: 4;
+      vertical-align: top;
+
+      .svgProducto {
+        display: inline-block;
+        line-height: 1;
+        width: 4rem;
+        height: 4rem;
+        background-color: $brand-color;
+        border-radius: 2rem;
+        fill: $blanco;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin: 0;
+      }
+    }
+
+    &.fila-00 {
+      .rama {
+        width: 14rem;
+        display: inline-block;
+        float: none;
+        margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+      }
+    }
+
+    &.fila-01 {
+      .rama {
+        width: 14rem;
+        display: inline-block;
+        float: none;
+        margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+      }
+    }
+
+    &.fila-02 {
+      .rama {
+        width: 50%;
+        float: left;
+        margin: 0 0 $spacing-unit 0;
+
+        @include media-query($on-palm) {
+          width: 14rem;
+          display: inline-block;
+          float: none;
+          margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2;
+        }
+      }
+    }
+
+    &.fila-03 {
+      margin-bottom: 2rem;
+
+      div:first-child {
+        width: initial;
+        float: left;
+        margin: 0 0 $spacing-unit 5rem;
+      }
+
+      div:last-child {
+        width: initial;
+        float: right;
+        margin: 0 5rem $spacing-unit 0;
+      }
+
+      @include media-query($on-palm) {
+        margin-bottom: 7rem;
+
+        div {
+          width: 14rem !important;
+          display: inline-block !important;
+          float: none !important;
+          margin: 0 $spacing-unit/2 $spacing-unit $spacing-unit/2 !important;
+        }
+      }
+    }
+  }
+}
+
+#svgConectores {
+  display: block;
+  z-index: 3;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0.5;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+
+  @include media-query(520px) {
+    display: none;
+  }
+}
+
+#svg01 {
+  width: 100%;
+  height: 100%;
+}
+
+#planeta-ciudad {
+  position: absolute;
+  bottom: -20.8vw;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 40vw;
+  height: 40vw;
+  z-index: 2;
+
+  @include media-query($on-desktop) {
+    bottom: -26vw;
+    width: 50vw;
+    height: 50vw;
+  }
+
+  @include media-query($on-palm) {
+    bottom: -31.1vw;
+    width: 60vw;
+    height: 60vw;
+  }
+
+  @include media-query(500px) {
+    bottom: -39vw;
+    width: 75vw;
+    height: 75vw;
+  }
+}
+
+.productos-noche {
+  text-align: center;
+  background-color: $brand-color2;
+
+  .wrapper {
+    position: relative;
+    padding-top: 18vw;
+    overflow: hidden;
+
+    @include media-query($on-desktop) {
+      padding-top: 24vw;
+    }
+
+    @include media-query($on-palm) {
+      padding-top: 28vw;
+    }
+
+    @include media-query(500px) {
+      padding-top: 34vw;
+    }
+
+    #fondo-estrellas {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 0;
+    }
+
+    .cotiza {
+      position: relative;
+      z-index: 1;
+      margin-bottom: $spacing-unit*2;
+
+      form {
+        margin: 0 auto;
+        color: $blanco;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .frm-grupo {
+          text-align: left;
+          width: 46%;
+          margin-left: 2%;
+          margin-right: 2%;
+          margin-bottom: $spacing-unit/2;
+
+          @include media-query($on-palm) {
+            width: 96%;
+          }
+        }
+
+        .paraBoton {
+          width: 100%;
+        }
+
+        button {
+          margin-top: $spacing-unit;
+        }
+      }
+    }
+  }
+}
+
+.formasDePago {
+  text-align: center;
+}
+
+.formasDePago__list {
+  display: flex;
+}
+
+.formasDePago__Item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  padding: $spacing-unit 0 $spacing-unit * 2 0;
+}
+
+.formasDePago__Item__icon {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    display: inline-block;
+  }
+}

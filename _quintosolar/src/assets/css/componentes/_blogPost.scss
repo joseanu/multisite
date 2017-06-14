@@ -1,0 +1,74 @@
+.blogHero {
+  position: relative;
+  overflow: hidden;
+  figure {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+  .blogHero_pie {
+    width: 450px;
+    position: absolute;
+    right: 20px;
+    bottom: -40px;
+    z-index: 1;
+  }
+  .title {
+    background-color: rgba($grey-lighter, 0.85);
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.tabla_ch {
+  width: 50%;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+
+
+// .ct-legend {
+//     position: relative;
+//     z-index: 10;
+//     list-style: none;
+//     text-align: center;
+
+//     li {
+//         position: relative;
+//         padding-left: 23px;
+//         margin-right: 10px;
+//         margin-bottom: 3px;
+//         cursor: pointer;
+//         display: inline-block;
+//     }
+
+//     li:before {
+//         width: 12px;
+//         height: 12px;
+//         position: absolute;
+//         left: 0;
+//         content: '';
+//         border: 3px solid transparent;
+//         border-radius: 2px;
+//     }
+
+//     li.inactive:before {
+//         background: transparent;
+//     }
+
+//     &.ct-legend-inside {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//     }
+
+//     @for $i from 0 to length($ct-series-colors) {
+//         .ct-series-#{$i}:before {
+//             background-color: nth($ct-series-colors, $i + 1);
+//             border-color: nth($ct-series-colors, $i + 1);
+//         }
+//     }
+// }

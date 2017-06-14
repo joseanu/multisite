@@ -1,6 +1,7 @@
 'use strict';
 const argv        = require('yargs').argv,
       gulp        = require('gulp'),
+      when        = require('gulp-if'),
       cheerio     = require('gulp-cheerio'),
       imagemin    = require('gulp-imagemin'),
       newer       = require('gulp-newer'),
@@ -14,15 +15,28 @@ const argv        = require('yargs').argv,
 // include paths file
 const paths       = require('../paths');
 
-const webSite     = argv.site + '/';
+const webSite     = '_' + argv.site + '/';
+
+// include config
+const config      = require('../../' + webSite + 'config');
+
+var imagePaths = [
+  webSite + paths.imageFilesGlob,
+  '!' + webSite + paths.imageFiles + '/{svg,svg/**}'
+];
+
+var responsive = false;
+
+if (config.resizeImgDir) {
+  responsive = true;
+  config.resizeImgDir.forEach(function responsivePaths(currentPath) {
+    imagePaths.push('!' + webSite + paths.imageFiles + '/{' + currentPath + ',' + currentPath + '/**}');
+  });
+}
 
 // 'gulp images:noresize' -- optimizes images
 gulp.task('images:noresize', () => 
-  gulp.src([
-      webSite + paths.imageFilesGlob,
-      '!' + webSite + paths.imageFiles + '/{responsive,responsive/**}',
-      '!' + webSite + paths.imageFiles + '/{svg,svg/**}'
-    ])
+  gulp.src( imagePaths )
     .pipe(newer(webSite + paths.imageFilesSite))
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
@@ -34,7 +48,7 @@ gulp.task('images:noresize', () =>
 );
 
 // Image resize values
-const responsiveSizes = [
+const responsiveSizes = config.resizeSizes || [
   { width: 25, upscale: false },
   { width: 200, upscale: false },
   { width: 300, upscale: false },
@@ -45,27 +59,29 @@ const responsiveSizes = [
 
 // 'gulp images:responsive' -- resizes, optimizes, and caches responsive images
 // https://gist.github.com/ddprrt/1b535c30374158837df89c0e7f65bcfc
-gulp.task('images:responsive', function() {
-  var streams = responsiveSizes.map(function(el) {
-    return gulp.src(webSite + paths.imageFiles + '/responsive' + paths.imagePattern)
-      .pipe(rename(function(file) {
-        if(file.extname) {
-          if(el.width == 25) {
-            file.basename = 'lqip-' + file.basename;
-          } else {
-            file.basename += '-' + el.width;
-          }
-        }
-      }))
-      .pipe(newer(webSite + paths.imageFilesSite + '/responsive'))
-      .pipe(resize(el))
-      .pipe(imagemin([
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng()
-      ], {verbose: true}))
-      .pipe(gulp.dest(webSite + paths.imageFilesSite + '/responsive'));
-  });
-  return merge2(streams);
+gulp.task('images:responsive', function(done) {
+  if (responsive) {
+    var streams = responsiveSizes.map(function(tamano) {
+      return config.resizeImgDir.map(function(currentPath) {
+        return gulp.src(webSite + paths.imageFiles + '/' + currentPath + paths.imagePattern)
+          .pipe(rename(function(file) {
+            if(file.extname) {
+              file.basename += '-' + tamano.width;
+            }
+          }))
+          .pipe(newer(webSite + paths.imageFilesSite + '/' + currentPath))
+          .pipe(resize(tamano))
+          .pipe(imagemin([
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng()
+          ], {verbose: true}))
+          .pipe(gulp.dest(webSite + paths.imageFilesSite + '/' + currentPath));
+      });
+    });
+    streams = [].concat.apply([], streams);
+    return merge2(streams);
+  }
+  done();
 });
 
 gulp.task('icons', function () {

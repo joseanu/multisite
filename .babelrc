@@ -1,9 +1,9 @@
 {
-  'presets': [
+  "presets": [
                 ["es2015", { "modules": false }]
         ],
-  'plugins': ['transform-runtime'],
-  'ignore': [
-    'node_modules'
+  "plugins": ["syntax-dynamic-import", "transform-runtime"],
+  "ignore": [
+    "node_modules"
   ]
 }

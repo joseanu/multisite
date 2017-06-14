@@ -1,0 +1,83 @@
+{
+    "a": [
+        {"termino":"Abertura","definicion":"En colectores solares, el área a través de la cual la radiación solar es admitida y dirigida al absorbedor."},
+        {"termino":"Absorbente","definicion":"El elemento de un colector solar que absorbe la energía solar y la convierte en calor, o en caso de un colector fotovoltáico, es el material que absorbe fotones para generar cargas positivas (huecos)."},
+        {"termino":"Absortividad (αλ)","definicion":"Es la razón de la cantidad de energía radiante absorbida por una superficie entre la cantidad total de energía incidente sobre esa superficie."},
+        {"termino":"Acimut solar (a)","definicion":"Es el ángulo formado por la proyección del rayo solar en el plano horizontal del sitio y la intersección de éste con el plano meridional o línea norte-sur, medido a partir de esta última, indistintamente desde el sur o desde el norte, de acuerdo al cuadrante en que se encuentre el Sol. En los cuadrantes al oeste el valor es negativo y al este positivo."},
+        {"termino":"Acumulador","definicion":" Elemento de instalación capaz de almacenar la energía eléctrica, transformándola en energía química. Se compone de una o más celdas electroquímicas conectadas entre sí en serie o en paralelo."},
+        {"termino":"Ahorro solar anual","definicion":"El ahorro solar anual de un edificio solar es el ahorro de energía atribuible a una característica solar en relación con los requerimientos energéticos de un edificio no solar."},
+        {"termino":"Albedo","definicion":"Es la fracción de la luz incidente reflejada en una longitud de onda o espectro dado."},
+        {"termino":"Altura solar","definicion":"Conocida también como elevación solar, es el ángulo formado por el rayo solar y el plano horizontal del sitio. Varía desde 0° cuando el Sol está en el horizonte, hasta 90° cuando éste está en el cenit."},
+        {"termino":"Amperio","definicion":"Es la intensidad de una corriente constante que, manteniéndose en dos conductores paralelos, rectilíneos, de longitud infinita, de sección circular despreciable y situados a una distancia de un metro uno de otro en el vacío, produciría una fuerza igual a 2×10-7 newton por metro de longitud."},
+        {"termino":"Amperio-hora","definicion":"Representa la cantidad de electricidad que, en una hora, atraviesa un conductor por el que circula una corriente continua de 1 Amperio. Es la unidad usada para especificar la capacidad de una batería."},
+        {"termino":"Angstrom (Å)","definicion":"es una unidad de longitud empleada principalmente para expresar longitudes de onda, distancias moleculares y atómicas, etc. Es  equivalente a la diez mil millonésima parte del metro (0.000,000,000,1 metros). En un centímetro caben 100 millones de angstroms."},
+        {"termino":"Ángulo de incidencia","definicion":"En referencia a los sistemas de energía solar, el ángulo en el que la luz directa del sol golpea una superficie; El ángulo entre la dirección del sol y la perpendicular a la superficie. La luz solar con un ángulo de incidencia de 90 grados tiende a ser absorbida, mientras que los ángulos inferiores tienden a ser reflejados."},
+        {"termino":"Ángulo de inclinación","definicion":"En referencia a los sistemas de energía solar, el ángulo que un colector solar está situado respecto de la horizontal."},
+        {"termino":"Ángulo horario (ω)","definicion":"Es el ángulo formado por el rayo solar y el plano meridional del sitio, medido en el plano que contiene a la trayectoria solar. La medición se hace a partir del plano meridional, por lo que la posición del Sol a las 12:00 horas tiene un ω =0°. Hacia el oriente la cuenta es positiva y hacia el poniente la cuenta es negativa."},
+        {"termino":"Angulo horario al amanecer","definicion":"Este es un caso particular de ω, que indica el valor del ángulo horario en el momento del amanecer, es decir, cuando el Sol está en el horizonte."},
+        {"termino":"Ánodo","definicion":"Es un electrodo en el que se produce una reacción de oxidación, mediante la cual un material, al perder electrones, incrementa su estado de oxidación. El polo positivo de una celda electrolítica, tubo de vacío, etc. (véase también ánodo de sacrificio)."},
+        {"termino":"Anticongelante","definicion":"Compuesto que se añade a los líquidos para reducir su punto de solidificación, logrando de esta forma que la mezcla resultante se congele a una temperatura más baja."},
+        {"termino":"Antirreflejante","definicion":"Un fino revestimiento de un material aplicado a una superficie de células fotovoltaicas que reduce la reflexión de la luz y aumenta la transmisión de la luz."},
+        {"termino":"Arreglo Solar","definicion":"Un sistema interconectado de módulos fotovoltaicos que funcionan como una unidad independiente de producción de electricidad. Los módulos o paneles solares se instalan en estructuras con monturas y apoyos comunes."},
+        {"termino":"Auditoría energética","definicion":"Es una inspección, estudio y análisis de los flujos de energía en un edificio, proceso o sistema con el objetivo de comprender la energía dinámica del sistema bajo estudio. Normalmente una auditoría energética se lleva a cabo para buscar oportunidades para reducir la cantidad de energía de entrada en el sistema sin afectar negativamente la salida."},
+    ],
+    "b": [
+        {"termino":"Balanceo de Sistemas","definicion":"En un sistema de energía renovable, se refiere a todos los componentes distintos del mecanismo utilizado para recolectar el recurso (como paneles fotovoltaicos o una turbina eólica). Pueden incluir diseño, terreno, preparación del sitio, instalación del sistema, estructuras de apoyo, acondicionamiento de energía, operación y mantenimiento y almacenamiento."},
+    ],
+    "c": [
+        {"termino":"Calentador solar activo","definicion":"Un sistema de calefacción solar que utiliza bombas o ventiladores para hacer circular el fluido caliente (agua o fluido de transferencia de calor como anticongelante diluido) de los colectores solares a un subsistema de tanques de almacenamiento."},
+        {"termino":"Celda electroquímica","definicion":"Es un dispositivo capaz de obtener energía eléctrica a partir de reacciones químicas, o bien, de producir reacciones químicas a través de la introducción de energía eléctrica, cuando se esté cargando la celda."},
+        {"termino":"CO2eq","definicion":"Equivalente de dióxido de carbono,es una medida de la huella de carbono. La masa de los gases emitidos es medida por su equivalencia en CO2 (dióxido de carbono)."},
+        {"termino":"Coeficiente de absorción","definicion":"En referencia a los dispositivos de conversión de energía solar, es el grado en que una sustancia absorberá la energía solar. En un dispositivo solar fotovoltaico, es el factor por el cual los fotones son absorbidos a medida que viajan una unidad de distancia a través de un material. El coeficiente de absorción determina hasta qué punto una luz de una longitud de onda particular puede penetrar en el material antes de ser absorbido. En un material con un bajo coeficiente de absorción, la luz se absorbe mal, y si el material es lo suficientemente delgado, parecerá transparente a esa longitud de onda. El coeficiente de absorción depende del material y también de la longitud de onda de la luz que está siendo absorbida."},
+        {"termino":"Corriente alterna","definicion":"La corriente eléctrica en la que la magnitud y el sentido varían cíclicamente. (abreviada CA en español y AC en inglés, de alternating current)"},
+        {"termino":"Cuerpo negro","definicion":"es un objeto teórico o ideal que absorbe toda la luz y toda la energía radiante que incide sobre él. Nada de la radiación incidente se refleja o pasa a través del cuerpo negro."},
+    ],
+    "d": [
+        {"termino":"Declinación solar (δ)","definicion":"Ángulo aparente formado por el plano que contiene al eje de rotación terrestre y el plano perpendicular a la eclíptica."},
+        {"termino":"Día solar","definicion":"Es el intervalo entre dos pasos sucesivos del Sol por el meridiano."},
+    ],
+    "e": [
+        {"termino":"Ecuación del tiempo (ET)","definicion":" Representa los minutos (y fracción) que deben sumarse o restarse a la hora solar verdadera para obtener la hora del tiempo medio. Es lo que en astronomía se conoce como el intervalo de tiempo que separa el paso por el meridiano local del Sol verdadero (que en su movimiento aparente recorre la eclíptica con velocidad variable), del paso del Sol medio (Sol ficticio que recorre la eclíptica con velocidad uniforme)."},
+        {"termino":"Emisividad (ελ)","definicion":"Se define como la razón de la energía emitida por una superficie a una longitud de onda y una temperatura dadas, entre la energía emitida por un cuerpo negro a la misma longitud de onda y a la misma temperatura."},
+    ],
+    "f": [
+        {"termino":"Fracción solar","definicion":"Es la cantidad de energía solar obtenida a través de la tecnología solar utilizada, dividido por el total de la energía requerida"},
+    ],
+    "h": [
+        {"termino":"Humedad asoluta","definicion":"Es la relación de la masa de vapor de agua y el volumen que ocupa el aire húmedo a una temperatura y presión dadas."},
+    ],
+    "i": [
+        {"termino":"Insolación","definicion":"La insolación es la cantidad de energía en forma de radiación solar que incide en una superficie de área e inclinación dadas."},
+        {"termino":"Irradiación","definicion":"Es la energía que en forma de radiación se integra o totaliza durante cierto tiempo en una superficie o zona. Sus unidades son Joules/m²  o cal/cm² (llamado también Langley y se abrevia ly) o kWatt-hora/m² día, que es una forma muy común de expresar este parámetro. "},
+        {"termino":"Irradiancia","definicion":"Es la energía instantánea que se emite o incide en cierta superficie o zona, sus unidades son W/m²."},
+    ],
+    "l": [
+        {"termino":"Latitud del sitio","definicion":"Es el ángulo que forma la vertical del lugar con el plano del ecuador. Es expresada en grados, se mide de 0° (en el ecuador) a ±90° (en los polos) y se considera como positiva en el hemisferio norte y negativa en el sur."},
+        {"termino":"Lectura de medición automática (o remota)","definicion":"Es la tecnología de recolección automática de consumo, diagnóstico y datos de estado del contador de agua o de energía (gas, electricidad) y de transferencia de dichos datos a una base de datos central para la facturación, resolución de problemas y análisis."},
+        {"termino":"Ley de Kirchhoff","definicion":"Establece que si un cuerpo está en equilibrio termodinámico con su entorno, su emisividad es igual a su absortividad; es decir, un buen reflector es un mal emisor."},
+        {"termino":"Ley de Planck","definicion":"Postula que la energía emitida por un cuerpo negro a una temperatura dada es proporcional a su frecuencia."},
+        {"termino":"Ley de Stefan-Boltzmann","definicion":"Expresa la densidad de energía radiante emitida (E) por un cuerpo negro como una función de la cuarta potencia de la temperatura del citado cuerpo."},
+    ],
+    "p": [
+        {"termino":"Potencia activa","definicion":"En un circuito de corriente alterna, Potencia activa (P) es la que se aprovecha como potencia útil. También se llama potencia media, real o verdadera y es debida a los dispositivos resistivos. Su unidad de medida en el vatio (W)."},
+        {"termino":"Potencia aparente","definicion":"Es el producto de los valores eficaces de tensión e intensidad. Es una potencia que se mueve por los conductores desde el generador hasta los receptores. Este es el requisito de voltaje-amperio de un dispositivo diseñado para convertir la energía eléctrica en una forma no eléctrica."},
+        {"termino":"Presión atmosférica","definicion":"Es la fuerza por unidad de área que ejerce el aire sobre la superficie terrestre."},
+    ],
+    "r": [
+        {"termino":"Radiación difusa","definicion":"Es la que se recibe del Sol después de ser desviada por dispersión atmosférica. Es radiación difusa la que se recibe a través de las nubes, así como la que proviene del cielo. De no haber radiación difusa, el cielo se vería negro aun de día, como sucede por ejemplo en la Luna."},
+        {"termino":"Radiación directa","definicion":"Es la parte que se recibe directamente del Sol sin sufrir ninguna dispersión atmosférica, por lo tanto la radiación extraterrestre es radiación directa."},
+        {"termino":"Radiación global","definicion":"Es la suma de la radiación directa más la difusa"},
+        {"termino":"Radiación terrestre","definicion":"Es la que proviene de objetos terrestres, por ejemplo la que emite una pared, un charco, un lago, etcétera."},
+        {"termino":"Radiación total","definicion":"Es la suma de la radiación global más la terrestre"},
+        {"termino":"Radiancia","definicion":"Es la irradiancia solar en una dirección particular e involucra cierto ángulo sólido, que afecta determinada superficie y con la que forma un ángulo. Sus unidades pueden ser Watt/m² por estereoradián."},
+        {"termino":"Reflectividad (ρλ)","definicion":"Razón de la cantidad de radiación reflejada entre la cantidad total incidente sobre una superficie."},
+    ],
+    "s": [
+        {"termino":"Semiconductor amorfo","definicion":"Material semiconductor no cristalino sin orden de largo alcance."},
+    ],
+    "t": [
+        {"termino":"Tiempo solar","definicion":"Es una medida del tiempo fundamentada en el movimiento aparente del Sol sobre el horizonte del lugar. Toma como origen el instante en el cual el Sol pasa por el meridiano, que es su punto más alto en el cielo, denominado mediodía. A partir de este instante se van contando las horas en intervalos de 24 partes hasta que completan el ciclo diurno."},
+        {"termino":"Tiempo solar local","definicion":"Consiste en el lapso existente entre el paso consecutivo del Sol medio por el meridiano superior del lugar."},
+        {"termino":"Transmitividad (τλ)","definicion":"Razón de la radiación transmitida por un material (agua, vidrio, aire, etcétera) entre la cantidad total de la radiación incidente sobre una superficie."}
+    ]
+}

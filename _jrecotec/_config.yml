@@ -1,0 +1,76 @@
+# Site settings
+title: JR Ecotecnología
+description: "Proveedor autorizado del programa Hipoteca Verde a nivel nacional, con 20 sucursales en 15 estados de la República Mexicana."
+logo: "/assets/img/social/logo.jpg"
+iconos: "/assets/img/svg/icons.svg"
+locale: es_MX
+baseurl: ""
+url: "https://www.jrecotecnologia.com"
+repository: "joseanu/jrecotecnologia"
+
+# Site owner
+owner:
+  name: "JR Ecotecnología"
+  email: contacto@jrecotecnologia.com
+  direccion: "Nicolás Romero #429 Col. Santa Teresita, Guadalajara, Jal."
+  telefonos:
+    - 3338258247
+    - 3338267767
+  formsurl: /server/contacto
+  facebook: https://www.facebook.com/jrecotecnologias
+  fb_app_id: 1622349154752586
+  linkedin: https://www.linkedin.com/company/jr-ecotecnologia
+  google:
+    analytics: UA-77266972-1
+    gtm: GTM-TQNGHQ
+    plus: https://google.com/+Jrecotecnologia
+    author: https://plus.google.com/110169972051158672784
+    verify: ZOcvun6lI3h_vsGspcSW5aeuN_i7P6ft94g-TOP_0hk
+    mapsapi: AIzaSyA_2f1E_wtDgpdaLNJoVTltecZEcmHpnDE
+  bing:
+    verify: C912FFA4973B378094014CAF88EB7EB7
+  alexa:
+    verify: Y5DYjZ4VWlrQzBP5kcQJeOKLNas
+
+# Jekyll configuration
+markdown: kramdown
+encoding: utf-8
+source: ./_jrecotec/.tmp/src
+destination: ./_jrecotec/.tmp/_site
+include: ["_pages"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
+gems:
+  - jekyll-sitemap
+
+# Colecciones
+collections:
+  ecotecnologias:
+    output: true
+    permalink: /:collection/:path/
+
+# Plugin: jekyll-datapage_gen
+page_gen:
+  - data: 'sucursales'
+    template: 'sucursal'
+    name: 'slug'
+    dir: 'sucursales'
+  - data: 'sucursales'
+    template: 'sucursalJson'
+    name: 'slug'
+    dir: 'sucursalData'
+    extension: 'json'
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "sucursales"
+    values:
+      bodyClass: "sucursal"
+      function: "form"
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: [development, dev]

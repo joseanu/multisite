@@ -1,0 +1,49 @@
+# Site settings
+title: "Concreto Estampado Guadalajara"
+description: "Decorando bajo tus pies"
+logo: "/assets/img/logo.svg"
+color: "#b22222"
+locale: "es_MX"
+baseurl: ""
+url: "https://www.concretoenguadalajara.com"
+
+# Site owner
+owner:
+  name: "Concreto Estampado Guadalajara"
+  email: "contacto@concretoenguadalajara.com"
+  ciudad: "Guadalajara"
+  estado: "Jalisco"
+  direccion: ""
+  colonia: ""
+  codigopostal: ""
+  latitud: ""
+  longitud: ""
+  telefonos:
+    - ""
+  horario: "1-5:0800-1800,6:0800-1300"
+  formsurl: "/server/contacto"
+  facebook: ""
+  fb_app_id: ""
+  linkedin: ""
+  google:
+    analytics: "UA-93040716-1"
+    gtm: "GTM-KZQT5NK"
+    plus: ""
+    maps: ""
+    author: ""
+    verify: "3G4VyaTi1GRMoYrkD6S-Z_n9NbrIzGt_GZd9iIq_aP0"
+    mapsapi: ""
+  bing:
+    verify: ""
+  alexa:
+    verify: ""
+
+# Jekyll configuration
+markdown: kramdown
+encoding: utf-8
+source: ./_concreto/.tmp/src
+destination: ./_concreto/.tmp/_site
+include: ["_pages"]
+exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
+gems:
+  - jekyll-sitemap

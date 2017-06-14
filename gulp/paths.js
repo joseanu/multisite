@@ -27,10 +27,10 @@ paths.sassFiles          = paths.sourceDir + paths.assetsDir + paths.stylesFolde
 paths.jsFiles            = paths.sourceDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFiles          = paths.sourceDir + paths.assetsDir + paths.iconFolderName;
 paths.imageFiles         = paths.sourceDir + paths.assetsDir + paths.imageFolderName;
-paths.phpFiles           = paths.sourceDir + paths.phpFolderName
+paths.phpFiles           = paths.sourceDir + paths.phpFolderName;
 
 // Temp asset files locations.
-paths.assetFilesTemp     = paths.tempDir + paths.assetsFolderName
+paths.assetFilesTemp     = paths.tempDir + paths.assetsFolderName;
 paths.sassFilesTemp      = paths.tempDir + paths.assetsDir + paths.stylesFolderName;
 paths.jsFilesTemp        = paths.tempDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFilesTemp      = paths.tempDir + paths.assetsDir + paths.iconFolderName;
@@ -38,7 +38,7 @@ paths.imageFilesTemp     = paths.tempDir + paths.assetsDir + paths.imageFolderNa
 paths.fontFilesTemp      = paths.tempDir + paths.assetsDir + paths.fontFolderName;
 
 // Site asset files locations.
-paths.assetFilesSite     = paths.siteDir + paths.assetsFolderName
+paths.assetFilesSite     = paths.siteDir + paths.assetsFolderName;
 paths.sassFilesSite      = paths.siteDir + paths.assetsDir + paths.stylesFolderName;
 paths.jsFilesSite        = paths.siteDir + paths.assetsDir + paths.scriptFolderName;
 paths.iconFilesSite      = paths.siteDir + paths.assetsDir + paths.iconFolderName;
@@ -56,13 +56,13 @@ paths.xmlPattern         = '/**/*.{xml,json}';
 paths.ymlPattern         = '/**/*.yml';
 
 // File globs
-paths.htmlFilesGlob      = paths.sourceFolderName + '/html' + paths.htmlPattern
-paths.imageFilesGlob     = paths.imageFiles + paths.imagePattern
-paths.jsFilesGlob        = paths.jsFiles + paths.jsPattern
-paths.mdFilesGlob        = paths.sourceFolderName + '/html' + paths.markdownPattern
-paths.sassFilesGlob      = paths.sassFiles + paths.sassPattern
-paths.txtFilesGlob       = paths.sourceFolderName + paths.txtPattern
-paths.xmlFilesGlob       = paths.sourceFolderName + paths.xmlPattern
-paths.ymlFilesGlob       = paths.sourceFolderName + paths.ymlPattern
+paths.htmlFilesGlob      = paths.sourceFolderName + '/html' + paths.htmlPattern;
+paths.imageFilesGlob     = paths.imageFiles + paths.imagePattern;
+paths.jsFilesGlob        = paths.jsFiles + paths.jsPattern;
+paths.mdFilesGlob        = paths.sourceFolderName + '/html' + paths.markdownPattern;
+paths.sassFilesGlob      = paths.sassFiles + paths.sassPattern;
+paths.txtFilesGlob       = paths.sourceFolderName + paths.txtPattern;
+paths.xmlFilesGlob       = paths.sourceFolderName + paths.xmlPattern;
+paths.ymlFilesGlob       = paths.sourceFolderName + paths.ymlPattern;
 
 module.exports = paths;

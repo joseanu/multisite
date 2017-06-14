@@ -1,0 +1,18 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo.src | prepend: site.url }}",
+      "width": {{ site.logo.width }},
+      "height": {{ site.logo.height }}
+    },
+    "sameAs": [
+      "{{ site.owner.facebook }}",
+      "{{ site.owner.linkedin }}",
+      "{{ site.owner.twitter }}",
+      "{{ site.owner.google.plus }}"
+    ]
+  }

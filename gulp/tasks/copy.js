@@ -6,7 +6,7 @@ const argv        = require('yargs').argv,
 // include paths
 const paths        = require('../paths');
 
-const webSite    = argv.site + '/';
+const webSite      = '_' + argv.site + '/';
 
 // 'gulp assets:copy' -- copies assets into the /_site/ to avoid Jekyll overwriting the whole directory
 gulp.task('copy:assets', () =>

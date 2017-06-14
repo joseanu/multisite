@@ -1,0 +1,24 @@
+---
+---
+
+<!doctype html>
+<html lang="es">
+
+  {% include head.html %}
+
+    <body class="quinto_sol{% if page.classes %} {{ page.classes }}{% endif %}{% if page.bodyClass %} {{ page.bodyClass }}{% endif %}"{% if page.function %} data-function="{{ page.function }}"{% endif %}>
+        {% if jekyll.environment == "production" %}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB3D95S"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        {% endif %}
+        {% include header.html %}
+
+        {{ content }}
+        
+        {% include footer.html %}
+        {% include partes/scripts.html %}
+
+    </body>
+</html>

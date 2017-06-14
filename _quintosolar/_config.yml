@@ -1,0 +1,80 @@
+# Site settings
+title: Quinto Solar
+description: "Los dioses se convirtieron en sol para alumbrar al mundo.."
+logo:
+  src: "/assets/img/logo.jpg"
+  width: 536
+  height: 109
+locale: es_MX
+lang: es
+baseurl: ""
+url: "https://www.quintosolar.com"
+
+# Paths
+path:
+  imagesBlog: "/assets/img/blog/"
+
+# Site owner
+owner:
+  name: "Quinto Solar"
+  email: contacto@quintosolar.com
+  direccion: "Guadalajara, Jal."
+  tel: 333
+  facebook: https://www.facebook.com/
+  fb_app_id: 1
+  linkedin: https://www.linkedin.com/
+  twitter: https://www.twitter.com/
+  google:
+    analytics: "UA-90044234-1"
+    gtm: "GTM-WB3D95S"
+    plus: https://google.com/+
+    author: https://plus.google.com/
+    verify: 
+    mapsapi: AIzaSyBHiby2iDfJtKe73ttJ9LSr7lj0-Ui5gJw
+  bing:
+    verify: 
+  alexa:
+    verify: 
+
+# Jekyll configuration
+markdown: kramdown
+kramdown:
+  toc_levels: 1..3
+  auto_ids: true
+encoding: utf-8
+source: ./_quintosolar/.tmp/src
+destination: ./_quintosolar/.tmp/public
+permalink: /:categories/:slug/
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+
+# https://github.com/sverrirs/jekyll-paginate-v2
+pagination:
+  enabled: true
+  debug: false
+  collection: 'posts'
+  per_page: 8
+  permalink: '/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Front Matter Defaults
+defaults:
+  # Noticias
+  - scope:
+      path: _posts/noticias
+      type: posts
+    values:
+      layout: blog-post
+      category: noticias
+      bodyClass: noticias
+  # Artículos
+  - scope:
+      path: _posts/articulos
+      type: posts
+    values:
+      layout: articulo
+      category: articulos

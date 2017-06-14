@@ -1,0 +1,8 @@
+{
+    "config": {
+        "vendor-dir": "phplib"
+    },
+    "require": {
+        "slim/slim": "^3.0"
+    }
+}

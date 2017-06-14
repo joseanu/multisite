@@ -7,7 +7,7 @@ const argv        = require('yargs').argv,
 // include paths
 const paths       = require('../paths');
 
-const webSite     = argv.site + '/';
+const webSite     = '_' + argv.site + '/';
 
 // 'gulp site' -- builds site with development settings
 // 'gulp site --prod' -- builds site with production settings

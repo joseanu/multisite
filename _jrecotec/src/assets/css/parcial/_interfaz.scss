@@ -1,0 +1,161 @@
+.boton {
+  display: inline-block;
+  position: relative;
+  height: 3rem;
+  line-height: 3rem;
+  border: 0;
+  border-radius: 0.3125rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  background-color: $brand-color3;
+  color: $blanco;
+  margin: 0.625rem;
+  padding: 0 1.75rem;
+  transition: box-shadow 0.2s, opacity 0.2s;
+  transition-delay: box-shadow 0.2s, opacity 0s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+  }
+}
+
+.boton.naranja {
+  background-color: $brand-color3;
+  color: $blanco;
+}
+
+.boton.blanco {
+  background-color: $blanco;
+  color: $text-color;
+}
+
+.boton.verde {
+  background-color: $brand-color;
+
+  &:hover {
+    color: $blanco;
+  }
+}
+
+.boton-naranja {
+  height: 3rem;
+  background-color: $brand-color3;
+  border: 0;
+  border-radius: 0.625rem;
+  text-transform: none;
+  color: $blanco;
+  padding: 0.625rem 1.75rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 400;
+  position: relative;
+
+  &:hover {
+    color: $blanco;
+    background-color: darken($brand-color3, 5);
+    text-decoration: none;
+  }
+}
+
+button:disabled {
+  cursor: default;
+  display: none;
+}
+
+.centrar {
+  text-align: center;
+}
+
+// intrinsic.scss ------------------------
+// An Intrinsic Ratio Component
+// ---------------------------------------
+.intrinsic {
+  // Make sure <picture> wrapper is set to block
+  // Max-width is governed by parentNode
+  display: block;
+  // Intrinsic Ratio Box
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%; // Default to square
+  // Custom Styling
+  background: #f0f0f0;
+
+  // Add as many ratios as you'd like...
+  &.intrinsic--square {
+    padding-top: 100%;
+  }
+
+  &.intrinsic--4x3 {
+    padding-top: 75%;
+  }
+
+  &.intrinsic--16x9 {
+    padding-top: 56.25%;
+  }
+
+  // Force the item to fill the intrinsic box
+  .intrinsic-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// ----------------------------------------------------------------------------
+div.cta {
+  background-color: $background-color;
+  border-top: 1px solid $grey-color-light;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: center;
+    padding: $spacing-unit / 2 $spacing-unit;
+  }
+
+  h2 {
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  @include media-query($on-laptop) {
+    display: none;
+  }
+}
+
+div.cta__cotizaSolar {
+  background-color: $brand-color3;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: $spacing-unit / 2 $spacing-unit;
+
+    @include media-query($on-laptop) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  h2 {
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}

@@ -1,0 +1,304 @@
+.siteHeader {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  z-index: 3;
+}
+
+.siteHeader-topBar {
+  height: $topbar-height;
+  background-color: $brand-color;
+}
+
+.siteHeader-topBar .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+
+  @include media-query($on-laptop) {
+    display: none;
+  }
+}
+
+#selectSucursal {
+  border: none;
+  padding: 0.125rem 2rem 0.125rem 0.25rem;
+  margin: 0;
+  width: auto;
+  display: inline;
+  font-size: $small-font-size;
+  background-color: #449b5e;
+  color: $blanco;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.siteHeader-topBar-telefono a,
+.siteHeader-topBar-telefono span,
+.siteHeader-topBar-correo a,
+.siteHeader-topBar-ubicacion a {
+  color: $blanco;
+  font-size: $small-font-size;
+
+  .icon {
+    margin-bottom: 0.0625rem;
+  }
+}
+
+.siteHeader-topBar-telefono {
+  margin: 0 $spacing-unit/2;
+}
+
+.siteHeader-topBar-correo a .icon {
+  margin-top: -0.125rem;
+}
+
+.siteHeader-topBar-ubicacion {
+  margin: 0 0 0 $spacing-unit/2;
+}
+
+.siteHeader-contenedor {
+  max-width: calc(1200px - (1.6667rem * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.6667rem;
+  padding-left: 1.6667rem;
+
+  @include media-query($on-laptop) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+
+.siteHeader-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-query($on-laptop) {
+    display: block;
+  }
+}
+
+.siteHeader-logoTipo {
+  padding: 0.5rem 0;
+  display: inline-block;
+
+  img {
+    width: $logo-height * 2.6;
+    height: $logo-height;
+  }
+}
+
+.siteHeader-menuToggle {
+  display: none !important;
+
+  @include media-query($on-laptop) {
+    &:checked ~ .siteHeader-menuPrincipal {
+      opacity: 1;
+      height: 20rem; //Para animar correctamente, establecer altura.---------------------------------------------------------------------------
+      visibility: visible;
+    }
+  }
+}
+
+.siteHeader-labelToggle {
+  display: none;
+
+  @include media-query($on-laptop) {
+    background: linear-gradient(to bottom, $brand-color 0%, $brand-color 20%, transparent 20%, transparent 40%, $brand-color 40%, $brand-color 60%, transparent 60%, transparent 80%, $brand-color 80%, $brand-color 100%); //Gradient Hamburger
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 2rem;
+    margin-top: 1.725rem;
+    width: 2rem;
+  }
+}
+
+.siteHeader-menuPrincipal {
+  margin: 0;
+  padding: 0;
+  font-size: $small-font-size;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-query($on-laptop) {
+    display: block;
+    height: 0;
+    list-style-type: none;
+    opacity: 0;
+    text-align: center;
+    transition: all 300ms cubic-bezier(0.32, 0, 0, 1);
+    width: 100%;
+    visibility: hidden;
+  }
+}
+
+.siteHeader-menuPrincipal-listItem {
+  list-style: none;
+  height: $logo-height + 1rem;
+  position: relative;
+
+  &:hover {
+    .siteHeader-menuPrincipal-link {
+      color: #fff;
+      text-decoration: none;
+
+      &::before {
+        transform: scaleX(1); // reveal
+      }
+    }
+  }
+
+  @include media-query(850px) {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  @include media-query($on-laptop) {
+    display: block;
+    height: 4rem; // ---------------------------------------------------------------------------
+    border-bottom: 1px solid $grey-color-light;
+
+    &:first-child {
+      display: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $on-laptop) {
+    // ------------------ Se revela el submenu con hover arriba de esta resolución.
+
+    &:hover {
+      .siteHeader-subMenu {
+        transform: scaleY(1); // reveal
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.siteHeader-menuPrincipal-link {
+  position: relative;
+  display: block;
+  line-height: $logo-height + 1rem;
+  margin: 0 0 0 2px;
+  padding: 0 1rem;
+  color: $text-color;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: $logo-height + 1rem;
+    width: 100%;
+    background-color: $brand-color;
+    transition: transform 300ms cubic-bezier(0.32, 0, 0, 1);
+    transform: scaleX(0); // hide
+  }
+
+  &.activo {
+    color: #fff;
+    cursor: default;
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  @include media-query($on-laptop) {
+    line-height: 4rem; // ---------------------------------------------------------------------------
+    font-size: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      height: 4rem; // ---------------------------------------------------------------------------
+      width: 100%;
+      background-color: $brand-color;
+      transition: transform 300ms cubic-bezier(0.32, 0, 0, 1);
+      transform: scaleX(0); // hide
+    }
+
+    &.activo {
+      color: #fff;
+      cursor: default;
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.siteHeader-subMenu {
+  position: absolute;
+  top: $logo-height + 1rem;
+  left: 0.125rem;
+  white-space: nowrap;
+  background-color: #fff;
+  border-top: 3px solid $brand-color;
+  transition: transform 300ms cubic-bezier(0.32, 0, 0, 1), opacity 300ms linear;
+  transform-origin: 0 0;
+  transform: scaleY(0); // hide
+  opacity: 0;
+}
+
+.siteHeader-subMenu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.siteHeader-subMenu-listItem {
+  border-bottom: 1px solid $grey-color-light;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    .siteHeader-subMenu-link {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.siteHeader-subMenu-link {
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit/2;
+  color: $text-color;
+
+  &.sin-icono {
+    padding-left: $spacing-unit;
+    line-height: 3rem;
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+}

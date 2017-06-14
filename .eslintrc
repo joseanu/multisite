@@ -1,0 +1,12 @@
+{
+	"extends": ["vue", "airbnb"],
+	"parser": "babel-eslint",
+	"parserOptions": {
+    "allowImportExportEverywhere": true
+  },
+	"rules": {
+		"no-param-reassign": [2, {
+			"props": false
+		}]
+	},
+}
