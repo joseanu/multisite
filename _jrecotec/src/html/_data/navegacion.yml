@@ -4,23 +4,33 @@ site-header:
   - title: "Inicio"
     url: /
   - title: "Catálogo"
-    url: /ecotecnologias/
+    url: /vuecatalogo/
     submenu:
       - title: "Energía solar"
         icon: "energia-solar"
-        url: /ecotecnologias/energia-solar/
+        url: /vuecatalogo/energia-solar/
+        data-slug: "energia-solar"
+        class: "js-vue-router"
       - title: "Línea blanca"
         icon: "linea-blanca"
-        url: /ecotecnologias/linea-blanca/
+        url: /vuecatalogo/linea-blanca/
+        data-slug: "linea-blanca"
+        class: "js-vue-router"
       - title: "Calentadores solares"
         icon: "calentadores-solares"
-        url: /ecotecnologias/calentadores-solares/
+        url: /vuecatalogo/calentadores-solares/
+        data-slug: "calentadores-solares"
+        class: "js-vue-router"
       - title: "Aire acondicionado"
         icon: "aire-acondicionado"
-        url: /ecotecnologias/aire-acondicionado/
+        url: /vuecatalogo/aire-acondicionado/
+        data-slug: "aire-acondicionado"
+        class: "js-vue-router"
       - title: "Ahorro de agua"
         icon: "ahorro-de-agua"
-        url: /ecotecnologias/ahorro-de-agua/
+        url: /vuecatalogo/ahorro-de-agua/
+        data-slug: "ahorro-de-agua"
+        class: "js-vue-router"
 #       - title: "Pinturas e impermeabilizantes"
 #         icon: "pintura-imper"
 #         url: /hola/

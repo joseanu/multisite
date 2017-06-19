@@ -7,7 +7,10 @@ import { DOMUtil } from './util';
 import initSelectSucursal from './topbar';
 import linkeaTelefonos from './telefonos';
 import atencionClientes from './atencion';
+import addVueRouterListener from './vueRouter';
 import Functions from './Functions/index';
+
+import Menu from './menu';
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
@@ -19,8 +22,12 @@ function domIsReady() {
   window.lazySizes.init();
   svg4everybody();
 
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    window.jrNavMenu = new Menu();
+  }
   initSelectSucursal();
   atencionClientes();
+  addVueRouterListener();
   if (isMobile.phone) linkeaTelefonos();
 
   // Load the function based on the body tag data-function=""

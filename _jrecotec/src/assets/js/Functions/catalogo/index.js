@@ -28,8 +28,10 @@ function createInstance() {
     store.replaceState(window.__INITIAL_STATE__); // eslint-disable-line
   }
 
+  window.vueRouter = router;
+
   router.onReady(() => {
-    // actually mount to DOM
+    // actually mount  to DOM
     app.$mount('#app');
   });
 }

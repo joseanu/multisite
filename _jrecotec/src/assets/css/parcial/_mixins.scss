@@ -12,6 +12,12 @@
   }
 }
 
+@mixin media-query-min($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
 /**
  * Clearfix
  *

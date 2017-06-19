@@ -8,66 +8,75 @@
 .siteHeader-topBar {
   height: $topbar-height;
   background-color: $brand-color;
-}
-
-.siteHeader-topBar .wrapper {
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: center;
 
   @include media-query($on-laptop) {
-    display: none;
+    height: 0.6rem;
   }
-}
 
-#selectSucursal {
-  border: none;
-  padding: 0.125rem 2rem 0.125rem 0.25rem;
-  margin: 0;
-  width: auto;
-  display: inline;
-  font-size: $small-font-size;
-  background-color: #449b5e;
-  color: $blanco;
-
-  &:focus {
-    outline: none;
-    box-shadow: none;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  
+    @include media-query($on-laptop) {
+      display: none;
+    }
   }
-}
-
-.siteHeader-topBar-telefono a,
-.siteHeader-topBar-telefono span,
-.siteHeader-topBar-correo a,
-.siteHeader-topBar-ubicacion a {
-  color: $blanco;
-  font-size: $small-font-size;
-
-  .icon {
-    margin-bottom: 0.0625rem;
+  
+  #selectSucursal {
+    border: none;
+    padding: 0.125rem 2rem 0.125rem 0.25rem;
+    margin: 0;
+    width: auto;
+    display: inline;
+    font-size: $small-font-size;
+    background-color: #449b5e;
+    color: $blanco;
+  
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
   }
-}
-
-.siteHeader-topBar-telefono {
-  margin: 0 $spacing-unit/2;
-}
-
-.siteHeader-topBar-correo a .icon {
-  margin-top: -0.125rem;
-}
-
-.siteHeader-topBar-ubicacion {
-  margin: 0 0 0 $spacing-unit/2;
+  
+  .siteHeader-topBar-telefono a,
+  .siteHeader-topBar-telefono span,
+  .siteHeader-topBar-correo a,
+  .siteHeader-topBar-ubicacion a {
+    color: $blanco;
+    font-size: $small-font-size;
+  
+    .icon {
+      margin-bottom: 0.0625rem;
+    }
+  }
+  
+  .siteHeader-topBar-telefono {
+    margin: 0 $spacing-unit/2;
+  }
+  
+  .siteHeader-topBar-correo a .icon {
+    margin-top: -0.125rem;
+  }
+  
+  .siteHeader-topBar-ubicacion {
+    margin: 0 0 0 $spacing-unit/2;
+  }
 }
 
 .siteHeader-contenedor {
+  position: relative;
   max-width: calc(1200px - (1.6667rem * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.6667rem;
   padding-left: 1.6667rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @include media-query($on-laptop) {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
@@ -76,49 +85,163 @@
   }
 }
 
+.siteHeader-logoTipo {
+  padding: 0.5rem 0;
+  // display: inline-block;
+
+  img {
+    min-width: $logo-height * 2.55477;
+    min-height: $logo-height;
+  }
+}
+
+$toggle-width: 2.2rem;
+$toggle-height: $toggle-width * 3 / 4;
+$span-width: 0.9;
+$span-height: $toggle-height * 2 / 15;
+
 .siteHeader-navegacion {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  @include media-query-min($on-laptop) {
+    transform: scale(1,1) !important;
+  }
+
   @include media-query($on-laptop) {
+    position: absolute;
+    top: calc(50% - (#{$toggle-height} / 2));
+    right: $toggle-width; //---------------------------------------------------------------------------
     display: block;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top right;
+    overflow: hidden;
+    contain: content;
+    background-color: transparent;
+    will-change: transform;
+    animation-duration: 200ms;
+    animation-timing-function: step-end;
   }
 }
 
-.siteHeader-logoTipo {
-  padding: 0.5rem 0;
-  display: inline-block;
+.menu__contents {
+  transform-origin: top right;
+  will-change: transform;
+  contain: content;
+  // padding: 0 $toggle-width $toggle-width $toggle-width; //---------------------------------------------------------------------------
+  animation-duration: 200ms;
+  animation-timing-function: step-end;
 
-  img {
-    width: $logo-height * 2.6;
-    height: $logo-height;
+  @include media-query-min($on-laptop) {
+    contain: none;
+    transform: scale(1,1) !important;
   }
 }
 
 .siteHeader-menuToggle {
-  display: none !important;
+  display: none;
+
+  &:focus {
+    outline:0;
+  }
 
   @include media-query($on-laptop) {
-    &:checked ~ .siteHeader-menuPrincipal {
-      opacity: 1;
-      height: 20rem; //Para animar correctamente, establecer altura.---------------------------------------------------------------------------
-      visibility: visible;
-    }
+    display: block;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
 .siteHeader-labelToggle {
+  position: relative;
   display: none;
+  padding: 0;
+  margin: 0;
+  // margin-right: -$toggle-width; //---------------------------------------------------------------------------
+  width: $toggle-width;
+  height: $toggle-height;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
 
   @include media-query($on-laptop) {
-    background: linear-gradient(to bottom, $brand-color 0%, $brand-color 20%, transparent 20%, transparent 40%, $brand-color 40%, $brand-color 60%, transparent 60%, transparent 80%, $brand-color 80%, $brand-color 100%); //Gradient Hamburger
-    cursor: pointer;
+    display: inline-block;
+  }
+
+  span {
     display: block;
-    float: right;
-    height: 2rem;
-    margin-top: 1.725rem;
-    width: 2rem;
+    position: absolute;
+    height: $span-height;
+    width: $span-width * 100%;
+    background: $brand-color;
+    border-radius: $span-height;
+    opacity: 1;
+    left: $toggle-width * 0.5 * (1 - $span-width);
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: $span-height;
+      transform-origin: left center;
+    }
+
+    &:nth-child(2) {
+      top: ($toggle-height / 2) - ($span-height / 2);
+      transform-origin: center;
+    }
+
+    &:nth-child(3) {
+      top: $toggle-height - ($span-height * 2);
+      transform-origin: left center;
+    }
+  }
+}
+
+@include media-query($on-laptop) {
+  .menu--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu--expanded {
+    animation-name: menuExpandAnimation;
+  }
+  .menu__contents--expanded {
+    animation-name: menuExpandContentsAnimation;
+    
+    .siteHeader-labelToggle {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: $toggle-height * 0.0286;
+          left: $toggle-width * 0.1818;// 0.14645;
+        }
+
+        &:nth-child(2) {
+          transform: scaleX(0);
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: $toggle-height * 0.87713;
+          left: $toggle-width * 0.1818;
+        }
+      }
+    }
+  }
+  .menu--collapsed {
+    animation-name: menuCollapseAnimation;
+  }
+  .menu__contents--collapsed {
+    animation-name: menuCollapseContentsAnimation;
   }
 }
 
@@ -133,15 +256,17 @@
 
   @include media-query($on-laptop) {
     display: block;
-    height: 0;
-    list-style-type: none;
-    opacity: 0;
-    text-align: center;
-    transition: all 300ms cubic-bezier(0.32, 0, 0, 1);
-    width: 100%;
-    visibility: hidden;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0 $toggle-width $toggle-width $toggle-width;
+    background: #FFF;
+    box-shadow: 0 50px 100px rgba(50,50,93,.1), 0 15px 35px rgba(50,50,93,.15), 0 5px 15px rgba(0,0,0,.1);
+    z-index: 1;
   }
 }
+
+$item-height-mobile: 2.5rem;
 
 .siteHeader-menuPrincipal-listItem {
   list-style: none;
@@ -167,19 +292,15 @@
 
   @include media-query($on-laptop) {
     display: block;
-    height: 4rem; // ---------------------------------------------------------------------------
+    height: auto; // $item-height-mobile; ------------------------------------------------
     border-bottom: 1px solid $grey-color-light;
-
-    &:first-child {
-      display: none;
-    }
 
     &:last-child {
       border-bottom: none;
     }
   }
 
-  @media (min-width: $on-laptop) {
+  @include media-query-min($on-laptop) {
     // ------------------ Se revela el submenu con hover arriba de esta resolución.
 
     &:hover {
@@ -195,7 +316,6 @@
   position: relative;
   display: block;
   line-height: $logo-height + 1rem;
-  margin: 0 0 0 2px;
   padding: 0 1rem;
   color: $text-color;
   text-decoration: none;
@@ -223,8 +343,8 @@
   }
 
   @include media-query($on-laptop) {
-    line-height: 4rem; // ---------------------------------------------------------------------------
-    font-size: 2rem;
+    line-height: $item-height-mobile;
+    font-size: 1rem;
 
     &::before {
       content: '';
@@ -232,7 +352,7 @@
       top: 0;
       right: 0;
       z-index: -1;
-      height: 4rem; // ---------------------------------------------------------------------------
+      height: $item-height-mobile;
       width: 100%;
       background-color: $brand-color;
       transition: transform 300ms cubic-bezier(0.32, 0, 0, 1);
@@ -261,6 +381,12 @@
   transform-origin: 0 0;
   transform: scaleY(0); // hide
   opacity: 0;
+
+  @include media-query($on-laptop) {
+    position: static;
+    transform: scaleY(1);
+    opacity: 1;
+  }
 }
 
 .siteHeader-subMenu-list {
