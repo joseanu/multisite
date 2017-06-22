@@ -30,12 +30,12 @@
       <h2>Oficinas centrales Guadalajara</h2>
       <div class="gdl">
         <div class="siteFooter__contacto__foto">
-          <img src="/assets/img/sucursales/guadalajara-200.jpg">
+          <img src="/assets/img/sucursales/guadalajara-200.jpg" alt="Oficinas centrales Guadalajara">
         </div>
         <div class="siteFooter__contacto__datos">
-          <p>Nicolás Romero #429</p>
-          <p>Col. Santa Teresita</p>
-          <p>Guadalajara, Jalisco</p>
+          <p>{{ site.owner.direccion.direccion1 }}</p>
+          <p>{{ site.owner.direccion.direccion2 }}</p>
+          <p>{{ site.owner.direccion.ciudad }}, {{ site.owner.direccion.estado }}</p>
           <p>Teléfonos:</p>
           {% for telefono in site.owner.telefonos %}
           <p>{% include partes/telefono tel=telefono noicon=1 %}</p>
@@ -51,7 +51,8 @@
   </div>
   <div class="siteFooter__copy">
     <div class="wrapper">
-      <p>&copy; 2017 JR Ecotecnología. Todos los derechos reservados | Canjea tu vale de ecotecnologías de Hipoteca Verde con nosotros.</p>
+      <p>&copy; 2017 JR Ecotecnología. Todos los derechos reservados.
+      <span class="siteFooter__copy__canjea">| Canjea tu vale de ecotecnologías de Hipoteca Verde con nosotros.</span></p>
     </div>
   </div>
 </footer>

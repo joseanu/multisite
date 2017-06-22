@@ -3,7 +3,7 @@ const d3 = require('d3');
 const jsdom = require('jsdom/lib/old-api.js');
 const topojson = require('topojson');
 
-const chartWidth = 870;
+const chartWidth = 885;
 const chartHeight = 555;
 
 const projection = d3

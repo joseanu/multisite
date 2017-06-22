@@ -1,0 +1,44 @@
+{
+  "@context": "http://schema.org",
+  "@type": "HomeGoodsStore",
+  "@id": "{{ page.url | prepend: site.url }}#sucursal",
+  "url": "{{ page.url | prepend: site.url }}",
+  "logo": "{{ site.logo | prepend: site.url }}",
+  "image": "{{ page.slug | prepend: '/assets/img/sucursales/' | prepend: site.url | append: '-logo-800.jpg' }}",
+  "hasMap": "{{ page.gmaps }}",
+  "email": "mailto:{{ page.correo }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ page.ciudad }}",
+    "addressRegion": "{{ page.estado }}",
+    "addressCountry": "MX",
+    "postalCode": "{{ page.cp }}",
+    "streetAddress": "{{ page.direccion1 }}{% if page.direccion2 %} {{ page.direccion2 }}{% endif %}"
+  },
+  "description": "{{ page.slogan }}",
+  "name": "{{ site.title }} {{ page.nombre }}",
+  "memberOf": {
+    "@type":"Organization",
+    "@id": "{{ site.url }}/#organization"
+  },
+  "telephone": {% include jsonld/telefono tel=page.tel %},
+  "openingHours": {% include jsonld/sucursal-horario %},
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "{{ page.lat }}",
+    "longitude": "{{ page.lng }}"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+    "@type": "GeoCoordinates",
+      "latitude": "{{ page.lat }}",
+      "longitude": "{{ page.lng }}"
+    },
+    "geoRadius": "16500"
+	},
+  "sameAs": [
+    "{{ page.facebook }}",
+    "{{ page.gplus }}"
+  ]
+}

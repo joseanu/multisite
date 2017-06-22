@@ -1,16 +1,10 @@
 .cotizaSolar {
-  main .wrapper {
+  &.wrapper {
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: $spacing-unit * 2;
-  }
-
-  #app {
-    text-align: center;
-    flex: 1 1 67%;
-    padding-right: $spacing-unit;
   }
 
   .formCotiza {

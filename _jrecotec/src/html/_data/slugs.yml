@@ -10,6 +10,9 @@ ahorro-de-agua:
     regaderas:
       filtro: 'Regaderas'
       producto: 'Regadera'
+    inodoros:
+      filtro: 'Inodoros'
+      producto: 'Inodoro'
 
 aire-acondicionado:
   nombre: 'Aire acondicionado'
@@ -37,9 +40,19 @@ linea-blanca:
 
 iluminacion-led:
   nombre: 'Iluminación led'
+  tipos:
+    ahorradores:
+      producto: 'Foco ahorrador'
+    led:
+      producto: 'Foco LED'
 
 pintura-imper:
   nombre: 'Pinturas e impermeabilizantes'
+  tipos:
+    pinturas:
+      producto: 'Pinturas'
+    impermeabilizantes:
+      producto: 'Impermeabilizantes'
 
 calentadores-solares:
   nombre: 'Calentadores solares'

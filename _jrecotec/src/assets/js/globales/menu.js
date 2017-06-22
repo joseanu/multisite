@@ -93,11 +93,13 @@ export default class Menu {
     if (expand) {
       this._menu.classList.add('menu--expanded');
       this._menuContents.classList.add('menu__contents--expanded');
+      this._menuToggleButton.classList.add('is-active');
       return;
     }
 
     this._menu.classList.add('menu--collapsed');
     this._menuContents.classList.add('menu__contents--collapsed');
+    this._menuToggleButton.classList.remove('is-active');
   }
 
   _calculateScales () {
@@ -105,8 +107,8 @@ export default class Menu {
     const expanded = this._menu.getBoundingClientRect();
 
     this._collapsed = {
-      x: collapsed.width / expanded.width,
-      y: collapsed.height / expanded.height
+      x: (collapsed.width) / expanded.width,
+      y: (collapsed.height + 8) / expanded.height
     }
   }
 

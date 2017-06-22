@@ -4,6 +4,7 @@ const argv         = require('yargs').argv,
       gulp         = require('gulp'),
       webpack      = require('webpack'),
       webpackstats = require("webpack-stats-plugin").StatsWriterPlugin,
+      Analyzer     = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
       Md5Hash      = require('webpack-md5-hash');
 
 // include paths
@@ -31,6 +32,13 @@ gulp.task('scripts', function(callback) {
   };
   var sourceMap = '';
 
+  if (argv.analyze) {
+    webpackPlugins.push(new Analyzer({
+      analyzerMode: 'server',
+      analyzerHost: process.env.IP,
+      analyzerPort: process.env.PORT,
+    }));
+  }
   if (argv.prod) {
     webpackPlugins.push(new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
@@ -54,6 +62,7 @@ gulp.task('scripts', function(callback) {
     filename: "stats.json",
     fields: null
   }));
+  webpackPlugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
   var webpackConfig = {
     context: path.join('/home/ubuntu/workspace/', webSite + paths.jsFiles),
@@ -89,7 +98,8 @@ gulp.task('scripts', function(callback) {
             plugins: ['syntax-dynamic-import', 'transform-runtime']
           }
         }
-      ]
+      ],
+      strictThisContextOnImports: true
     },
     devtool: sourceMap,
     plugins: webpackPlugins

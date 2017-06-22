@@ -90,12 +90,12 @@
   // display: inline-block;
 
   img {
-    min-width: $logo-height * 2.55477;
-    min-height: $logo-height;
+    width: $logo-height * 2.55477;
+    height: $logo-height;
   }
 }
 
-$toggle-width: 2.2rem;
+$toggle-width: 36px;
 $toggle-height: $toggle-width * 3 / 4;
 $span-width: 0.9;
 $span-height: $toggle-height * 2 / 15;
@@ -112,7 +112,7 @@ $span-height: $toggle-height * 2 / 15;
   @include media-query($on-laptop) {
     position: absolute;
     top: calc(50% - (#{$toggle-height} / 2));
-    right: $toggle-width; //---------------------------------------------------------------------------
+    right: $toggle-width;
     display: block;
     opacity: 0;
     pointer-events: none;
@@ -130,7 +130,6 @@ $span-height: $toggle-height * 2 / 15;
   transform-origin: top right;
   will-change: transform;
   contain: content;
-  // padding: 0 $toggle-width $toggle-width $toggle-width; //---------------------------------------------------------------------------
   animation-duration: 200ms;
   animation-timing-function: step-end;
 
@@ -140,7 +139,7 @@ $span-height: $toggle-height * 2 / 15;
   }
 }
 
-.siteHeader-menuToggle {
+.siteHeader-menuToggle.hamburger {
   display: none;
 
   &:focus {
@@ -148,60 +147,10 @@ $span-height: $toggle-height * 2 / 15;
   }
 
   @include media-query($on-laptop) {
-    display: block;
+    display: inline-block;
     text-align: right;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
     width: 100%;
     -webkit-tap-highlight-color: transparent;
-  }
-}
-
-.siteHeader-labelToggle {
-  position: relative;
-  display: none;
-  padding: 0;
-  margin: 0;
-  // margin-right: -$toggle-width; //---------------------------------------------------------------------------
-  width: $toggle-width;
-  height: $toggle-height;
-  transform: rotate(0deg);
-  transition: .5s ease-in-out;
-  cursor: pointer;
-
-  @include media-query($on-laptop) {
-    display: inline-block;
-  }
-
-  span {
-    display: block;
-    position: absolute;
-    height: $span-height;
-    width: $span-width * 100%;
-    background: $brand-color;
-    border-radius: $span-height;
-    opacity: 1;
-    left: $toggle-width * 0.5 * (1 - $span-width);
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-
-    &:nth-child(1) {
-      top: $span-height;
-      transform-origin: left center;
-    }
-
-    &:nth-child(2) {
-      top: ($toggle-height / 2) - ($span-height / 2);
-      transform-origin: center;
-    }
-
-    &:nth-child(3) {
-      top: $toggle-height - ($span-height * 2);
-      transform-origin: left center;
-    }
   }
 }
 
@@ -215,27 +164,6 @@ $span-height: $toggle-height * 2 / 15;
   }
   .menu__contents--expanded {
     animation-name: menuExpandContentsAnimation;
-    
-    .siteHeader-labelToggle {
-      span {
-        &:nth-child(1) {
-          transform: rotate(45deg);
-          top: $toggle-height * 0.0286;
-          left: $toggle-width * 0.1818;// 0.14645;
-        }
-
-        &:nth-child(2) {
-          transform: scaleX(0);
-          opacity: 0;
-        }
-
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-          top: $toggle-height * 0.87713;
-          left: $toggle-width * 0.1818;
-        }
-      }
-    }
   }
   .menu--collapsed {
     animation-name: menuCollapseAnimation;

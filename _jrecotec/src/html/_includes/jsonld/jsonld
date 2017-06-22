@@ -1,0 +1,17 @@
+{% capture jsonld %}[
+{%- if include.website == 1 -%}
+  {% include jsonld/website %},
+{%- endif -%}
+{%- if include.webpage == 1 -%}
+  {% include jsonld/webpage %},
+{%- endif -%}
+{%- if include.organization == 1 -%}
+  {% include jsonld/organization %},
+{%- endif -%}
+{%- if include.sucursal == 1 -%}
+  {% include jsonld/sucursal %},
+{%- endif -%}
+]{% endcapture %}
+<script type="application/ld+json">
+{{ jsonld | strip_newlines | replace:',]',']' }}
+</script>

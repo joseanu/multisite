@@ -11,13 +11,39 @@
 <script>
   import ProductosLink from './components/ProductosLink.vue';
 
+  const origin = 'https://www.jrecotecnologia.com';
+
   export default {
+    metaInfo() {
+      return {
+        title: this.titulo,
+        titleTemplate: '%s - JR Ecotecnología',
+        meta: [
+          { name: 'description', content: this.titulo },
+        ],
+        link: [
+          { rel: 'canonical', href: `${origin}${this.$route.path}` },
+        ],
+      };
+    },
     asyncData({ store }) {
       return store.dispatch('fetchData');
     },
     computed: {
       datosListos() {
         return this.$store.state.datosListos;
+      },
+      slug() {
+        if (this.$route.params.slug !== undefined) {
+          return this.$route.params.slug;
+        }
+        return 'vuecatalogo';
+      },
+      titulo() {
+        if (this.$route.params.slug !== undefined) {
+          return this.$store.state.categorias[this.$route.params.slug].nombre;
+        }
+        return 'Catálogo de Ecotecnologías';
       },
       key() {
         return this.$route.params.slug !== undefined
@@ -36,27 +62,10 @@
         });
       }
     },
+    beforeUpdate() {
+      document.querySelector('.subHeader-pageTitle h1').innerHTML = this.titulo;
+      document.querySelector('.breadcrumb__lastItem span').innerHTML = this.titulo;
+      document.querySelector('.breadcrumb__lastItem').href = `${origin}${this.$route.path}`;
+    },
   };
 </script>
-
-<style>
-  .fade-enter-active, .fade-leave-active {
-    transition: all .2s ease;
-  }
-  .fade-enter, .fade-leave-active {
-    opacity: 0;
-  }
-  .move-leave-active {
-  	animation: moveToLeft .4s ease both;
-  }
-  .move-enter-active {
-  	animation: moveFromRight .4s ease both;
-  }
-  @keyframes moveToLeft {
-  	from { }
-  	to { transform: translateX(-100%); }
-  }
-  @keyframes moveFromRight {
-  	from { transform: translateX(100%); }
-  }
-</style>

@@ -1,30 +1,24 @@
 import 'es6-promise/auto';
-import 'lazysizes/plugins/attrchange/ls.attrchange';
-import 'lazysizes';
+
 import svg4everybody from 'svg4everybody';
 import isMobile from 'ismobilejs';
+
 import { DOMUtil } from './util';
-import initSelectSucursal from './topbar';
-import linkeaTelefonos from './telefonos';
-import atencionClientes from './atencion';
-import addVueRouterListener from './vueRouter';
+
+import atencionClientes from './globales/atencion';
+import lazySizes from './globales/lazysizes';
+import Menu from './globales/menu';
+import linkeaTelefonos from './globales/telefonos';
+import initSelectSucursal from './globales/topbar';
+import addVueRouterListener from './globales/vueRouter';
+
 import Functions from './Functions/index';
 
-import Menu from './menu';
-
-window.lazySizesConfig = window.lazySizesConfig || {};
-window.lazySizesConfig.init = false;
-window.lazySizesConfig.loadMode = 1;
-window.lazySizesConfig.expand = 222;
-window.lazySizesConfig.expFactor = 1.6;
-
 function domIsReady() {
-  window.lazySizes.init();
+  lazySizes.init();
   svg4everybody();
 
-  if (window.matchMedia('(max-width: 768px)').matches) {
-    window.jrNavMenu = new Menu();
-  }
+  window.jrNavMenu = new Menu();
   initSelectSucursal();
   atencionClientes();
   addVueRouterListener();

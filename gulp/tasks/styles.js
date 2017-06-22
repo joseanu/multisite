@@ -11,7 +11,6 @@ const argv          = require('yargs').argv,
       size          = require('gulp-size'),
       rename        = require('gulp-rename'),
       cssnano       = require('gulp-cssnano'),
-      purify        = require('gulp-purifycss'),
       rev           = require('gulp-rev'),
       gulpStylelint = require('gulp-stylelint');
 
@@ -34,7 +33,6 @@ gulp.task('styles', () =>
     }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({ browsers: ['> 0.5%'] }),
-      mqpacker(),
     ]))
     .pipe(size({
       showFiles: true
@@ -52,18 +50,6 @@ gulp.task('styles', () =>
       showFiles: true
     })))
     .pipe(gulp.dest(webSite + paths.sassFilesTemp))
-);
-
-gulp.task('unused-css', () =>
-  gulp.src(webSite + paths.sassFilesTemp + '/*.css')
-    .pipe(when(argv.prod, purify([
-      webSite + paths.jsFilesTemp + '/**/*.js',
-      webSite + paths.tempDir + paths.siteFolderName + '/**/*.html'
-    ])))
-    .pipe(when(argv.prod, size({
-      showFiles: true
-    })))
-    .pipe(gulp.dest(webSite + paths.sassFilesSite))
 );
 
 gulp.task('lint-css', function lintCssTask() {

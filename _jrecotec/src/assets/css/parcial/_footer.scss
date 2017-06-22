@@ -3,7 +3,6 @@ $alturaBorde: 0.4rem;
 footer {
   font-size: $small-font-size;
   background-color: $footer-color1;
-  padding-top: $spacing-unit;
   border-top: $alturaBorde solid #c4268c;
   position: relative;
 
@@ -22,7 +21,10 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding-bottom: $spacing-unit;
+
+  &>div {
+    margin-top: $spacing-unit;
+  }
 
   h2 {
     margin-top: 0;
@@ -34,25 +36,18 @@ footer {
 
 .siteFooter__logo {
   flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  max-width: 12rem;
-  min-width: 8rem;
-  margin-right: 5rem;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  order: 4;
+  margin: $spacing-unit / 2 0;
+  text-align: center;
 }
 
 .siteFooter__logo__svg {
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding-bottom: 39.14253%;
 
   svg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
+    width: $logo-height * 2.55477 / 1.6;
+    height: $logo-height / 1.6;
     fill: #fff;
   }
 }
@@ -83,7 +78,6 @@ footer {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
-  min-width: 21rem;
 
   .gdl {
     display: flex;
@@ -96,6 +90,10 @@ footer {
 
 .siteFooter__contacto__foto {
   width: 11rem;
+
+  @include media-query($on-palm) {
+    width: 8rem;
+  } 
 }
 
 .siteFooter__contacto__datos {
@@ -110,5 +108,12 @@ footer {
 .siteFooter__copy {
   background-color: $footer-color2;
   font-size: $small-font-size;
+  text-align: center;
   color: $blanco;
+}
+
+.siteFooter__copy__canjea {
+  @include media-query($on-laptop) {
+    display: none;
+  }
 }

@@ -2,14 +2,12 @@
   <img src="/assets/img/svg/logo.svg" alt="{{ site.title }}">
 </a>
 
-<nav class="siteHeader-navegacion js-menu" role="navigation">
+<nav class="siteHeader-navegacion js-menu">
   <div class="menu__contents js-menu-contents">
-    <button id="menu-toggle" class="siteHeader-menuToggle js-menu-toggle">
-      <div class="siteHeader-labelToggle js-menu-title">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <button id="menu-toggle" class="siteHeader-menuToggle hamburger hamburger--slider js-menu-toggle" type="button">
+      <span class="siteHeader-label-Toggle hamburger-box js-menu-title">
+        <span class="hamburger-inner"></span>
+      </span>
     </button>
     <ul id="navegacion" class="siteHeader-menuPrincipal">
       {% for link in site.data.navegacion.site-header %}

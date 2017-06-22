@@ -153,7 +153,8 @@ gulp.task('build:catalogo', function(callback) {
             plugins: ['syntax-dynamic-import', 'transform-runtime']
           }
         }
-      ]
+      ],
+      strictThisContextOnImports: true
     },
     devtool: '#source-map',
     plugins: [

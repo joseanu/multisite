@@ -1,24 +1,31 @@
-{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-
-<nav class="subHeader-breadcrumbs"itemscope itemtype="http://schema.org/BreadcrumbList">
+{%- if page.breadcrumbs -%}
+  {%- assign crumbs = page.breadcrumbs | split: '/' -%}
+{%- else -%}
+  {%- assign crumbs = page.url | remove:'/index.html' | split: '/' -%}
+{%- endif -%}
+<nav class="subHeader-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
   <span itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
     {% include partes/icono.svg icon="home" class="icon" %}
-    <a href="{{ site.url }}" class="breadcrumb__item" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+    <a href="{{ site.url }}" class="breadcrumb__item" itemscope itemtype="http://schema.org/WebSite" itemid="{{ site.url }}/#site" itemprop="item">
       <span itemprop="name">{{ site.title }}</span>
     </a> <span class="breadcrumb__sep">></span>
     <meta itemprop="position" content="1" />
   </span>
-{% for crumb in crumbs offset: 1 %}
-{% if forloop.last %}
+{%- for crumb in crumbs offset: 1 -%}
+{%- if forloop.last -%}
   <span itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
-    <a href="{{ site.url }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{% if forloop.last == true %}{{ crumb }}{% else %}{{ crumb | append: '/' }}{% endif %}{% endfor %}" class="breadcrumb__item" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+    <a href="{{ site.url }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{% if forloop.last == true %}{{ crumb }}{% else %}{{ crumb | append: '/' }}{% endif %}{% endfor %}" class="breadcrumb__item breadcrumb__lastItem" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+  {%- if page.breadcrumbs -%}
+      <span itemprop="name">{%raw%}{{ titulo }}{% endraw %}</span>
+  {%- else -%}
       <span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span>
+  {%- endif -%}
     </a>
     <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
   </span>
-{% else %}
+{%- else -%}
   <span itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem">
     <a href="{{ site.url }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}" class="breadcrumb__item" itemscope itemtype="http://schema.org/Thing" itemprop="item">
@@ -26,16 +33,6 @@
     </a> <span class="breadcrumb__sep">></span>
     <meta itemprop="position" content="{{ forloop.index | plus: 1 }}" />
   </span>
-{% endif %}
-{% endfor %}
+{%- endif -%}
+{%- endfor -%}
 </nav>
-  
-  
-  
-
-
-
-
-
-
-

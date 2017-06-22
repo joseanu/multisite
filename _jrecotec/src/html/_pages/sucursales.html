@@ -1,16 +1,18 @@
 ---
 layout: con-cabeza
 permalink: /sucursales/
+tipo: CollectionPage
+collection: sucursales
 title: "Sucursales"
 description: "Adquiere ecotecnologías en una de nuestras sucursales, estamos por todo México. Seguro hay una cerca de tí."
 slug: sucursales
 bodyClass: sucursalesMain
 ---
 
-{% assign sucursales = site.data.sucursales | sort: 'estado' %}
+{%- assign sucursales = site.data.sucursales | sort: 'estado' -%}
 <div class="wrapper">
   <ul class="sucursales__Lista">
-    {% for sucursal in sucursales %}
+    {%- for sucursal in sucursales -%}
     <li class="sucursales__Lista__Item">
       <a href="/sucursales/{{ sucursal.slug }}.html">
         <figure class="intrinsic intrinsic--square">
@@ -25,8 +27,10 @@ bodyClass: sucursalesMain
         <h3 class="sucursales__Lista__Nombre" style="border-color: {{ sucursal.color }};">{{ sucursal.nombre }}</h3>
       </a>
     </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </div>
 
 {% include partes/cta.html %}
+
+{% include jsonld/jsonld webpage=1 %}

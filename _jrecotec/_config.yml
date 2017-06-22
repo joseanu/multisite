@@ -3,7 +3,7 @@ title: JR Ecotecnología
 description: "Proveedor autorizado del programa Hipoteca Verde a nivel nacional, con 20 sucursales en 15 estados de la República Mexicana."
 logo: "/assets/img/social/logo.jpg"
 iconos: "/assets/img/svg/icons.svg"
-locale: es_MX
+locale: es
 baseurl: ""
 url: "https://www.jrecotecnologia.com"
 repository: "joseanu/jrecotecnologia"
@@ -12,7 +12,12 @@ repository: "joseanu/jrecotecnologia"
 owner:
   name: "JR Ecotecnología"
   email: contacto@jrecotecnologia.com
-  direccion: "Nicolás Romero #429 Col. Santa Teresita, Guadalajara, Jal."
+  direccion:
+    direccion1: "Nicolás Romero #429"
+    direccion2: "Col. Santa Teresita"
+    cuidad: "Guadalajara"
+    estado: "Jalisco"
+    cp: "44600"
   telefonos:
     - 3338258247
     - 3338267767
@@ -31,6 +36,8 @@ owner:
     verify: C912FFA4973B378094014CAF88EB7EB7
   alexa:
     verify: Y5DYjZ4VWlrQzBP5kcQJeOKLNas
+  majestic:
+    verify: MJ12_c11ec5d2-030d-4d5c-9018-75cf25b2ee12
 
 # Jekyll configuration
 markdown: kramdown
@@ -39,7 +46,7 @@ source: ./_jrecotec/.tmp/src
 destination: ./_jrecotec/.tmp/_site
 include: ["_pages"]
 exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
-gems:
+plugins:
   - jekyll-sitemap
 
 # Colecciones
@@ -57,7 +64,7 @@ page_gen:
   - data: 'sucursales'
     template: 'sucursalJson'
     name: 'slug'
-    dir: 'sucursalData'
+    dir: 'api/sucursalData'
     extension: 'json'
 
 # Defaults

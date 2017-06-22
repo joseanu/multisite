@@ -1,5 +1,5 @@
 .productosHeader {
-  margin-bottom: $spacing-unit;
+  // margin-bottom: $spacing-unit;
 }
 
 .productosHeader__list {
@@ -27,6 +27,18 @@
     background-color: $background-color;
     box-shadow: inset 0 1px 1px $grey-color;
   }
+  
+  @include media-query(960px) {
+    padding: $spacing-unit 0;
+  }
+
+  @include media-query(500px) {
+    padding: $spacing-unit / 2  0;
+  }
+
+  @include media-query(400px) {
+    padding: $spacing-unit / 3  0;
+  }
 }
 
 .productosHeader__listItem__icon {
@@ -41,6 +53,30 @@
     background-color: $brand-color;
     border-radius: 2rem;
     fill: $blanco;
+
+    @include media-query(500px) {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 1.5rem;
+    }
+
+    @include media-query(400px) {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.productosHeader__listItem__nombre {
+  text-align: center;
+
+  @include media-query(960px) {
+    font-size: $small-font-size;
+  }
+
+  @include media-query($on-laptop) {
+    display: none;
   }
 }
 
@@ -61,10 +97,14 @@
   flex-basis: 0%;
 }
 
+.mainProductos {
+  background-color: $background-color;
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////
 .productosGrid {
   background-color: $background-color;
-  margin-top: -$spacing-unit;
+  // margin-top: -$spacing-unit;
   padding-top: $spacing-unit;
 }
 
@@ -72,41 +112,19 @@
   overflow: initial;
 }
 
-.productosFiltro {
+.productosNav {
   padding-bottom: $spacing-unit;
   text-align: center;
 
-  button {
-    display: inline-block;
-    position: relative;
+  button, a {
     height: 1.5rem;
     line-height: 1.5rem;
-    border: 0;
     border-radius: 0.125rem;
-    font-family: inherit;
     font-size: 1rem;
-    background-color: $background-color;
-    color: $brand-color;
-    margin: 1.25rem/4;
-    padding: 0 1.75rem;
-    transition: box-shadow 0.2s, opacity 0.2s;
-    transition-delay: box-shadow 0.2s, opacity 0s;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-
-    &:hover {
-      opacity: 0.9;
-      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
-      transition-delay: 0s;
-      text-decoration: none;
-    }
-
-    &:active {
-      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-      transition-delay: 0s;
-    }
-
-    &:focus {
-      outline: none;
+    
+    &.activo {
+      background-color: $brand-color;
+      color: $blanco;
     }
   }
 

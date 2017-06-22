@@ -16,6 +16,13 @@ function createRouter(baseURL) {
         path: `/${baseURL}/:slug`,
         name: 'categoria',
         component: () => import(/* webpackChunkName: "catalogoCategoria" */ './views/Categoria.vue'),
+        children: [
+          {
+            path: 'cotizar',
+            name: 'cotizar',
+            component: () => import(/* webpackChunkName: "cotizarSolar" */ './components/energia-solar/cotizar/Cotizador.vue'),
+          },
+        ],
       },
     ],
   });

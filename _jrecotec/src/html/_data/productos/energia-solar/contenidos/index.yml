@@ -1,0 +1,138 @@
+nombre: 'Sistemas fotovoltáicos'
+body: |
+  <div class="energiaSolar-wrapper">
+    <p>Un sistema fotovoltaico es un conjunto de dispositivos que aprovechan la energía producida por el sol y la convierten en energía eléctrica. Estos sistemas se basan en la capacidad de las celdas fotovoltaicas de transformar energía solar en energía eléctrica.</p>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen5-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen5-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen5-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen5-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen5-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen5-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen5-800.jpg 800w"
+      alt="Paneles solares" class="lazyload imgSolar" />
+  
+    <p>México es un país privilegiado por su ubicación geográfica, está dentro de la llamada "franja solar" en la que el recurso solar es el más alto del planeta. En promedio México cuenta con una insolación de 5.56 kWh/m² por día, con máximos de 6 kWh/m² por día en los estados de Jalisco y San Luis Potosí y promedios mínimos de 4.94 y 5.04 kWh/m² por día para los estados de Tabasco e Hidalgo. Tenemos en total veinte estados en la república con insolación promedio mayor a 5.5 kWh/m² por día, lo que representa un potencial energético importante y renovable que puede aprovecharse en beneficio del país.<sup>[De acuerdo con información oficial de la NASA]</sup></p>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen8-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen8-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen8-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen8-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen8-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen8-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen8-800.jpg 800w"
+      alt="Energía solar" class="lazyload imgSolar" />
+  
+    <h2>Beneficios de un sistema fotovoltaico:</h2>
+    <ul>
+      <li>Proviene de una fuente inagotable, el sol.</li>
+      <li>No contamina, no produce emisiones de CO2 u otros gases.</li>
+      <li>No precisa de un suministro exterior, no consume combustible, ni necesita presencia de otros recursos como el agua o el viento.</li>
+      <li>No produce ruidos.</li>
+      <li>Reduce la dependencia energética de los países.</li>
+      <li>Elevada versatilidad, los sistemas pueden instalarse en casi cualquier lugar y las instalaciones pueden ser de cualquier tamaño.</li>
+      <li>Los módulos gozan de una larga vida.</li>
+      <li>En lo económico tienen un rápido retorno de inversión y generan un ahorro inmediato en el recibo de CFE.</li>
+    </ul>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen3-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen3-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen3-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen3-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen3-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen3-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen3-800.jpg 800w"
+      alt="Paneles fotovoltaicos" class="lazyload imgSolar" />
+  
+    <h2>¿Cómo funciona un sistema fotovoltaico interconectado a la red CFE?</h2>
+    <p>En México existe el Contrato de Interconexión o Cogeneración en Pequeña Escala. Bajo este contrato, el usuario residencial puede instalar hasta 10 kW con fuente de energía renovable bajo un esquema de medición neta.</p>
+    <p>El esquema de medición neta es un intercambio administrativo de energía. La idea es que cuando la demanda de energía del usuario es menor que la energía entregada por el Sistema Fotovoltaico, pueda entregar excedentes de energía a la red, o bien, recibir energía en momentos donde el SFVI no puede suministrarla (por ejemplo, en días nublados o durante la noche).</p>
+    <p>Los paneles instalados en el techo de tu casa reciben la radiación solar, las celdas fotovoltaicas convierten esta energía en corriente directa, dicha corriente pasa al inversor, el cual la convierte a corriente alterna, la que es utilizada en la casa.</p>
+    <p>Una vez instalado el sistema de paneles, personal de CFE inspeccionará y dará la autorización para cambiar el medidor común por uno bidireccional, el cual mide la energía consumida por el domicilio, a la vez que mide la producción del sistema. Cuando se efectúa el cambio de medidor, el sistema está listo para comenzar a producir.</p>
+    <p>Tomando como ejemplo el caso de un usuario DAC (Doméstico Alto Consumo) de la tarifa 1 instala un Sistema Fotovoltaico en su vivienda diseñado para que su consumo esté por debajo del límite mensual de la tarifa 1 subsidiada. Se pueden presentar 3 situaciones de facturación:</p>
+    <ol>
+      <li>El usuario utiliza de la electricidad generada por su sistema y de la red, en este caso el usuario paga una factura que obedecerá de los niveles de los rangos que consume (básico, básico + intermedio ó básico + intermedio + excedente) y de los precios correspondientes de acuerdo a esta tarifa.</li>
+      <li>Cuando el sistema genera lo mismo que consume, hay un equilibrio entre lo que consume de la red y lo que manda a la red, en esta situación el usuario paga en la factura solamente un cargo mínimo por estar conectado a la red eléctrica.</li>
+      <li>El genera excedentes eléctricos que entrega a la red, en este caso la factura incluye solamente el cargo mínimo, además obtendrá un crédito de energía eléctrica que podría ser utilizado durante el año posterior.</li>
+    </ol>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen7-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen7-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen7-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen7-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen7-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen7-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen7-800.jpg 800w"
+      alt="Sistema fotovoltaico" class="lazyload imgSolar" />
+  
+    <h2>¿Para qué tarifas de CFE aplica el sistema fotovoltaico?</h2>
+    <p>El sistema puede aplicar para cualquier tarifa, ya que siempre van a generar un ahorro, este varía en función de los precios del KW en cada tarifa y los rangos de consumo, lo que definirá el tiempo de retorno de la inversión. Las tarifas residenciales más comunes son 01, 02 y DAC</p>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen9-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen9-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen9-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen9-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen9-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen9-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen9-800.jpg 800w"
+      alt="Celdas fotovoltaicas" class="lazyload imgSolar" />
+  
+    <h2>¿Cuánto ahorro puede generar el sistema?</h2>
+    <p>Los sistemas fotovoltaicos son un traje a la medida. Basándonos en el historial de consumo del domicilio podemos dimensionar el sistema, logrando desde un 50% hasta un 99% de ahorro, según las necesidades y preferencias del cliente.</p>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen4-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen4-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen4-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen4-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen4-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen4-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen4-800.jpg 800w"
+      alt="Celdas solares" class="lazyload imgSolar" />
+  
+    <h2>¿Cuánto dura un sistema fotovoltaico?</h2>
+    <p>Los sistemas fotovoltaicos y sus componentes gozan de una larga vida, con muy poco mantenimiento, un sistema de energía solar doméstico puede durar hasta 25 años.</p>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen2-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen2-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen2-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen2-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen2-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen2-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen2-800.jpg 800w"
+      alt="Celdas fotovoltaicas" class="lazyload imgSolar" />
+  
+    <h2>Para dimensionar un sistema fotovoltaico aislado es imprescindible saber:</h2>
+    <ul>
+      <li>Donde se instalará el sistema.</li>
+      <li>Que aparatos y de que capacidad se van a alimentar.</li>
+      <li>Por cuantas horas.</li>
+      <li>El sistema se diseña para cubrir esas necesidades específicas y no debe sobrecargarse.</li>
+    </ul>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen1-25.jpg" 
+      data-srcset="/assets/img/productos/energia-solar/Imagen1-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen1-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen1-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen1-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen1-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen1-800.jpg 800w"
+      alt="Celdas fotovoltaicas" class="lazyload imgSolar" />
+  
+    <h2>¿Qué se necesita para obtener una cotización?</h2>
+    <ul>
+      <li>Nombre</li>
+      <li>E-mail</li>
+      <li>Teléfono</li>
+      <li>Nombre del titular del recibo de CFE</li>
+      <li>Numero de servicio (RPU)</li>
+    </ul>
+  
+    <img data-sizes="auto" src="/assets/img/productos/energia-solar/Imagen6-25.jpg"
+      data-srcset="/assets/img/productos/energia-solar/Imagen6-25.jpg 25w,
+        /assets/img/productos/energia-solar/Imagen6-200.jpg 200w,
+        /assets/img/productos/energia-solar/Imagen6-300.jpg 300w,
+        /assets/img/productos/energia-solar/Imagen6-400.jpg 400w,
+        /assets/img/productos/energia-solar/Imagen6-600.jpg 600w,
+        /assets/img/productos/energia-solar/Imagen6-800.jpg 800w"
+      alt="Celdas fotovoltaicas" class="lazyload imgSolar" />
+  </div>

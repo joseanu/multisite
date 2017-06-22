@@ -3,10 +3,11 @@ import initForm from './form';
 export default {
 
   home() {
-    require.ensure([], (require) => {
-      const Home = require('./home/index').default;
-      Home();
-    }, 'home');
+    import(/* webpackChunkName: "homeScripts" */ './home/index').then((Home) => {
+      Home.default();
+    }).catch((err) => {
+      throw new Error(err);
+    });
   },
 
   productosGrid() {
@@ -29,7 +30,7 @@ export default {
     import(/* webpackChunkName: "catalogoMain" */ './catalogo/index').then((catalogo) => {
       catalogo.default();
     }).catch((err) => {
-      console.log('Failed to load Catalogo', err);
+      throw new Error(err);
     });
   },
 };

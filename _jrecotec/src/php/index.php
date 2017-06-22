@@ -1,7 +1,10 @@
 <?php
 require '../phplib/autoload.php';
 
-Rollbar::init(array('access_token' => '5d2cc4719bdd47fc999f825b306ca9f5'));
+if ( $_SERVER['HTTP_HOST'] != 'multisite-joseanu.c9users.io' ) {
+	error_log("Oracle database not available!", 0);
+	Rollbar::init(array('access_token' => '5d2cc4719bdd47fc999f825b306ca9f5'));
+}
 
 $app = new \Slim\Slim();
 
@@ -118,7 +121,7 @@ $app->post('/contacto', function () use ($app) {
 		}
 		else
 		{
-			if ( $_SERVER['HTTP_HOST'] != 'jr-ecotecnologia-joseanu.c9users.io' ) {
+			if ( $_SERVER['HTTP_HOST'] != 'multisite-joseanu.c9users.io' ) {
 				$correo = enviarCorreo($post);
 				if ( $correo == 'enviado' ) {
 					$respuesta['ok'] = 'Gracias por contactarnos. Recibimos tus datos y en breve nos comunicaremos.';
@@ -169,7 +172,7 @@ $app->post('/cotizar', function () use ($app) {
 		}
 		if ( empty($errores) )
 		{
-			if ( $_SERVER['HTTP_HOST'] != 'jr-ecotecnologia-joseanu.c9users.io' ) {
+			if ( $_SERVER['HTTP_HOST'] != 'multisite-joseanu.c9users.io' ) {
 				$arr = (array)$post;
 				$arr['_subject'] = 'Solicitud para Cotizar Sistema Fotovoltaico';
 				unset($arr['errores']);

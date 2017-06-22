@@ -39,6 +39,7 @@ function generar(callback) {
   const routes = require('../.tmp/_site/api/productosData/categorias.json');
 
   routes['/'] = 'Indice';
+  routes['energia-solar/cotizar'] = 'Cotizador';
 
   const promesas = Object.keys(routes).map(async (slug) => {
     let prop;
@@ -56,7 +57,6 @@ function generar(callback) {
 
     const context = {
       url: route,
-      meta: '',
     };
 
     const html = await renderToString(context);

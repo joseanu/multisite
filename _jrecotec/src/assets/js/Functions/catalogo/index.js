@@ -1,10 +1,10 @@
 import Vue from 'vue';
+import Meta from 'vue-meta';
 import createStore from './store';
 import createRouter from './router';
-import titleMixin from './mixins/title';
 import App from './App.vue';
 
-Vue.mixin(titleMixin);
+Vue.use(Meta);
 
 const baseURL = 'vuecatalogo';
 
@@ -12,11 +12,7 @@ export function createApp() {
   const store = createStore();
   const router = createRouter(baseURL);
 
-  const app = new Vue({
-    router,
-    store,
-    render: h => h(App),
-  });
+  const app = new Vue(Object.assign(App, { router, store }));
 
   return { app, router, store };
 }
@@ -31,7 +27,6 @@ function createInstance() {
   window.vueRouter = router;
 
   router.onReady(() => {
-    // actually mount  to DOM
     app.$mount('#app');
   });
 }

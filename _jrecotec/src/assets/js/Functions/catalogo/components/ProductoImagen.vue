@@ -78,6 +78,7 @@
           cellAlign: 'center',
           setGallerySize: false,
           imagesLoaded: true,
+          dragThreshold: 6,
         });
       },
       iniciarFlickity() {
@@ -98,9 +99,8 @@
   };
 </script>
 
-<style scoped>
-  .productoImagen img {
-    width: 100%;
-    
+<style>
+  .flickity-viewport {
+    touch-action: pan-y !important;
   }
 </style>

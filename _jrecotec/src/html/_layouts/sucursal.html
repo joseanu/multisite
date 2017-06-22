@@ -1,5 +1,6 @@
 ---
 layout: default
+tipo: ItemPage
 dataLayer: 
   { pageCategory: sucursal,
   tieneFormulario: true }
@@ -78,5 +79,7 @@ dataLayer:
     </div>
   </div>
 </div>
+
 {% include partes/cta-cotizaSolar.html %}
-{% include partes/jsonld-sucursal %}
+
+{% include jsonld/jsonld webpage=1 sucursal=1 %}

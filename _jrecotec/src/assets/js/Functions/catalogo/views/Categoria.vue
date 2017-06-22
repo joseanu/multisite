@@ -1,19 +1,39 @@
 <template>
-  <div v-if="parametro === undefined">
-    Indice
-  </div>
-  <div v-else class="productosGrid">
-    <div class="wrapper">
-      <div class="productos">
-        <div id="filtro" class="productosFiltro" v-if="filtro.length > 1">
-          <button type="button" @click="filtrar('all')">Todos</button>
-          <button type="button" v-for="tipo in filtro" @click="filtrar(tipo.slug)">{{ tipo.nombre }}</button>
-        </div>
-        <transition-group name="list" tag="div" class="productosLista">
-          <template v-for="(productos, tipo) in visibles">
-            <producto v-for="producto in productos" :tipo="tipo" :producto="producto" :key="producto.modelo"></producto>
-          </template>
-        </transition-group>
+  <div class="mainProductos">
+    <div class="productosNav" v-if="Object.keys(contenidos).length > 0">
+      <template v-for="(contenido, ruta) in contenidos">
+        <router-link
+          class="boton blanco"
+          v-if="ruta === 'index' && contenido.nombre"
+          :to="{ name: 'categoria', params: { slug: parametro }  }" exact>
+          {{ contenido.nombre }}
+        </router-link>
+        <router-link
+          class="boton blanco"
+          v-else-if="contenido.nombre"
+          :to="{ name: ruta }" exact>
+          {{ contenido.nombre }}
+        </router-link>
+      </template>
+    </div>
+    <transition name="list">
+      <div v-if="contenidoIndex" v-html="contenidos.index.body"></div>
+    </transition>
+    <transition name="move" mode="out-in">
+      <router-view key="key"></router-view>
+    </transition>
+    <div v-if="numCategorias > 0" class="productosGrid">
+      <div class="wrapper">
+        <div class="productos">
+          <div id="filtro" class="productosNav" v-if="filtro.length > 1">
+            <button type="button" class="boton blanco" @click="filtrar('all')">Todos</button>
+            <button type="button" class="boton blanco" v-for="tipo in filtro" @click="filtrar(tipo.slug)">{{ tipo.nombre }}</button>
+          </div>
+          <transition-group name="list" tag="div" class="productosLista">
+            <template v-for="(productos, tipo) in visibles">
+              <producto v-for="producto in productos" :tipo="tipo" :producto="producto" :key="producto.modelo"></producto>
+            </template>
+          </transition-group>
         </div>
       </div>
     </div>
@@ -25,12 +45,6 @@
   import Producto from '../components/Producto.vue';
 
   export default {
-    title() {
-      if (this.parametro) {
-        return this.$store.state.categorias[this.parametro].nombre;
-      }
-      return 'Catálogo de Ecotecnologías';
-    },
     data() {
       return {
         visibles: {},
@@ -40,20 +54,45 @@
       parametro() {
         return this.$route.params.slug;
       },
-      categoria() {
+      numCategorias() {
         if (this.parametro) {
-          return this.$store.state.productos[this.$route.params.slug];
+          return Object.keys(this.$store.state.productos[this.parametro]).filter(
+            cat => cat !== 'contenidos',
+          ).length;
+        }
+        return 0;
+      },
+      contenidos() {
+        if (this.parametro) {
+          return this.$store.state.productos[this.parametro].contenidos || {};
+        }
+        return {};
+      },
+      contenidoIndex() {
+        if (this.$route.name === 'categoria' && this.contenidos.index) {
+          return true;
+        }
+        return false;
+      },
+      productos() {
+        if (this.parametro) {
+          return Object.keys(this.$store.state.productos[this.parametro])
+            .filter(cat => cat !== 'contenidos')
+            .reduce((obj, key) => {
+              obj[key] = this.$store.state.productos[this.parametro][key];
+              return obj;
+            }, {});
         }
         return {};
       },
       tipos() {
-        if (this.categoria) {
-          return this.$store.state.categorias[this.$route.params.slug].tipos || {};
+        if (this.productos) {
+          return this.$store.state.categorias[this.parametro].tipos || {};
         }
         return {};
       },
       filtro() {
-        if (this.tipos) {
+        if (this.tipos !== {}) {
           return Object.keys(this.tipos).reduce((filtro, tipoSlug) => {
             if (this.tipos[tipoSlug] && this.tipos[tipoSlug].filtro) {
               filtro.push({
@@ -68,15 +107,12 @@
       },
     },
     methods: {
-      filtrar2(dataGroup) {
-        this.$shuffle.filter(dataGroup);
-      },
       filtrar(dataGroup) {
         if (dataGroup === 'all') {
-          this.visibles = this.categoria;
+          this.visibles = this.productos;
         } else {
           this.visibles = {
-            [dataGroup]: this.categoria[dataGroup],
+            [dataGroup]: this.productos[dataGroup],
           };
         }
       },
@@ -85,29 +121,7 @@
       Producto,
     },
     mounted() {
-      this.visibles = this.categoria;
-      // function iniciarShuffle(Shuffle) {
-      //   this.$shuffle = new Shuffle(this.$el.querySelector('#grid'), {
-      //     itemSelector: '.producto',
-      //     useTransforms: true,
-      //   });
-      //   imagesLoaded(this.$el, () => {
-      //     this.$shuffle.layout();
-      //   });
-      // }
-      // if (this.parametro) {
-      //   import(/* webpackChunkName: "shuffle" */ 'shufflejs').then(iniciarShuffle.bind(this));
-      // }
+      this.visibles = this.productos;
     },
   };
 </script>
-
-<style>
-  .list-enter-active, .list-leave-active, .list-move {
-    transition: all 0.3s;
-  }
-  .list-enter, .list-leave-to {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-</style>

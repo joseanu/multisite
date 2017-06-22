@@ -1,4 +1,4 @@
-import { $class } from './util';
+import { $class } from '../util';
 
 export default function atencionClientes() {
   $class('atencion__link').addEventListener('click', () => {
