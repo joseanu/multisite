@@ -1,6 +1,6 @@
 - slug: 'ahorro-agua'
   nombre: 'Ahorro de agua'
-  slogan: 'ddd'
+  slogan: 'Productos para el ahorro de agua. Sistemas de grifería optimizados para aprovechar responsablemente el recurso.'
   tipos:
     mezcladoras:
       filtro: 'Mezcladoras'
@@ -16,6 +16,7 @@
       producto: 'Inodoro'
 - slug: 'aire-acondicionado'
   nombre: 'Aire acondicionado'
+  slogan: 'Mantén tu casa fresca y cómoda con los equipos de aire acondicionado de la mayor eficiencia energética.'
   tipos:
     mirage:
       filtro: 'Mirage'
@@ -23,10 +24,13 @@
       filtro: 'AUX'
 - slug: 'energia-solar'
   nombre: 'Energía solar'
+  slogan: 'Adquiere tus paneles solares y usa la energía solar para ahorrar electricidad. Conoce nuestros sistemas fotovoltáicos.'
 - slug: 'energia-solar/cotizar'
   nombre: 'Cotiza tu sistema fotovoltáico'
+  slogan: 'Calculamos cuantos paneles solares necesitas para cubrir tu consumo de energía actual y conoce tus ahorros estimados.'
 - slug: 'linea-blanca'
   nombre: 'Línea blanca'
+  slugan: 'Ahorra energía con tus electrodomésticos. Conoce en nuestro catálogo de línea blanca los mejores productos de bajo consumo para tu hogar.'
   tipos:
     estufas:
       filtro: 'Estufas'
@@ -39,6 +43,7 @@
       producto: 'Refrigerador'
 - slug: 'iluminacion-led'
   nombre: 'Iluminación led'
+  slogan: 'Ofrecemos una amplia gama de lámparas e iluminación con LED de Bajo Consumo de Energía y Ahorradoras para iluminacion interior y exterior.'
   tipos:
     ahorradores:
       producto: 'Foco ahorrador'
@@ -46,6 +51,7 @@
       producto: 'Foco LED'
 - slug: 'pintura-imper'
   nombre: 'Pinturas e impermeabilizantes'
+  slogan: 'Evita goteras o dále color a tus espacios al mismo tiempo que cuidas el ambiente y le bajas al calor de tu casa.'
   tipos:
     pinturas:
       producto: 'Pinturas'
@@ -53,3 +59,4 @@
       producto: 'Impermeabilizantes'
 - slug: 'calentadores-solares'
   nombre: 'Calentadores solares'
+  slogan: 'Energía renovable en tu hogar. Utiliza la energía solar para calentar el agua y evita la emisión de contaminantes.'
