@@ -1,0 +1,30 @@
+body: |
+  <div class="wrapper productosMarcas">
+    <h2 class="h_gde">Nuestras marcas</h2>
+    <div class="productosMarcas__list">
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/aux.jpg" alt="Aires Acondicionados AUX">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/cato.jpg" alt="Sanitarios CATO">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/disa.jpg" alt="Grifería DISA">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/era.jpg" alt="Calentadores Solares Era">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/hera.jpg" alt="Pinturas HERA">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/metalflu.jpg" alt="Grifería Metalflu">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/mirage.jpg" alt="Aires Acondicionados Mirage">
+      </div>
+      <div class="productosMarcas__listItem">
+        <img src="/assets/img/marcas/whirlpool.jpg" alt="Línea Blanca Whirlpool">
+      </div>
+    </div>
+  </div>

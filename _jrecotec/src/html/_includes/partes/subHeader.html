@@ -1,7 +1,7 @@
 <div class="subHeader">
 	<div class="subHeader-contenedor">
 		<div class="subHeader-pageTitle">
-			<h1>{% if page.header %}{{ page.header }}{% else %}{{ page.title }}{% endif %}</h1>
+			<h1>{% if page.header %}{{ page.header }}{% elsif page.nombre %}{{ page.nombre }}{% else %}{{ page.title }}{% endif %}</h1>
         </div>
         {% include partes/breadcrumbs.html %}
 	</div>

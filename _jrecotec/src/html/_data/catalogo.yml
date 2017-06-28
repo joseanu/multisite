@@ -1,5 +1,6 @@
-ahorro-de-agua:
+- slug: 'ahorro-agua'
   nombre: 'Ahorro de agua'
+  slogan: 'ddd'
   tipos:
     mezcladoras:
       filtro: 'Mezcladoras'
@@ -13,19 +14,18 @@ ahorro-de-agua:
     inodoros:
       filtro: 'Inodoros'
       producto: 'Inodoro'
-
-aire-acondicionado:
+- slug: 'aire-acondicionado'
   nombre: 'Aire acondicionado'
   tipos:
     mirage:
       filtro: 'Mirage'
     aux:
       filtro: 'AUX'
-
-energia-solar:
+- slug: 'energia-solar'
   nombre: 'Energía solar'
-
-linea-blanca:
+- slug: 'energia-solar/cotizar'
+  nombre: 'Cotiza tu sistema fotovoltáico'
+- slug: 'linea-blanca'
   nombre: 'Línea blanca'
   tipos:
     estufas:
@@ -37,22 +37,19 @@ linea-blanca:
     refrigeradores:
       filtro: 'Refrigeradores'
       producto: 'Refrigerador'
-
-iluminacion-led:
+- slug: 'iluminacion-led'
   nombre: 'Iluminación led'
   tipos:
     ahorradores:
       producto: 'Foco ahorrador'
     led:
       producto: 'Foco LED'
-
-pintura-imper:
+- slug: 'pintura-imper'
   nombre: 'Pinturas e impermeabilizantes'
   tipos:
     pinturas:
       producto: 'Pinturas'
     impermeabilizantes:
       producto: 'Impermeabilizantes'
-
-calentadores-solares:
+- slug: 'calentadores-solares'
   nombre: 'Calentadores solares'

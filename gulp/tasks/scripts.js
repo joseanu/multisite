@@ -4,8 +4,7 @@ const argv         = require('yargs').argv,
       gulp         = require('gulp'),
       webpack      = require('webpack'),
       webpackstats = require("webpack-stats-plugin").StatsWriterPlugin,
-      Analyzer     = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
-      Md5Hash      = require('webpack-md5-hash');
+      Analyzer     = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // include paths
 const paths        = require('../paths');
@@ -49,7 +48,6 @@ gulp.task('scripts', function(callback) {
     webpackPlugins.push(new webpack.LoaderOptionsPlugin({
       minimize: true
     }));
-    webpackPlugins.push(new Md5Hash());
     output.filename = '[name]-[chunkhash].js';
     output.chunkFilename = 'chunk/[name]-[chunkhash].js';
     sourceMap = '#source-map';

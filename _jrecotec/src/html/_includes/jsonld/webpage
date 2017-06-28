@@ -1,27 +1,10 @@
-{%- assign directorio = page.dir | replace:'/','' -%}
-{%- if directorio == 'sucursales' and page.nombre != null  -%}
-  {%- assign seo_title = 'Ecotecnologías en ' | append: page.nombre | append: ', ' | append: page.estado -%}
-{%- elsif page.title -%}
-  {%- assign seo_title = page.title -%}
-{%- elsif site.title -%}
-  {%- assign seo_title = site.title | append: ' - ' | append: site.description -%}
-{%- endif -%}
-{%- if seo_title -%}
-  {%- assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once -%}
-{%- endif -%}
-{%- if page.slogan -%}
-  {%- assign seo_description = page.slogan -%}
-{%- elsif page.description -%}
-  {%- assign seo_description = page.description -%}
-{%- elsif site.description -%}
-  {%- assign seo_description = site.description -%}
-{%- endif -%}
-{%- if seo_description -%}
-  {%- assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once -%}
-{%- endif -%}
-{%- if site.url -%}
-  {%- assign canonical_url = page.url | replace:'index.html','' | prepend: site.url -%}
-{%- endif -%}
+{%- capture seo_title -%}{%- include partes/seo_title -%}{%- endcapture -%}
+{%- capture reemplazar -%} - {{ site.title }}{%- endcapture -%}
+{%- assign seo_title = seo_title | replace: reemplazar,'' -%}
+
+{%- capture seo_description -%}{%- include partes/seo_description -%}{%- endcapture -%}
+
+{%- assign canonical_url = page.url | replace:'index.html','' | prepend: site.url -%}
 
 {%- if page.tipo -%}
   {%- assign type = page.tipo -%}
@@ -60,9 +43,15 @@
   },
 {%- endif-%}
 
+{%- if page.tipo == 'QAPage' -%}
+  {% include jsonld/preguntas %},
+{%- endif-%}
+
 {%- if page.tipo == 'CollectionPage' -%}
   {%- if page.collection == 'sucursales' -%}
     {% include jsonld/sucursales %},
+  {%- elsif page.collection == 'catalogo' -%}
+    {% include jsonld/catalogo %},
   {%- endif-%}
 {%- endif-%}
 

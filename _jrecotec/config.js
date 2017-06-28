@@ -16,6 +16,7 @@ config.ftppath = '/public_html/';
 
 config.serviceWorker = {
   generar: false,
+  fileName: 'trabajador.js',
   staticFileGlobs: [
     webSite + paths.sassFilesSite + '/**/*.css',
     webSite + paths.jsFilesSite + '/**/*.js',

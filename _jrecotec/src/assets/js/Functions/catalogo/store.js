@@ -7,7 +7,7 @@ Vue.use(Vuex);
 function createStore() {
   return new Vuex.Store({
     state: {
-      categorias: {},
+      categorias: [],
       productos: {},
       imagenes: {},
       datosListos: false,
@@ -30,7 +30,7 @@ function createStore() {
             });
           })
           .catch((error) => {
-            console.log(error);
+            throw new Error(error);
           });
       },
     },
@@ -44,7 +44,16 @@ function createStore() {
       },
     },
 
-    getters: {},
+    getters: {
+      getCategorias: state =>
+        state.categorias.filter(categoria => categoria.slug.indexOf('/') === -1),
+
+      getCategoriaBySlug: state => slug =>
+        state.categorias.find(categoria => categoria.slug === slug),
+
+      getContenidosBySlug: state => slug =>
+        (state.productos[slug] && state.productos[slug].contenidos) || 0,
+    },
   });
 }
 

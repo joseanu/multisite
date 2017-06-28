@@ -6,7 +6,7 @@ const writeFile = promisify(fs.writeFile);
 
 const { createBundleRenderer } = require('vue-server-renderer');
 
-const baseURL = '/vuecatalogo/';
+const baseURL = '/ecotecnologias/';
 
 function ensureDirectoryExistence(filePath) {
   var dirname = path.dirname(filePath);
@@ -20,28 +20,23 @@ function ensureDirectoryExistence(filePath) {
 function generar(callback) {
   const bundle = JSON.parse(
     fs.readFileSync(
-      path.resolve(__dirname, "./build/vue-ssr-server-bundle.json"),
+      path.resolve(__dirname, "../.tmp/vue-ssr-build/vue-ssr-server-bundle.json"),
       "utf8"
     )
   );
-  const template = fs.readFileSync(
-    path.resolve(__dirname, "../.tmp/_site/vuecatalogo/index.html"),
-    "utf-8"
+
+  const categorias = JSON.parse(
+    fs.readFileSync(
+      path.resolve(__dirname, "../.tmp/_site/api/productosData/categorias.json"),
+      "utf8"
+    )
   );
 
-  const renderer = createBundleRenderer(bundle, {
-    runInNewContext: true,
-    template,
-  });
+  const routes = categorias.map(el => el.slug);
 
-  const renderToString = promisify(renderer.renderToString);
+  routes.push('/');
 
-  const routes = require('../.tmp/_site/api/productosData/categorias.json');
-
-  routes['/'] = 'Indice';
-  routes['energia-solar/cotizar'] = 'Cotizador';
-
-  const promesas = Object.keys(routes).map(async (slug) => {
+  const promesas = routes.map(async (slug) => {
     let prop;
 
     if (slug === '/') {
@@ -54,6 +49,17 @@ function generar(callback) {
 
     const filePath = path.join(path.resolve(__dirname, "../_site"), route, "/index.html");
     ensureDirectoryExistence(filePath);
+
+    const template = fs.readFileSync(
+      filePath,
+      "utf-8"
+    );
+  
+    const renderer = createBundleRenderer(bundle, {
+      runInNewContext: true,
+      template,
+    });
+    const renderToString = promisify(renderer.renderToString);
 
     const context = {
       url: route,

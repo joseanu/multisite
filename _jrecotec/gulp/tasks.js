@@ -115,8 +115,8 @@ gulp.task('build:catalogo', function(callback) {
     entry: { main: './entry.js' },
     target: 'node',
     output: {
-      path: path.resolve(__dirname, '../catalogo/build'),
-      publicPath: '/build/',
+      path: path.resolve(__dirname, '../.tmp/vue-ssr-build'),
+      publicPath: '/vue-ssr-build/',
       filename: 'server-bundle.js',
       libraryTarget: 'commonjs2',
     },
@@ -176,7 +176,7 @@ gulp.task('build:catalogo', function(callback) {
 });
 
 gulp.task('genera:catalogo', function(callback) {
-  const generar = require('../catalogo/generate');
+  const generar = require('../vue-ssr/generar');
   generar(callback);
 });
 
@@ -203,7 +203,7 @@ gulp.task('watch:jr', () => {
   );
   gulp.watch(
     webSite + paths.jsFiles + '/Functions/catalogo' + paths.jsPattern,
-    gulp.series('build:catalogo', 'genera:catalogo', 'scripts', 'copy:assets')
+    gulp.series('build:site', 'build:catalogo', 'genera:catalogo', 'html', 'scripts', 'copy:assets')
   );
   gulp.watch(
     webSite + paths.sassFilesGlob,

@@ -10,21 +10,7 @@ export default {
     });
   },
 
-  productosGrid() {
-    require.ensure([], (require) => {
-      const Productos = require('./productosGrid').default;
-      Productos();
-    }, 'productosGrid');
-  },
-
   form: initForm,
-
-  cotizaSolar() {
-    require.ensure([], (require) => {
-      const Cotizador = require('./cotizaSolar/index').default;
-      Cotizador();
-    }, 'cotizaSolar');
-  },
 
   catalogo() {
     import(/* webpackChunkName: "catalogoMain" */ './catalogo/index').then((catalogo) => {

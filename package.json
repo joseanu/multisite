@@ -80,6 +80,7 @@
     "webpack-md5-hash": "0.0.5",
     "webpack-node-externals": "^1.6.0",
     "webpack-stats-plugin": "^0.1.5",
+    "workbox-build": "^1.0.1",
     "yargs": "^8.0.2"
   },
   "repository": {

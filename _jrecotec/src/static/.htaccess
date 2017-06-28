@@ -5,6 +5,9 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+#Redirects
+RewriteRule ^cotizar-paneles-solares/(.*)$ https://www.%{HTTP_HOST}/energia-solar/cotizar/$1 [R=301,NC,L]
+
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/json
 </IfModule>

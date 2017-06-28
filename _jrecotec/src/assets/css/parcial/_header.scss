@@ -87,7 +87,6 @@
 
 .siteHeader-logoTipo {
   padding: 0.5rem 0;
-  // display: inline-block;
 
   img {
     width: $logo-height * 2.55477;
@@ -263,7 +262,6 @@ $item-height-mobile: 2.5rem;
 
   &.activo {
     color: #fff;
-    cursor: default;
 
     &::before {
       transform: scaleX(1);

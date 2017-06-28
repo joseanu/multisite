@@ -1,5 +1,5 @@
 <template>
-  <div class="producto">
+  <div class="producto" :id="producto.modelo">
     <div class="productoInner">
       <producto-imagen
         :altText="`${producto.marca} ${producto.modelo}`"
@@ -33,9 +33,10 @@
     },
     computed: {
       tipoProducto() {
-        return this.$store.state.categorias[this.$route.params.slug].tipos
-          && this.$store.state.categorias[this.$route.params.slug].tipos[this.tipo]
-          && this.$store.state.categorias[this.$route.params.slug].tipos[this.tipo].producto;
+        const categoria = this.$store.getters.getCategoriaBySlug(this.$route.params.slug);
+        return categoria.tipos
+          && categoria.tipos[this.tipo]
+          && categoria.tipos[this.tipo].producto;
       },
     },
     components: {

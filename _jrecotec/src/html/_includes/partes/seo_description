@@ -1,0 +1,11 @@
+{%- if page.slogan -%}
+  {%- assign seo_description = page.slogan -%}
+{%- elsif page.description -%}
+  {%- assign seo_description = page.description -%}
+{%- elsif site.description -%}
+  {%- assign seo_description = site.description -%}
+{%- endif -%}
+{%- if seo_description -%}
+  {%- assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- endif -%}
+{{ seo_description }}

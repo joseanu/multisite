@@ -6,7 +6,7 @@ import App from './App.vue';
 
 Vue.use(Meta);
 
-const baseURL = 'vuecatalogo';
+const baseURL = 'ecotecnologias';
 
 export function createApp() {
   const store = createStore();

@@ -24,21 +24,26 @@ const config      = require('../../' + webSite + 'config');
 
 // 'gulp styles' -- creates a CSS file from SCSS, adds prefixes and creates a Sourcemap
 // 'gulp styles --prod' -- creates a CSS file from your SCSS, adds prefixes, minifies, gzips and cache busts it. Does not create a Sourcemap
-gulp.task('styles', () =>
-  gulp.src(webSite + paths.sassFiles + '/main.scss')
+gulp.task('styles', () => {
+  return gulp.src(webSite + paths.sassFiles + '/main.scss')
     .pipe(when(!argv.prod, sourcemaps.init()))
     .pipe(sass({
       importer: sassImport(),
       precision: 10
     }).on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer({ browsers: ['> 0.5%'] }),
+      autoprefixer({
+        browsers: ['> 0.5%']
+      }),
     ]))
     .pipe(size({
       showFiles: true
     }))
     .pipe(when(argv.prod, rename({suffix: '.min'})))
-    .pipe(when(argv.prod, when('*.css', cssnano({autoprefixer: false}))))
+    .pipe(when(argv.prod, when('*.css', cssnano({
+      autoprefixer: false,
+      svgo: false
+    }))))
     .pipe(when(argv.prod, size({
       showFiles: true
     })))
@@ -49,7 +54,8 @@ gulp.task('styles', () =>
       gzip: true,
       showFiles: true
     })))
-    .pipe(gulp.dest(webSite + paths.sassFilesTemp))
+    .pipe(gulp.dest(webSite + paths.sassFilesTemp));
+  }
 );
 
 gulp.task('lint-css', function lintCssTask() {

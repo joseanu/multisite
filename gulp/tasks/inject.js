@@ -16,8 +16,8 @@ gulp.task('inject:css', () =>
         return filepath; // return filepath only
       },
       ignorePath: webSite + paths.tempFolderName,
-      addRootSlash: false,
-      addPrefix: '{{ site.url }}',
+      addRootSlash: true,
+      addPrefix: '',
       removeTags: true
     }))
     .pipe(gulp.dest(webSite + paths.tempDir + paths.sourceDir + paths.includesFolderName))
@@ -31,8 +31,8 @@ gulp.task('inject:scripts', () =>
         return '<script async src="' + filepath + '"></script>';
       },
       ignorePath: webSite + paths.tempFolderName,
-      addRootSlash: false,
-      addPrefix: '{{ site.url }}',
+      addRootSlash: true,
+      addPrefix: '',
       removeTags: true
     }))
     .pipe(gulp.dest(webSite + paths.tempDir + paths.sourceDir + paths.includesFolderName + '/partes'))

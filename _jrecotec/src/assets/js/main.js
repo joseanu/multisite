@@ -19,7 +19,9 @@ function domIsReady() {
   svg4everybody();
 
   window.jrNavMenu = new Menu();
+
   initSelectSucursal();
+
   atencionClientes();
   addVueRouterListener();
   if (isMobile.phone) linkeaTelefonos();

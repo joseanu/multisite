@@ -1,34 +1,29 @@
 ---
-layout: compress
 ---
-
-{% if page.slug != null %}
-  {% assign body_class = page.slug %}
-{% endif %}
-{% if page.bodyClass %}
-  {% assign body_class = page.bodyClass %}
-{% endif %}
-
+{%- if page.slug -%}
+  {%- assign body_class = page.slug -%}
+{%- endif -%}
+{%- if page.bodyClass -%}
+  {%- assign body_class = page.bodyClass -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ site.locale }}">
- 
   {% include head.html %}
-
   <body{% if body_class %} class="{{ body_class }}"{% endif %}{% if page.function %} data-function="{{ page.function }}"{% endif %}>
     <div class="jr__main">
-      {% if jekyll.environment == "production" %}
-        {% include partes/gtm.html part='body' %}
-      {% endif %}
+      {%- if jekyll.environment == "production" -%}
+        {%- include partes/gtm.html part='body' -%}
+      {%- endif -%}
   
-      {% include header.html %}
+      {%- include header.html -%}
   
       <main class="contenido">
           {{ content }}
       </main>
   
-      {% include footer.html %}
+      {%- include footer.html -%}
     </div>
-    {% include anuncio.html %}
+    {%- include anuncio.html -%}
   </body>
 
 </html>

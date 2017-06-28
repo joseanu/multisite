@@ -10,7 +10,7 @@ module Jekyll
       if(name.is_a? Integer)
         return name.to_s
       end
-      return name.downcase.strip.gsub(' ', '-').gsub(/[^\w.-]/, '')
+      return name.downcase.strip.gsub(' ', '-').gsub(/[^-\w.\/]/, '')
     end
   end
 
@@ -64,7 +64,7 @@ module Jekyll
       # (name/index.html) or standard files (name.html). This information
       # is passed to the DataPage constructor, which sets the @dir variable
       # as required by this directive
-      index_files = site.config['page_gen-dirs'] == true
+      
 
       # data contains the specification of the data for which we want to generate
       # the pages (look at the README file for its specification)
@@ -75,6 +75,7 @@ module Jekyll
           name = data_spec['name']
           dir = data_spec['dir'] || data_spec['data']
           extension = data_spec['extension'] || "html"
+          index_files = data_spec['page_gen-dirs'] == true
 
           if site.layouts.key? template
             # records is the list of records defined in _data.yml

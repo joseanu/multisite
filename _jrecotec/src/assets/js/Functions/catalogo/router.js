@@ -10,6 +10,7 @@ function createRouter(baseURL) {
     routes: [
       {
         path: `/${baseURL}`,
+        name: 'index',
         component: () => import(/* webpackChunkName: "catalogoCategoria" */ './views/Categoria.vue'),
       },
       {

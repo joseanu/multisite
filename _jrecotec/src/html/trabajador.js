@@ -2,7 +2,7 @@
   'use strict';
   
   //https://www.filamentgroup.com/sw.js
-  const version = 'jr0.22pluton::';
+  const version = 'jr0.28saturnoo::';
   const ignorar = /(google-analytics|googletagmanager|facebook|tawk)/;
   const staticCacheName = version + 'static';
   const pagesCacheName = version + 'pages';
@@ -20,9 +20,7 @@
     '<!-- trabajador:css --><!-- endinject -->',
     '<!-- trabajador:js --><!-- endinject -->',
     <!-- chunks:js --><!-- endinject -->
-    '/assets/img/svg/logo-jr.svg',
     '/assets/img/svg/icons.svg',
-    '/assets/img/svg/iconos-productos.svg',
     '/assets/img/svg/mapaSucursales.svg',
     '/assets/img/subheader.jpg'
   ];
