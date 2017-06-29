@@ -62,4 +62,4 @@
 }{% endcapture %}
 {%- capture match -%},}{%- endcapture -%}
 {%- capture replacement -%}}{%- endcapture -%}
-{{ jsonld | strip_newlines | replace: match, replacement }}
+{{ jsonld | strip_newlines | replace: match, replacement | replace: match, replacement }}

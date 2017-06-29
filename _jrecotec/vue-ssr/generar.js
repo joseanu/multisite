@@ -66,7 +66,6 @@ function generar(callback) {
     };
 
     const html = await renderToString(context);
-
     if (html) {
       console.log(`Se generó la ruta: ${slug}`);
       return writeFile(filePath, html);

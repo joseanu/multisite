@@ -1,0 +1,36 @@
+---
+layout: null
+---
+{%- capture json -%}{
+{%- for item in site.data.catalogo -%}
+  {%- if item.slug == page.slug -%}
+    {%- for prop in item -%}
+      {{ prop[0] | jsonify }}: {{ prop[1] | jsonify }},
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if site.data.productos[page.slug] -%}
+  {%- if site.data.productos[page.slug].contenidos -%}
+    {%- if site.data.productos[page.slug].size > 1 -%}
+      "productos": {
+      {%- for prop in site.data.productos[page.slug] -%}
+        {%- if prop[0] == 'contenidos' -%}
+        {%- else -%}
+          {{ prop[0] | jsonify }}: {{ prop[1] | jsonify }}
+          {%- if forloop.last == true -%}{%- else -%},{%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      },
+    {%- endif -%}
+    "contenidos": {{ site.data.productos[page.slug].contenidos | jsonify }},
+  {%- else -%}
+    "productos": {{ site.data.productos[page.slug] | jsonify }},
+  {%- endif -%}
+{%- endif -%}
+{%- if site.data.imageList[page.slug] -%}
+  "imagenes": {{ site.data.imageList[page.slug] | jsonify }}
+{%- endif -%}
+}{%- endcapture -%}
+{%- capture match -%},}{%- endcapture -%}
+{%- capture replacement -%}}{%- endcapture -%}
+{{ json | strip_newlines | replace: match, replacement | replace: match, replacement }}

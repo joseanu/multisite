@@ -1,3 +1,6 @@
+- slug: 'index'
+  nombre: 'Catálogo de ecotecnologias'
+  slogan: 'Conoce nuestras ecotecnologías, cuida el medio ambiente y ahorra energía eléctrica, agua y gas.'
 - slug: 'ahorro-agua'
   nombre: 'Ahorro de agua'
   slogan: 'Productos para el ahorro de agua. Sistemas de grifería optimizados para aprovechar responsablemente el recurso.'
@@ -30,7 +33,7 @@
   slogan: 'Calculamos cuantos paneles solares necesitas para cubrir tu consumo de energía actual y conoce tus ahorros estimados.'
 - slug: 'linea-blanca'
   nombre: 'Línea blanca'
-  slugan: 'Ahorra energía con tus electrodomésticos. Conoce en nuestro catálogo de línea blanca los mejores productos de bajo consumo para tu hogar.'
+  slogan: 'Ahorra energía con tus electrodomésticos. Conoce en nuestro catálogo de línea blanca los mejores productos de bajo consumo para tu hogar.'
   tipos:
     estufas:
       filtro: 'Estufas'

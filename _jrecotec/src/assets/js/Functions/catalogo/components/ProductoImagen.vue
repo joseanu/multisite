@@ -34,9 +34,9 @@
     computed: {
       imagenes() {
         const img =
-          (this.$store.state.imagenes[this.$route.params.slug] &&
-            this.$store.state.imagenes[this.$route.params.slug][this.tipo]) ||
-          this.$store.state.imagenes[this.$route.params.slug];
+          (this.$store.getters.getImagenesBySlug(this.$route.params.slug) &&
+            this.$store.getters.getImagenesBySlug(this.$route.params.slug)[this.tipo]) ||
+          this.$store.getters.getImagenesBySlug(this.$route.params.slug);
 
         if (!img) {
           return [];

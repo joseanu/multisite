@@ -65,6 +65,11 @@ page_gen:
     template: 'ecotecnologias'
     name: 'slug'
     dir: 'ecotecnologias'
+  - data: 'catalogo'
+    template: 'catalogoJson'
+    name: 'slug'
+    dir: 'api/catalogoData'
+    extension: 'json'
 
 # Defaults
 defaults:

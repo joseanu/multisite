@@ -2,4 +2,22 @@
 layout: null
 permalink: /api/productosData/categorias.json
 ---
-{{ site.data.catalogo | jsonify }}
+{%- capture json -%}
+[
+{%- for item in site.data.catalogo -%}
+  {
+  {%- for prop in item -%}
+    {%- if prop[0] == 'tipos' -%}
+    {%- else -%}
+      {{ prop[0] | jsonify }}: {{ prop[1] | jsonify }}
+    {%- endif -%}
+    {%- if forloop.last == true -%}{%- else -%},{%- endif -%}
+  {%- endfor -%}
+  }
+  {%- if forloop.last == true -%}{%- else -%},{%- endif -%}
+{%- endfor -%}
+]
+{%- endcapture -%}
+{%- capture match -%},}{%- endcapture -%}
+{%- capture replacement -%}}{%- endcapture -%}
+{{ json | strip_newlines | replace: match, replacement | replace: ',]', ']' }}

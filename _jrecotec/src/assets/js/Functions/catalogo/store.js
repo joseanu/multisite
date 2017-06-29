@@ -8,25 +8,27 @@ function createStore() {
   return new Vuex.Store({
     state: {
       categorias: [],
-      productos: {},
-      imagenes: {},
-      datosListos: false,
+      catalogo: {},
     },
     actions: {
-      fetchData({ commit, state }) {
-        if (state.datosListos === true) {
-          return Promise.resolve('Success');
+      fetchData({ commit, state }, slug) {
+        if (state.categorias.length === 0) {
+          axios.get('/api/productosData/categorias.json')
+          .then((response) => {
+            commit('setCategorias', { categorias: response.data });
+          })
+          .catch((error) => {
+            throw new Error(error);
+          });
         }
-        return Promise.all([
-          axios.get('/api/productosData/categorias.json'),
-          axios.get('/api/productosData/productos.json'),
-          axios.get('/api/productosData/imagenes.json'),
-        ])
-          .then(([categorias, productos, imagenes]) => {
+        if (state.catalogo[slug]) {
+          return Promise.resolve();
+        }
+        return axios.get(`/api/catalogoData/${slug}.json`)
+          .then((response) => {
             commit('setData', {
-              categorias: categorias.data,
-              productos: productos.data,
-              imagenes: imagenes.data,
+              slug,
+              data: response.data,
             });
           })
           .catch((error) => {
@@ -36,11 +38,11 @@ function createStore() {
     },
 
     mutations: {
-      setData(state, { categorias, productos, imagenes }) {
+      setCategorias(state, { categorias }) {
         state.categorias = categorias;
-        state.productos = productos;
-        state.imagenes = imagenes;
-        state.datosListos = true;
+      },
+      setData(state, { slug, data }) {
+        Vue.set(state.catalogo, slug, data);
       },
     },
 
@@ -52,7 +54,13 @@ function createStore() {
         state.categorias.find(categoria => categoria.slug === slug),
 
       getContenidosBySlug: state => slug =>
-        (state.productos[slug] && state.productos[slug].contenidos) || 0,
+        (state.catalogo[slug] && state.catalogo[slug].contenidos) || 0,
+
+      getProductosBySlug: state => slug =>
+        (state.catalogo[slug] && state.catalogo[slug].productos) || {},
+
+      getImagenesBySlug: state => slug =>
+        (state.catalogo[slug] && state.catalogo[slug].imagenes) || 0,
     },
   });
 }

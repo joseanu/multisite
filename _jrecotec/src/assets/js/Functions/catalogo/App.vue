@@ -1,6 +1,6 @@
 <template>
-  <div id="app" v-if="datosListos">
-    <div class="wrapper productosHeader bab">
+  <div id="app">
+    <div class="wrapper productosHeader">
       <productos-link></productos-link>
     </div>
 
@@ -12,54 +12,42 @@
 
 <script>
   import ProductosLink from './components/ProductosLink.vue';
+
   const origin = 'https://www.jrecotecnologia.com';
 
   export default {
     metaInfo() {
       return {
-        title: this.titulo,
-        titleTemplate: 'Catálogo de Ecotecnologías %s - JR Ecotecnología',
+        title: `Catálogo de Ecotecnologías${this.metadatos ? `: ${this.metadatos.nombre}` : ''} - JR Ecotecnología`,
         meta: [
-          { name: 'description', content: this.titulo },
+          { name: 'description', content: this.descripcion },
         ],
         link: [
           { rel: 'canonical', href: `${origin}${this.$route.path}` },
         ],
-        script: [
-          { innerHTML: '{ "@context": "http://schema.org" }', type: 'application/ld+json' },
-        ],
       };
     },
-    asyncData({ store }) {
-      return store.dispatch('fetchData');
-    },
     computed: {
-      datosListos() {
-        return this.$store.state.datosListos;
-      },
       parametro() {
         if (this.$route.params.slug !== undefined) {
           return this.$route.params.slug;
         }
-        return 'ecotecnologias';
+        return 'index';
       },
-      titulo() {
-        if (this.parametro !== 'ecotecnologias') {
-          return this.$store.getters.getCategoriaBySlug(this.parametro).nombre;
+      metadatos() {
+        if (this.parametro !== 'index') {
+          return this.$store.getters.getCategoriaBySlug(this.parametro);
         }
-        return '';
+        return false;
+      },
+      descripcion() {
+        return this.metadatos
+          ? this.metadatos.slogan
+          : 'Conoce nuestras ecotecnologías, cuida el medio ambiente y ahorra energía eléctrica, agua y gas.';
       },
     },
     components: {
       ProductosLink,
-    },
-    beforeMount() {
-      const { asyncData } = this.$options;
-      if (asyncData) {
-        this.dataPromise = asyncData({
-          store: this.$store,
-        });
-      }
     },
     beforeUpdate() {
       document.querySelector('.subHeader-pageTitle h1').innerHTML = this.titulo;

@@ -39,7 +39,10 @@
         return this.$store.getters.getContenidosBySlug(this.parametro);
       },
       cantidadContenidos() {
-        return Object.keys(this.contenidos).length;
+        if (this.contenidos) {
+          return Object.keys(this.contenidos).length;
+        }
+        return 0;
       },
       contenidoBody() {
         if (

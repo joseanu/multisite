@@ -1,7 +1,5 @@
 import { createApp } from './index';
 import categorias from '../../../../../.tmp/_site/api/productosData/categorias.json';
-import productos from '../../../../../.tmp/_site/api/productosData/productos.json';
-import imagenes from '../../../../../.tmp/_site/api/productosData/imagenes.json';
 
 export default context =>
   new Promise((resolve, reject) => {
@@ -16,13 +14,16 @@ export default context =>
         reject({ code: 404 });
       }
 
-      Promise.resolve(
-        store.commit('setData', { categorias, productos, imagenes }),
-      ).then(() => {
+      const promesas = [Promise.resolve(store.commit('setCategorias', { categorias }))];
+
+      const slug = router.currentRoute.params.slug ? router.currentRoute.params.slug : 'index';
+      const data = require(`../../../../../.tmp/_site/api/catalogoData/${slug}.json`); // eslint-disable-line
+      promesas.push(Promise.resolve(store.commit('setData', { slug, data })));
+
+      Promise.all(promesas)
+      .then(() => {
         const { title, meta, link } = vueMeta.inject();
         context.state = store.state;
-        context.titulo = app.titulo;
-        context.slug = app.slug;
         context.title = title.text();
         context.meta = meta.text();
         context.link = link.text();

@@ -1,4 +1,5 @@
 import 'es6-promise/auto';
+import 'core-js/fn/array/find';
 
 import svg4everybody from 'svg4everybody';
 import isMobile from 'ismobilejs';

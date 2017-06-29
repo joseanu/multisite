@@ -94,6 +94,7 @@
     "chartist-plugin-axistitle": "0.0.1",
     "chartist-plugin-legend": "^0.6.1",
     "chartist-plugin-tooltips": "0.0.17",
+    "core-js": "^2.4.1",
     "d3": "^4.8.0",
     "es6-promise": "^4.1.0",
     "flickity": "^2.0.5",

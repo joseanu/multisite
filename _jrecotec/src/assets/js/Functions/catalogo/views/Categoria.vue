@@ -1,5 +1,5 @@
 <template>
-  <div class="mainProductos bab">
+  <div class="mainProductos">
     <contenido></contenido>
     <div v-if="numCategorias > 0" class="productosGrid">
       <div class="wrapper">
@@ -24,6 +24,10 @@
   import Producto from '../components/Producto.vue';
 
   export default {
+    asyncData({ store, route }) {
+      const slug = route.params.slug ? route.params.slug : 'index';
+      return store.dispatch('fetchData', slug);
+    },
     data() {
       return {
         filtrado: 'todos',
@@ -35,28 +39,19 @@
       },
       numCategorias() {
         if (this.parametro) {
-          return Object.keys(this.$store.state.productos[this.parametro]).filter(
-            cat => cat !== 'contenidos',
-          ).length;
+          return Object.keys(this.$store.getters.getProductosBySlug(this.parametro)).length;
         }
         return 0;
       },
       productos() {
+        const subset = x => ({ [x]: a }) => ({ [x]: a });
         if (this.parametro) {
-          return Object.keys(this.$store.state.productos[this.parametro])
-            .filter((categoria) => {
-              if (categoria !== 'contenidos') {
-                if (this.filtrado === 'todos') {
-                  return true;
-                }
-                return categoria === this.filtrado;
-              }
-              return false;
-            })
-            .reduce((obj, key) => {
-              obj[key] = this.$store.state.productos[this.parametro][key];
-              return obj;
-            }, {});
+          if (this.filtrado === 'todos') {
+            return this.$store.getters.getProductosBySlug(this.parametro);
+          }
+          return subset(this.filtrado)(
+            this.$store.getters.getProductosBySlug(this.parametro),
+          );
         }
         return {};
       },
@@ -86,6 +81,26 @@
     components: {
       Contenido,
       Producto,
+    },
+    beforeMount() {
+      const { asyncData } = this.$options;
+      if (asyncData) {
+        this.dataPromise = asyncData({
+          store: this.$store,
+          route: this.$route,
+        });
+      }
+    },
+    beforeRouteUpdate(to, from, next) {
+      const { asyncData } = this.$options;
+      if (asyncData) {
+        asyncData({
+          store: this.$store,
+          route: to,
+        }).then(next).catch(next);
+      } else {
+        next();
+      }
     },
   };
 </script>

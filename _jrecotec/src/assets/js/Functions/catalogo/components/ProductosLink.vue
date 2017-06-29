@@ -1,8 +1,9 @@
 <template>
   <div class="productosHeader__list">
+    <template v-for="{ slug, nombre } in categorias">
     <router-link
+      v-if="slug !== 'index'"
       class="productosHeader__listItem"
-      v-for="{ slug, nombre } in categorias"
       :to="{ name: 'categoria', params: { slug } }"
       :key="slug">
       <div class="productosHeader__listItem__icon">
@@ -15,6 +16,7 @@
         {{ nombre }}
       </div>
     </router-link>
+    </template>
   </div>
 </template>
 
