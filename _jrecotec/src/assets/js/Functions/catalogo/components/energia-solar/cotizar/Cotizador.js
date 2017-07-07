@@ -47,6 +47,10 @@ export default {
       axios.post('/server/cotizar', this.$data)
         .then(response => {
           if (response.data.ok) vm.estatus = response.data.ok;
+          window.dataLayer.push({
+            event: 'formSubmitted',
+            formName: 'cotizarSolar',
+          });
         })
         .catch(function (error) {
           vm.errores = error.response.data;

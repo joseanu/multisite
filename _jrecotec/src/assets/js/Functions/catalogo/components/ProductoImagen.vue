@@ -98,9 +98,3 @@
     destroyed() {},
   };
 </script>
-
-<style>
-  .flickity-viewport {
-    touch-action: pan-y !important;
-  }
-</style>

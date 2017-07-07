@@ -93,6 +93,10 @@
     },
     beforeRouteUpdate(to, from, next) {
       const { asyncData } = this.$options;
+      dataLayer.push({
+        'event':'VirtualPageview',
+        'virtualPageURL': to,
+      });
       if (asyncData) {
         asyncData({
           store: this.$store,
