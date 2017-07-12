@@ -61,6 +61,9 @@ function createStore() {
 
       getImagenesBySlug: state => slug =>
         (state.catalogo[slug] && state.catalogo[slug].imagenes) || 0,
+
+      getFiltrosBySlug: state => slug =>
+        (state.catalogo[slug] && state.catalogo[slug].tipos) || 0,
     },
   });
 }

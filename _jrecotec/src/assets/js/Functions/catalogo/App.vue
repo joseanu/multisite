@@ -50,8 +50,8 @@
       ProductosLink,
     },
     beforeUpdate() {
-      document.querySelector('.subHeader-pageTitle h1').innerHTML = this.titulo;
-      document.querySelector('.breadcrumb__lastItem span').innerHTML = this.titulo;
+      document.querySelector('.subHeader-pageTitle h1').innerHTML = this.metadatos.nombre;
+      document.querySelector('.breadcrumb__lastItem span').innerHTML = this.metadatos.nombre;
       document.querySelector('.breadcrumb__lastItem').href = `${origin}${this.$route.path}`;
     },
   };

@@ -57,7 +57,7 @@
       },
       filtros() {
         if (this.productos) {
-          const tipos = this.$store.getters.getCategoriaBySlug(this.parametro).tipos;
+          const tipos = this.$store.getters.getFiltrosBySlug(this.parametro);
           if (tipos) {
             return Object.keys(tipos).reduce((filtro, tipoSlug) => {
               if (tipos[tipoSlug] && tipos[tipoSlug].filtro) {
@@ -93,9 +93,10 @@
     },
     beforeRouteUpdate(to, from, next) {
       const { asyncData } = this.$options;
+      const dataLayer = window.dataLayer || [];
       dataLayer.push({
-        'event':'VirtualPageview',
-        'virtualPageURL': to,
+        event: 'VirtualPageview',
+        virtualPageURL: to,
       });
       if (asyncData) {
         asyncData({
