@@ -95,7 +95,11 @@ gulp.task('scripts', function(callback) {
             ],
             plugins: ['syntax-dynamic-import', 'transform-runtime']
           }
-        }
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader'
+        },
       ],
       strictThisContextOnImports: true
     },

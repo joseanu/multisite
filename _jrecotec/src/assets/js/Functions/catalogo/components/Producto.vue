@@ -9,7 +9,7 @@
       <div class="productoInner__nombre">
         <h2>
           <span v-if="tipoProducto">
-            {{ tipoProducto }} 
+            {{ tipoProducto }}
           </span>
           {{ producto.marca }}
           <br>
@@ -24,23 +24,23 @@
 </template>
 
 <script>
-  import ProductoImagen from './ProductoImagen.vue';
+import ProductoImagen from './ProductoImagen.vue';
 
-  export default {
-    props: {
-      producto: Object,
-      tipo: String,
+export default {
+  props: {
+    producto: Object,
+    tipo: String,
+  },
+  computed: {
+    tipoProducto() {
+      const categoria = this.$store.getters.getCategoriaBySlug(this.$route.params.slug);
+      return categoria.tipos
+        && categoria.tipos[this.tipo]
+        && categoria.tipos[this.tipo].producto;
     },
-    computed: {
-      tipoProducto() {
-        const categoria = this.$store.getters.getCategoriaBySlug(this.$route.params.slug);
-        return categoria.tipos
-          && categoria.tipos[this.tipo]
-          && categoria.tipos[this.tipo].producto;
-      },
-    },
-    components: {
-      ProductoImagen,
-    },
-  };
+  },
+  components: {
+    ProductoImagen,
+  },
+};
 </script>

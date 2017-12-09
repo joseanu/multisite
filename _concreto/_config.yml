@@ -1,6 +1,6 @@
 # Site settings
-title: "Concreto Estampado Guadalajara"
-description: "Decorando bajo tus pies"
+title: "Colados Profesionales Guadalajara"
+description: "Contratistas especializados en colocación de concreto."
 logo: "/assets/img/logo.svg"
 color: "#b22222"
 locale: "es_MX"
@@ -45,5 +45,5 @@ source: ./_concreto/.tmp/src
 destination: ./_concreto/.tmp/_site
 include: ["_pages"]
 exclude: ["Gemfile", "Gemfile.lock", "gulpfile.js", "package.json", "favicons", "node_modules", "src", "README.md", "notas.md", "composer.phar", "composer.json", "composer.lock"]
-gems:
+plugins:
   - jekyll-sitemap

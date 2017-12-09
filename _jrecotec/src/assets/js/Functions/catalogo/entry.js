@@ -11,7 +11,7 @@ export default context =>
     router.onReady(() => {
       const matchedComponents = router.getMatchedComponents();
       if (!matchedComponents.length) {
-        reject({ code: 404 });
+        reject(new Error({ code: 404 }));
       }
 
       const promesas = [Promise.resolve(store.commit('setCategorias', { categorias }))];
@@ -21,14 +21,14 @@ export default context =>
       promesas.push(Promise.resolve(store.commit('setData', { slug, data })));
 
       Promise.all(promesas)
-      .then(() => {
-        const { title, meta, link } = vueMeta.inject();
-        context.state = store.state;
-        context.title = title.text();
-        context.meta = meta.text();
-        context.link = link.text();
+        .then(() => {
+          const { title, meta, link } = vueMeta.inject();
+          context.state = store.state;
+          context.title = title.text();
+          context.meta = meta.text();
+          context.link = link.text();
 
-        resolve(app);
-      }).catch(reject);
+          resolve(app);
+        }).catch(reject);
     }, reject);
   });

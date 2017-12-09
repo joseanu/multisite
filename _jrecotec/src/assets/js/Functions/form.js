@@ -11,7 +11,7 @@ function initForm() {
   if (form != null) {
     form.addEventListener(
       'submit',
-      evt => {
+      (evt) => {
         if (hasHtml5Validation()) {
           if (!form.checkValidity()) {
             evt.preventDefault();
@@ -40,7 +40,7 @@ function initForm() {
                   statusMessage.innerHTML = message.loading;
                 },
               })
-              .then(response => {
+              .then((response) => {
                 if (response.data.ok) {
                   statusMessage.innerHTML = response.data.ok;
                   window.dataLayer.push({
@@ -53,7 +53,7 @@ function initForm() {
                   statusMessage.innerHTML = message.failure;
                 }
               })
-              .catch(error => {
+              .catch((error) => {
                 statusMessage.innerHTML = message.failure;
                 throw new Error(error);
               });

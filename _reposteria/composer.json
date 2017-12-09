@@ -1,0 +1,10 @@
+{
+    "config": {
+        "vendor-dir": "phplib"
+    },
+    "require": {
+        "slim/slim": "2.*",
+        "phpmailer/phpmailer": "^5.2",
+        "rollbar/rollbar": "^0.18.2"
+    }
+}

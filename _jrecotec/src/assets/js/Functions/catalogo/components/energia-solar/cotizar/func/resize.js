@@ -2,8 +2,7 @@ export default function cambiaTamano(image, mimeType) {
   const maxWidth = 800;
   const maxHeight = 800;
 
-  const width = image.width;
-  const height = image.height;
+  const { width, height } = image;
 
   const shouldResize = (width > maxWidth) || (height > maxHeight);
 

@@ -15,7 +15,6 @@ config.tasks = {
     'assets',
     'build:site',
     'html',
-    'unused-css',
     'php',
     'copy:static'
   ]

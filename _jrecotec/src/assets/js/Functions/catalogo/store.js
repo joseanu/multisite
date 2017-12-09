@@ -14,12 +14,12 @@ function createStore() {
       fetchData({ commit, state }, slug) {
         if (state.categorias.length === 0) {
           axios.get('/api/productosData/categorias.json')
-          .then((response) => {
-            commit('setCategorias', { categorias: response.data });
-          })
-          .catch((error) => {
-            throw new Error(error);
-          });
+            .then((response) => {
+              commit('setCategorias', { categorias: response.data });
+            })
+            .catch((error) => {
+              throw new Error(error);
+            });
         }
         if (state.catalogo[slug]) {
           return Promise.resolve();

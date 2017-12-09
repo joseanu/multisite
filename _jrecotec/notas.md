@@ -94,7 +94,32 @@ Sucursales Tijuana, Ciudad Obregon y Xalapa borradas 24/05/17
     "lat": 19.525875,
     "color": "#fdc84a"
 }, 
-  
+
+borrado 16/11/2017
+, {
+    "id": 2,
+    "slug": "reynosa",
+    "slogan": "Proveedor de focos ahorradores, focos leds, calentadores de agua, aire acondicionado, fotoceldas solares y más accesorios ahorradores en Reynosa.",
+    "nombre": "Reynosa",
+    "ciudad": "Reynosa",
+    "estado": "Tamaulipas",
+    "direccion1": "Calle Av. Aguas Calientes 960",
+    "direccion2": "",
+    "colonia": "Col. Rodríguez",
+    "cp": 88630,
+    "encargado": "Diana Gutierrez Cepeda",
+    "tel": 8999237915,
+    "correo": "reynosa@jrecotecnologia.com",
+    "gmaps": "https://goo.gl/fC9PlP",
+    "facebook": "https://www.facebook.com/jrecotec.reynosa/",
+    "gplus": "https://plus.google.com/+Jrecotecnologia-Reynosa",
+    "horario": "1-6:0900-1800",
+    "lng": -98.2864539,
+    "lat": 26.0782865,
+    "color": "#f19e65"
+}
+
+
 usar en lugar de lastitem:
 {% assign items = items | split: "|||" | join: ',' %}
 

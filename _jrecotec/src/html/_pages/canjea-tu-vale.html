@@ -59,7 +59,7 @@ slug: canjea
       <div class="form-group">
         <label for="frm-estado">Estado *</label>
         <select name="estado" id="frm-estado" class="select" required>
-          <option disabled selected value> -- selecciona un estado -- </option>
+          <option selected="selected" disabled="disabled" value=""> -- selecciona un estado -- </option>
           <option value="Aguascalientes">Aguascalientes</option><option value="Baja California">Baja California</option><option value="Baja California Sur">Baja California Sur</option><option value="Campeche">Campeche</option><option value="Coahuila">Coahuila</option><option value="Colima">Colima</option><option value="Chiapas">Chiapas</option><option value="Chihuahua">Chihuahua</option><option value="Ciudad de México">Ciudad de México</option><option value="Durango">Durango</option><option value="Guanajuato">Guanajuato</option><option value="Guerrero">Guerrero</option><option value="Hidalgo">Hidalgo</option><option value="Jalisco">Jalisco</option><option value="México">México</option><option value="Michoacán">Michoacán</option><option value="Morelos">Morelos</option><option value="Nayarit">Nayarit</option><option value="Nuevo León">Nuevo León</option><option value="Oaxaca">Oaxaca</option><option value="Puebla">Puebla</option><option value="Querétaro">Querétaro</option><option value="Quintana Roo">Quintana Roo</option><option value="San Luis Potosí">San Luis Potosí</option><option value="Sinaloa">Sinaloa</option><option value="Sonora">Sonora</option><option value="Tabasco">Tabasco</option><option value="Tamaulipas">Tamaulipas</option><option value="Tlaxcala">Tlaxcala</option><option value="Veracruz">Veracruz</option><option value="Yucatán">Yucatán</option><option value="Zacatecas">Zacatecas</option>
         </select>
       </div>
@@ -67,59 +67,55 @@ slug: canjea
         <label for="frm-inf">Número de crédito Infonavit</label>
         <input type="number" name="credito" id="frm-inf" class="input" pattern="[0-9]*" />
       </div>
+      <div class="form-group">
+        <label for="frm-msg">Mensaje:</label>
+        <textarea id="frm-msg" name="mensaje" class="input" spellcheck="true" rows="2"></textarea>
+      </div>
       <div class="form-group checkbox">
         <h4>Marca los productos de tu interés:</h4>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk01" class="control__input" value="Focos ahorradores">
-          <label for="chk01" class="control__label">Focos ahorradores</label>
+          <input name="intereses[]" type="checkbox" id="chk01" class="control__input" value="Focos ahorradores y LED">
+          <label for="chk01" class="control__label">Focos ahorradores y LED</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk02" class="control__input" value="Focos LED">
-          <label for="chk02" class="control__label">Focos LED</label>
+          <input name="intereses[]" type="checkbox" id="chk02" class="control__input" value="Paneles solares">
+          <label for="chk02" class="control__label">Paneles solares</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk03" class="control__input" value="Paneles solares">
-          <label for="chk03" class="control__label">Paneles solares</label>
+          <input name="intereses[]" type="checkbox" id="chk03" class="control__input" value="Aire acondicionado">
+          <label for="chk03" class="control__label">Aire acondicionado</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk04" class="control__input" value="Aire acondicionado">
-          <label for="chk04" class="control__label">Aire acondicionado</label>
+          <input name="intereses[]" type="checkbox" id="chk04" class="control__input" value="Refrigerador">
+          <label for="chk04" class="control__label">Refrigerador</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk05" class="control__input" value="Refrigerador">
-          <label for="chk05" class="control__label">Refrigerador</label>
+          <input name="intereses[]" type="checkbox" id="chk05" class="control__input" value="Estufa">
+          <label for="chk05" class="control__label">Estufa</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk06" class="control__input" value="Estufa">
-          <label for="chk06" class="control__label">Estufa</label>
+          <input name="intereses[]" type="checkbox" id="chk06" class="control__input" value="Lavadora">
+          <label for="chk06" class="control__label">Lavadora</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk07" class="control__input" value="Lavadora">
-          <label for="chk07" class="control__label">Lavadora</label>
+          <input name="intereses[]" type="checkbox" id="chk07" class="control__input" value="Calentador Solar">
+          <label for="chk07" class="control__label">Calentador Solar</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk08" class="control__input" value="Calentador Solar">
-          <label for="chk08" class="control__label">Calentador Solar</label>
+          <input name="intereses[]" type="checkbox" id="chk08" class="control__input" value="Boiler de paso">
+          <label for="chk08" class="control__label">Boiler de paso</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk09" class="control__input" value="Boiler de paso">
-          <label for="chk09" class="control__label">Boiler de paso</label>
+          <input name="intereses[]" type="checkbox" id="chk09" class="control__input" value="Muebles de baño">
+          <label for="chk09" class="control__label">Muebles de baño</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk10" class="control__input" value="Inodoro">
-          <label for="chk10" class="control__label">Inodoro</label>
+          <input name="intereses[]" type="checkbox" id="chk10" class="control__input" value="Mezcladoras">
+          <label for="chk10" class="control__label">Mezcladoras</label>
         </div>
         <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk11" class="control__input" value="Lavabo">
-          <label for="chk11" class="control__label">Lavabo</label>
-        </div>
-        <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk12" class="control__input" value="Mezcladoras">
-          <label for="chk12" class="control__label">Mezcladoras</label>
-        </div>
-        <div class="control">
-          <input name="intereses[]" type="checkbox" id="chk13" class="control__input" value="Regaderas">
-          <label for="chk13" class="control__label">Regaderas</label>
+          <input name="intereses[]" type="checkbox" id="chk11" class="control__input" value="Regaderas">
+          <label for="chk11" class="control__label">Regaderas</label>
         </div>
       </div>
 

@@ -1,0 +1,57 @@
+# Site settings
+title: 'Repostería y Pastelería Ulloa'
+description: 'Acompañamos a nuestros clientes en sus momentos especiales.'
+logo: '/assets/img/social/logo.jpg'
+iconos: '/assets/img/svg/icons.svg'
+locale: 'es'
+baseurl: ''
+url: 'https://www.reposteriaulloa.com'
+repository: 'joseanu/reposteriaulloa'
+
+# Site owner
+owner:
+  name: 'Repostería y Pastelería Ulloa'
+  email: 'contacto@reposteriaulloa.com'
+  direccion:
+    direccion1: 'Fco. I. Madero #821'
+    direccion2: 'Col. Americana'
+    ciudad: 'Guadalajara'
+    estado: 'Jalisco'
+    cp: 44160
+  telefonos:
+    - 3338251324
+    - 3318031952
+  formsurl: '/server/contacto'
+  facebook: 'https://www.facebook.com/Pastelería-y-Repostería-Ulloa-129288693785670/'
+  fb_app_id: null
+  linkedin: null
+  google:
+    analytics: 'UA-20041596-1'
+    gtm: null
+    plus: null
+    author: null
+    verify: null
+    mapsapi: null
+  bing:
+    verify: null
+  alexa:
+    verify: null
+  majestic:
+    verify: null
+
+# Jekyll configuration
+markdown: kramdown
+encoding: 'utf-8'
+timezone: '	America/Mexico_City'
+source: './_reposteria/.tmp/src'
+destination: './_reposteria/.tmp/_site'
+include: ['_pages']
+exclude: ['Gemfile', 'Gemfile.lock', 'gulpfile.js', 'package.json', 'favicons', 'node_modules', 'src', 'README.md', 'notas.md', 'composer.phar', 'composer.json', 'composer.lock']
+plugins:
+  - jekyll-sitemap
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: [development, dev]

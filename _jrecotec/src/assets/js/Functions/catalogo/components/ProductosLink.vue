@@ -21,11 +21,11 @@
 </template>
 
 <script>
-  export default {
-    computed: {
-      categorias() {
-        return this.$store.getters.getCategorias;
-      },
+export default {
+  computed: {
+    categorias() {
+      return this.$store.getters.getCategorias;
     },
-  };
+  },
+};
 </script>
