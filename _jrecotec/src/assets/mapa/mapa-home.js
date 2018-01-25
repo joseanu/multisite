@@ -3,7 +3,7 @@ const d3 = require('d3');
 const jsdom = require('jsdom/lib/old-api.js');
 const topojson = require('topojson');
 
-const chartWidth = 885;
+const chartWidth = 940;
 const chartHeight = 555;
 
 const projection = d3
@@ -13,7 +13,7 @@ const projection = d3
   .translate([435, 295]);
 
 module.exports = function (mapData = '/home/ubuntu/workspace/_jrecotec/src/assets/mapa/mx_tj_s6q6.json',
-  sucursalesData = '/home/ubuntu/workspace/_jrecotec/src/html/_data/sucursales.json',
+  sucursalesData = '/home/ubuntu/workspace/_jrecotec/src/html/_data/sucursales_mapa.json',
   outputLocation = '/home/ubuntu/workspace/_jrecotec/src/assets/mapa/mapa-sucursales.svg') {
 
   jsdom.env({

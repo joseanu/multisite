@@ -1,1 +1,5 @@
-{% include partes/icono.svg icon="check" class="icon" %}
+{%- assign class = "icon" -%}
+{%- if include.class -%}
+{%- assign class = include.class -%}
+{%- endif -%}
+{% include partes/icono.svg icon="check" class=class %}

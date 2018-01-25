@@ -8,6 +8,26 @@ RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #Redirects
 RewriteRule ^cotizar-paneles-solares/(.*)$ https://www.%{HTTP_HOST}/energia-solar/cotizar/$1 [R=301,NC,L]
 
+RewriteRule ^sucursales/mexicali\.html$ /sucursales/mexicali/? [L,R=301]
+RewriteRule ^sucursales/chihuahua\.html$ /sucursales/chihuahua/? [L,R=301]
+RewriteRule ^sucursales/leon\.html$ /sucursales/leon/? [L,R=301]
+RewriteRule ^sucursales/guadalajara\.html$ /sucursales/guadalajara/? [L,R=301]
+RewriteRule ^sucursales/puerto-vallarta\.html$ /sucursales/puerto-vallarta/? [L,R=301]
+RewriteRule ^sucursales/morelia\.html$ /sucursales/morelia/? [L,R=301]
+RewriteRule ^sucursales/tepic\.html$ /sucursales/tepic/? [L,R=301]
+RewriteRule ^sucursales/monterrey\.html$ /sucursales/monterrey/? [L,R=301]
+RewriteRule ^sucursales/monterrey2\.html$ /sucursales/monterrey/? [L,R=301]
+RewriteRule ^sucursales/queretaro\.html$ /sucursales/queretaro/? [L,R=301]
+RewriteRule ^sucursales/cancun\.html$ /sucursales/cancun/? [L,R=301]
+RewriteRule ^sucursales/culiacan\.html$ /sucursales/culiacan/? [L,R=301]
+RewriteRule ^sucursales/guaymas\.html$ /sucursales/guaymas/? [L,R=301]
+RewriteRule ^sucursales/villahermosa\.html$ /sucursales/villahermosa/? [L,R=301]
+RewriteRule ^sucursales/reynosa\.html$ /sucursales/reynosa/? [L,R=301]
+RewriteRule ^sucursales/matamoros\.html$ /sucursales/matamoros/? [L,R=301]
+RewriteRule ^sucursales/coatzacoalcos\.html$ /sucursales/coatzacoalcos/? [L,R=301]
+RewriteRule ^sucursales/merida\.html$ /sucursales/merida/? [L,R=301]
+RewriteRule ^sucursales/zacatecas\.html$ /sucursales/zacatecas/? [L,R=301]
+
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/json
 </IfModule>

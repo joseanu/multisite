@@ -11,7 +11,7 @@ function cambioSucursal(datos) {
     .querySelector('.siteHeader-topBar-ubicacion a')
     .setAttribute(
       'href',
-      `${document.location.origin}/sucursales/${selectSucursal.value}.html`,
+      `${document.location.origin}/sucursales/${selectSucursal.value}/`,
     );
 }
 

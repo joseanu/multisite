@@ -14,7 +14,7 @@ bodyClass: sucursalesMain
   <ul class="sucursales__Lista">
     {%- for sucursal in sucursales -%}
     <li class="sucursales__Lista__Item">
-      <a href="/sucursales/{{ sucursal.slug }}.html">
+      <a href="/sucursales/{{ sucursal.slug }}/">
         <figure class="intrinsic intrinsic--square">
           <img data-sizes="auto" src="{{ site.url }}/assets/img/sucursales/{{ sucursal.slug }}-25.jpg" data-srcset="{{ site.url }}/assets/img/sucursales/{{ sucursal.slug }}-25.jpg 25w,
                             {{ site.url }}/assets/img/sucursales/{{ sucursal.slug }}-200.jpg 200w,

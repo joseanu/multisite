@@ -2,7 +2,7 @@
 {%- capture los_dias %}0,Mo,Tu,We,Th,Fr,Sa,Su{% endcapture -%}
 {%- assign dias = los_dias | split: ',' -%}
 
-{%- assign hor_ary = page.horario | split: ',' -%}
+{%- assign hor_ary = include.horario | split: ',' -%}
 
 {%- for hor_part in hor_ary -%}
 

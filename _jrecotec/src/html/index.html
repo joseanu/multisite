@@ -10,8 +10,11 @@ namespace: Home
 
 <div class="svg-wrapper">
   <div class="wrapper afueraMapa" id="mapaSucursales">
-    <h1>Proveedores de ecotecnologias con {{ site.data.sucursales | size }} sucursales en todo México</h1>
+    <h1>Proveedores de ecotecnologias con {{ site.owner.num_sucursales }} sucursales en todo México</h1>
     <a href="{{ site.url }}/sucursales/" class="boton naranja">Ver Sucursales</a>
+    <div id="svgMapaSucursales">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 555" preserveAspectRatio="xMinYMid"></svg>
+    </div>
   </div>
 </div>
 <div class="proveedores">
@@ -21,8 +24,8 @@ namespace: Home
 </div>
 <div class="tu-vale">
   <div class="wrapper">
-    <h2 class="h_gde">Tu vale de ecotecnologias</h2>
-    <p>Canjea con nosotros tu constancia de <a href="{{ site.url }}/hipoteca-verde/">Hipoteca Verde Infonavit</a></p>
+    <h2 class="h_gde">Tu casa ecológica</h2>
+    <p>Gasta menos y vive mejor</p>
     <div class="valores">
       <div class="valor">
         {% include partes/check.svg %}
@@ -55,7 +58,16 @@ namespace: Home
         <p>Todos nuestros productos cumplen con las <strong>normas federales</strong>.</p>
       </div>
     </div>
-    <a href="{{ site.url }}/canjea-tu-vale/" class="boton naranja">Canjea tu vale</a>
+    <div class="programas">
+      <div>
+        <p>Canjea con nosotros tu constancia de <a href="{{ site.url }}/hipoteca-verde/">Hipoteca Verde Infonavit</a></p>
+        <a href="{{ site.url }}/canjea-tu-vale/" class="boton naranja">Canjea tu vale</a>
+      </div>
+      <div>
+        <p>Pide tu crédito del programa <a href="{{ site.url }}/mejoramiento/">Mejoramiento Integral Sustentable</a>.</p>
+        <a href="{{ site.url }}/mejoramiento/" class="boton naranja">Crédito FIDE</a>
+      </div>
+    </div>
   </div>
 </div>
 <div class="productos-dia">
@@ -67,7 +79,7 @@ namespace: Home
       <div class="rama">
         <a href="{{ site.url }}/ecotecnologias/energia-solar/">
           {% include partes/icono.svg icon="energia-solar" class="svgProducto" title="Energía solar fotovoltaica" %}
-          <h3 id="svgEnergia">Energía solar fotovoltaica</h3>
+          <h3 id="svgEnergia">Paneles solares</h3>
         </a>
       </div>
     </div>
@@ -160,20 +172,24 @@ namespace: Home
   </div>
   <div class="wrapper formasDePago__list">
     <div class="formasDePago__Item">
-      <div class="formasDePago__Item__icon">
-        <img src="/assets/img/svg/pago_contado.svg">
-      </div>
-      <div class="formasDePago__Item__nombre">
-        De contado
-      </div>
+      <a href="{{ site.url }}/mejoramiento/">
+        <div class="formasDePago__Item__icon">
+          <img src="/assets/img/svg/pago_fide.svg">
+        </div>
+        <div class="formasDePago__Item__nombre">
+          Crédito FIDE
+        </div>
+      </a>
     </div>
     <div class="formasDePago__Item">
-      <div class="formasDePago__Item__icon">
-        <img src="/assets/img/svg/pago_infonavit.svg">
-      </div>
-      <div class="formasDePago__Item__nombre">
-        Infonavit
-      </div>
+      <a href="{{ site.url }}/canjea-tu-vale/">
+        <div class="formasDePago__Item__icon">
+          <img src="/assets/img/svg/pago_infonavit.svg">
+        </div>
+        <div class="formasDePago__Item__nombre">
+          Hipoteca Verde
+        </div>
+      </a>
     </div>
     <div class="formasDePago__Item">
       <div class="formasDePago__Item__icon">

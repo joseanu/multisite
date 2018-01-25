@@ -8,7 +8,7 @@
       "position": {{ forloop.index | plus: 1 }},
       "item": {
         "@type": "HomeGoodsStore",
-        "@id": "{{ sucursal.slug | prepend: '/sucursales/' | prepend: site.url | append: '.html#sucursal' }}",
+        "@id": "{{ sucursal.slug | prepend: '/sucursales/' | prepend: site.url | append: '/#sucursal' }}",
         "name": "{{ site.title }} {{ sucursal.nombre }}"
       }
     },

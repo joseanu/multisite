@@ -1,5 +1,5 @@
-{%- assign directorio = page.dir | replace:'/','' -%}
-{%- if directorio == 'sucursales' and page.nombre -%}
+{%- assign directorio = page.dir | split:'/' -%}
+{%- if directorio[1] == 'sucursales' and page.nombre -%}
   {%- assign seo_title = 'Ecotecnologías en ' | append: page.nombre | append: ', ' | append: page.estado | append: ' - ' | append: site.title -%}
 {%- elsif page.bodyClass == 'catalogo' and page.nombre -%}
   {%- assign seo_title = 'Catálogo de Ecotecnologías: ' | append: page.nombre | append: ' - ' | append: site.title -%}

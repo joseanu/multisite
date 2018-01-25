@@ -1,30 +1,30 @@
 .svg-wrapper {
-  height: calc(100vh - 2.16671rem); // menos $topbar-height
-  margin-top: -7.2167rem; // header + topbar
-  padding-top: 7.2167rem;
-  margin-bottom: -(1.95rem + $spacing-unit * 2); // proveedores
-  padding-bottom: 1.95rem + $spacing-unit * 2;
+//  height: calc(100vh - 2.16671rem); // menos $topbar-height
+//  margin-top: -7.2167rem; // header + topbar
+//  padding-top: 7.2167rem;
+//  margin-bottom: -(1.95rem + $spacing-unit * 2); // proveedores
+//  padding-bottom: 1.95rem + $spacing-unit * 2;
   background-color: #435277;
   animation-name: agua;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 
   .afueraMapa {
-    height: 100%;
+//    height: 100%;
     position: relative;
     padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
     overflow: visible;
 
     div {
-      height: 100%;
-      width: 70%;
+//      height: 100%;
+      width: 65%;
       animation: fade-in 3s;
 
-      svg {
-        height: 100%;
-        width: 100%;
-      }
+//      svg {
+//        height: 100%;
+//        width: 100%;
+//      }
     }
   }
 
@@ -32,7 +32,7 @@
     margin: 0;
     margin-right: $spacing-unit;
     position: absolute;
-    left: 50%;
+    left: 45%;
     top: 20%;
     font-size: 1.4rem;
     font-weight: $base-font-weight;
@@ -41,7 +41,7 @@
 
   .boton {
     position: absolute;
-    left: 50%;
+    left: 60%;
     top: calc(20% + 4.5rem);
   }
 

@@ -2,8 +2,8 @@
   'use strict';
   
   //https://www.filamentgroup.com/sw.js
-  const version = 'jr0.33venus::';
-  const ignorar = /(google-analytics|googletagmanager|facebook|tawk)/;
+  const version = 'jr0.34tierra::';
+  const ignorar = /(google-analytics|googleapis|googletagmanager|facebook|tawk)/;
   const staticCacheName = version + 'static';
   const pagesCacheName = version + 'pages';
   const imagesCacheName = version + 'images';

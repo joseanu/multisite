@@ -21,6 +21,7 @@ owner:
   telefonos:
     - 3338258247
     - 3338267767
+  num_sucursales: 30
   formsurl: '/server/contacto'
   facebook: 'https://www.facebook.com/jrecotecnologias'
   fb_app_id: 1622349154752586
@@ -55,6 +56,7 @@ page_gen:
     template: 'sucursal'
     name: 'slug'
     dir: 'sucursales'
+    page_gen-dirs: true
   - data: 'sucursales'
     template: 'sucursalJson'
     name: 'slug'

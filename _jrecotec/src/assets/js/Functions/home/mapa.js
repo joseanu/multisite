@@ -31,7 +31,7 @@ function animarMarcadores() {
 
   elementos.forEach((elemento) => {
     const elAnchor = elemento.getElementsByTagName('a')[0];
-    const linkHref = `${document.location.origin}/sucursales/${elAnchor.attributes[0].nodeValue}.html`;
+    const linkHref = `${document.location.origin}/sucursales/${elAnchor.attributes[0].nodeValue}/`;
     elAnchor.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', linkHref);
 
     elemento.addEventListener('mouseenter', () => {
@@ -67,7 +67,7 @@ export default function () {
   ajax.onload = () => {
     const div = document.createElement('div');
     div.innerHTML = ajax.responseText;
-    $id('mapaSucursales').appendChild(div);
+    $id('mapaSucursales').replaceChild(div, $id('svgMapaSucursales'));
 
     if (!isMobile.any) animarMarcadores();
   };
