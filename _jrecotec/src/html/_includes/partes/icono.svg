@@ -1,4 +1,0 @@
-<svg{% if include.class %} class="{{ include.class }}"{% endif %}>
-  {% if include.title %}<title>{{ include.title }}</title>{% endif %}
-  <use xlink:href="{{ site.iconos }}#{{ include.icon }}"></use>
-</svg>

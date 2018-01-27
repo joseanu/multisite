@@ -1,8 +1,0 @@
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "@id": "{{ site.url }}/#site",
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "sameAs": ["{{ site.owner.facebook }}", "{{ site.owner.linkedin }}", "{{ site.owner.google.plus }}"]
-}
