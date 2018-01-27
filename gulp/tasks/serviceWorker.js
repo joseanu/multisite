@@ -1,7 +1,7 @@
 'use strict';
 const argv        = require('yargs').argv,
       gulp        = require('gulp'),
-      gutil       = require('gulp-util'),
+      log         = require('fancy-log'),
       swPrecache  = require('sw-precache'),
       wbBuild     = require('workbox-build');
 
@@ -21,7 +21,7 @@ gulp.task('service-worker', function(callback) {
 
   const sw_options = {
     cacheId: webSite,
-    logger: gutil.log,
+    logger: log,
     navigateFallback: '/sin-red.html',
     stripPrefix: webSite + paths.siteDir
   };

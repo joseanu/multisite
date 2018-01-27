@@ -4,7 +4,8 @@
   "description": "varias webs",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install --loglevel verbose"
   },
   "author": "anya",
   "license": "ISC",
@@ -29,8 +30,9 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-vue": "^3.13.1",
+    "fancy-log": "^1.3.2",
     "gm": "^1.23.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-connect-php": "1.0.1",
     "gulp-cssnano": "^2.1.2",
@@ -52,10 +54,9 @@
     "gulp-stylelint": "^5.0.0",
     "gulp-svgmin": "^1.2.2",
     "gulp-svgstore": "^6.0.0",
-    "gulp-util": "^3.0.7",
     "jsdom": "^11.3.0",
     "merge2": "^1.2.0",
-    "node-sass": "^4.6.0",
+    "node-sass": "^4.7.2",
     "pify": "^3.0.0",
     "readline-sync": "^1.4.7",
     "require-dir": "^0.3.1",

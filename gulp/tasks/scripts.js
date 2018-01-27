@@ -25,7 +25,7 @@ gulp.task('scripts', function(callback) {
     })
   ];
   var output = {
-    path: path.join('/home/ubuntu/workspace/', webSite + paths.jsFilesTemp),
+    path: path.join(process.cwd(), webSite + paths.jsFilesTemp),
     publicPath: '/' + paths.assetsDir + paths.scriptFolderName + '/',
     sourceMapFilename: '[file].map'
   };
@@ -63,7 +63,7 @@ gulp.task('scripts', function(callback) {
   webpackPlugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
   var webpackConfig = {
-    context: path.join('/home/ubuntu/workspace/', webSite + paths.jsFiles),
+    context: path.join(process.cwd(), webSite + paths.jsFiles),
     entry: entradas,
     output: output,
     module: {

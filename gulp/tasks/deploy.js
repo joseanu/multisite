@@ -2,7 +2,7 @@
 const argv        = require('yargs').argv,
       gulp        = require('gulp'),
       shell       = require('shelljs'),
-      gutil       = require('gulp-util'),
+      log         = require('fancy-log'),
       ftp         = require('vinyl-ftp'),
       rlSync      = require('readline-sync');
 
@@ -22,7 +22,7 @@ gulp.task('deploy:ftp', function deployFTP () {
           user: argv.user,
           password: argv.pass,
           parallel: 2,
-          log: gutil.log
+          log: log
         };
     if (!argv.pass) {
       ftpconfig.password = rlSync.question('Escribe la contraseña del servidor FTP: ', {

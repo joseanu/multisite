@@ -27,6 +27,9 @@ RewriteRule ^sucursales/matamoros\.html$ /sucursales/matamoros/? [L,R=301]
 RewriteRule ^sucursales/coatzacoalcos\.html$ /sucursales/coatzacoalcos/? [L,R=301]
 RewriteRule ^sucursales/merida\.html$ /sucursales/merida/? [L,R=301]
 RewriteRule ^sucursales/zacatecas\.html$ /sucursales/zacatecas/? [L,R=301]
+RewriteRule ^sucursales/ciudad-obregon\.html$ /sucursales/ciudad-obregon/? [L,R=301]
+
+
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript application/json

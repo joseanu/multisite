@@ -5,3 +5,4 @@
 *.tmp/
 *phplib
 *composer.phar
+node_modules
