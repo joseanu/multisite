@@ -1,8 +1,16 @@
 {
   "presets": [
-                ["es2015", { "modules": false }]
-        ],
-  "plugins": ["syntax-dynamic-import", "transform-runtime"],
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-runtime"
+  ],
   "ignore": [
     "node_modules"
   ]

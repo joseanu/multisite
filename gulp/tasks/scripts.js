@@ -1,10 +1,12 @@
 'use strict';
-const argv         = require('yargs').argv,
-      path         = require('path'),
-      gulp         = require('gulp'),
-      webpack      = require('webpack'),
-      webpackstats = require("webpack-stats-plugin").StatsWriterPlugin,
-      Analyzer     = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const argv            = require('yargs').argv,
+      path            = require('path'),
+      gulp            = require('gulp'),
+      webpack         = require('webpack'),
+      VueLoaderPlugin = require('vue-loader/lib/plugin'),
+      webpackstats    = require("webpack-stats-plugin").StatsWriterPlugin,
+      Analyzer        = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
+      UglifyJsPlugin  = require('uglifyjs-webpack-plugin');
 
 // include paths
 const paths        = require('../paths');
@@ -17,11 +19,13 @@ const config      = require('../../' + webSite + 'config');
 var entradas = config.webpackEntry || { main: './main' };
 
 gulp.task('scripts', function(callback) {
+  var mode = argv.prod ? 'production' : 'development';
   var webpackPlugins = [
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify(argv.prod ? 'production' : 'development'),
-      }
+    new VueLoaderPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpackstats({
+      filename: "stats.json",
+      fields: null
     })
   ];
   var output = {
@@ -39,15 +43,6 @@ gulp.task('scripts', function(callback) {
     }));
   }
   if (argv.prod) {
-    webpackPlugins.push(new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }));
-    webpackPlugins.push(new webpack.LoaderOptionsPlugin({
-      minimize: true
-    }));
     output.filename = '[name]-[chunkhash].js';
     output.chunkFilename = 'chunk/[name]-[chunkhash].js';
     sourceMap = '#source-map';
@@ -56,13 +51,9 @@ gulp.task('scripts', function(callback) {
     output.chunkFilename = 'chunk/[name].js';
     sourceMap = '#cheap-module-source-map';
   }
-  webpackPlugins.push(new webpackstats({
-    filename: "stats.json",
-    fields: null
-  }));
-  webpackPlugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
   var webpackConfig = {
+    mode,
     context: path.join(process.cwd(), webSite + paths.jsFiles),
     entry: entradas,
     output: output,
@@ -82,19 +73,14 @@ gulp.task('scripts', function(callback) {
               'scss': 'vue-style-loader!css-loader!sass-loader',
               'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
             },
-            cssSourceMap: false
+            cssSourceMap: false,
+            preserveWhitespace: false
           }
         },
         {
           test: /\.jsx?$/,
           exclude: /(node_modules)/,
-          loader: 'babel-loader',
-          query: {
-            presets: [
-              ["es2015", { "modules": false }]
-            ],
-            plugins: ['syntax-dynamic-import', 'transform-runtime']
-          }
+          loader: 'babel-loader'
         },
         {
           test: /\.svg$/,
@@ -102,6 +88,11 @@ gulp.task('scripts', function(callback) {
         },
       ],
       strictThisContextOnImports: true
+    },
+    optimization: {
+      minimizer: [new UglifyJsPlugin({
+        sourceMap: true
+      })]
     },
     devtool: sourceMap,
     plugins: webpackPlugins
