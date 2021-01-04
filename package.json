@@ -94,7 +94,7 @@
     "url": "https://github.com/joseanu/multisite.git"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bulma": "^0.7.2",
     "core-js": "^2.5.7",
     "es6-promise": "^4.2.5",
