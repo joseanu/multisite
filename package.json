@@ -106,7 +106,7 @@
     "ismobilejs": "^0.4.0",
     "lazysizes": "^4.1.4",
     "lodash": "^4.17.11",
-    "marked": "^0.5.1",
+    "marked": "^4.0.10",
     "milligram": "^1.2.4",
     "normalize.css": "^8.0.0",
     "svg4everybody": "^2.1.9",
